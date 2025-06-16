@@ -1,9 +1,11 @@
-{ config, pkgs, ... }:
+{ config, pkgs, ... }: 
 
 {
+
   # 注意修改这里的用户名与用户目录
   home.username = "chen";
   home.homeDirectory = "/home/chen";
+
 
   # 直接将当前文件夹的配置文件，链接到 Home 目录下的指定位置
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
@@ -246,3 +248,4 @@
   # changes in each release.
   home.stateVersion = "25.05";
 }
+
