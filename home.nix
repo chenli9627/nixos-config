@@ -235,6 +235,11 @@
     # dracula-theme.theme-dracula
     # vscodevim.vim
     yzhang.markdown-all-in-one
+    github.github-vscode-theme
+    jnoortheen.nix-ide
+    vscodevim.vim
+    ms-python.python
+    ms-python.debugpy
   ];
 };
 
