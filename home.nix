@@ -240,6 +240,7 @@
     vscodevim.vim
     ms-python.python
     ms-python.debugpy
+    brettm12345.nixfmt-vscode
   ];
 };
 
