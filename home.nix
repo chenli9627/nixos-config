@@ -33,8 +33,13 @@
   # 建议将所有 GUI 软件，以及与 OS 关系不大的 CLI 软件，都通过 home.packages 安装
   home.packages = with pkgs;[
 
+    # nix
+    nixd
+    nil
+
     # dev tools
     vscode
+    jetbrains.idea-community-bin
 
     # java
     zulu
@@ -152,8 +157,10 @@
     glow # markdown previewer in terminal
 
     btop  # replacement of htop/nmon
+    htop
     iotop # io monitoring
     iftop # network monitoring
+    nvtopPackages.amd
 
     # system call monitoring
     strace # system call monitoring
@@ -240,7 +247,8 @@
     vscodevim.vim
     ms-python.python
     ms-python.debugpy
-    brettm12345.nixfmt-vscode
+    # brettm12345.nixfmt-vscode
+    kamadorueda.alejandra
   ];
 };
 
