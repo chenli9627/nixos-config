@@ -173,6 +173,7 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
+    ncpamixer
   ];
 
   # git 相关配置

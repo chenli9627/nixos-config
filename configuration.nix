@@ -85,7 +85,7 @@ environment.variables.EDITOR = "vim";
   users.users.chen = {
     isNormalUser = true;
     shell = pkgs.fish;
-    extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" "networkmanager" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];
