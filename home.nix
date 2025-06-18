@@ -73,6 +73,7 @@
     goldendict-ng
     localsend
     cherry-studio
+    calibre
 
     # scala
     scala
@@ -174,6 +175,7 @@
     pciutils # lspci
     usbutils # lsusb
     ncpamixer
+    pavucontrol
   ];
 
   # git 相关配置
