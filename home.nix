@@ -239,6 +239,7 @@
     zoxide.enable = true;
     zoxide.enableFishIntegration = true;
     yazi.enable = true;
+    yazi.enableFishIntegration = true;
   };
   # programs.zoxide.enable = true;
   # programs.zoxide.enableFishIntegration= true;
