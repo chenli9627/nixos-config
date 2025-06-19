@@ -262,7 +262,7 @@
 programs.kitty = pkgs.lib.mkForce {
   enable = true;
   themeFile = "Github_Light.conf";
-  kitty.shellIntegration.enableFishIntegration = true;
+  shellIntegration.enableFishIntegration = true;
   settings = {
     font_family = "CaskaydiaMono Nerd Font Mono";
     # include = "current-theme.conf";
