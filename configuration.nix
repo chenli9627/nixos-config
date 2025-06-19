@@ -122,7 +122,6 @@
     curl
     wget
     sqlite
-    home-manager
   ];
 
   virtualisation.docker = {
