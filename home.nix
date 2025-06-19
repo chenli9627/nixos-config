@@ -202,7 +202,7 @@
         ms-azuretools.vscode-docker
       ];
       userSettings = [
-        editor.fontFamily = "CaskaydiaMono Nerd Font Mono"
+        "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
       ];
     };
   };
