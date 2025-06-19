@@ -88,9 +88,9 @@
     isNormalUser = true;
     shell = pkgs.fish;
     extraGroups = ["wheel" "docker" "networkmanager"]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      tree
-    ];
+    # packages = with pkgs; [
+    #   tree
+    # ];
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -128,6 +128,7 @@
     neovim
     # kitty
     fish
+    tree
     wget
     #     gnomeExtensions.just-perfection
     # 	gnomeExtensions.appindicator

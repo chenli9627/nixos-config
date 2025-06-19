@@ -32,6 +32,9 @@
   # 这些软件将仅在当前用户下可用，不会影响系统级别的配置
   # 建议将所有 GUI 软件，以及与 OS 关系不大的 CLI 软件，都通过 home.packages 安装
   home.packages = with pkgs; [
+    typst
+    typstyle
+
     # nix
     nixd
     nil
@@ -246,6 +249,7 @@
     profiles.default.extensions = with pkgs.vscode-extensions; [
       yzhang.markdown-all-in-one
       golang.go
+      myriad-dreamin.tinymist
       github.github-vscode-theme
       jnoortheen.nix-ide
       vscodevim.vim
@@ -253,6 +257,11 @@
       ms-python.debugpy
       kamadorueda.alejandra
       asvetliakov.vscode-neovim
+      ms-vscode.cpptools-extension-pack
+      rust-lang.rust-analyzer
+      tomoki1207.pdf
+      ecmel.vscode-html-css
+      ms-azuretools.vscode-docker
     ];
   };
   programs.kitty = pkgs.lib.mkForce {
