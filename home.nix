@@ -201,9 +201,9 @@
         ecmel.vscode-html-css
         ms-azuretools.vscode-docker
       ];
-      userSettings = [
+      userSettings = {
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
-      ];
+      };
     };
   };
   programs.kitty = pkgs.lib.mkForce {
