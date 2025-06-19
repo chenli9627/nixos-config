@@ -257,7 +257,7 @@
     kamadorueda.alejandra
   ];
 };
-programs.kitty = lib.mkForce {
+programs.kitty = pkgs.lib.mkForce {
   enable = true;
   settings = {
     font_family = "CaskaydiaMono Nerd Font Mono";
