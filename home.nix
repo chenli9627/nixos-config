@@ -181,25 +181,27 @@
   programs.vscode = {
     enable = true;
     mutableExtensionsDir = false;
-    profiles.default.enableExtensionUpdateCheck = false;
-    profiles.default.enableUpdateCheck = false;
-    profiles.default.extensions = with pkgs.vscode-extensions; [
-      yzhang.markdown-all-in-one
-      golang.go
-      myriad-dreamin.tinymist
-      github.github-vscode-theme
-      jnoortheen.nix-ide
-      # vscodevim.vim
-      ms-python.python
-      ms-python.debugpy
-      kamadorueda.alejandra
-      asvetliakov.vscode-neovim
-      ms-vscode.cpptools-extension-pack
-      rust-lang.rust-analyzer
-      tomoki1207.pdf
-      ecmel.vscode-html-css
-      ms-azuretools.vscode-docker
-    ];
+    profiles.default = {
+      enableExtensionUpdateCheck = false;
+      enableUpdateCheck = false;
+      extensions = with pkgs.vscode-extensions; [
+        yzhang.markdown-all-in-one
+        golang.go
+        myriad-dreamin.tinymist
+        github.github-vscode-theme
+        jnoortheen.nix-ide
+        # vscodevim.vim
+        ms-python.python
+        ms-python.debugpy
+        kamadorueda.alejandra
+        asvetliakov.vscode-neovim
+        ms-vscode.cpptools-extension-pack
+        rust-lang.rust-analyzer
+        tomoki1207.pdf
+        ecmel.vscode-html-css
+        ms-azuretools.vscode-docker
+      ];
+    };
   };
   programs.kitty = pkgs.lib.mkForce {
     enable = true;
