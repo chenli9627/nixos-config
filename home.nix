@@ -292,7 +292,7 @@ programs.kitty = pkgs.lib.mkForce {
         # "U+E5FA-U+E62B"
       ];
     in
-      (builtins.concatStringsSep ","mappings) + "Noto Sans CJK SC";
+      (builtins.concatStringsSep "," mappings) + " Noto Sans CJK SC";
       # (builtins.concatStringsSep "," mappings) + " Symbols Nerd Font";
   };
 };
