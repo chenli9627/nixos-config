@@ -117,7 +117,7 @@
     wget
     git
     gcc
-    # clash-verge-rev
+    clash-verge-rev
     curl
     wget
     sqlite

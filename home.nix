@@ -53,7 +53,7 @@
     localsend
     cherry-studio
     calibre
-    clash-verge-rev
+    # clash-verge-rev
 
     # scala
     scala
@@ -64,9 +64,6 @@
     # C/C++
     clang
     llvm
-
-    # Clash
-    # clash-verge-rev
 
     # Gnome things
     wl-clipboard
@@ -172,8 +169,8 @@
       enableCompletion = true;
     };
     firefox.enable = true;
-    clash-verge.enable = true;
-    clash-verge.autoStart = true;
+    # clash-verge.enable = true;
+    # clash-verge.autoStart = true;
     fish.enable = true;
     zoxide.enable = true;
     zoxide.enableFishIntegration = true;
