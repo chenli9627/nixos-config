@@ -1,11 +1,11 @@
-{ config, pkgs, ... }: 
-
 {
-
+  config,
+  pkgs,
+  ...
+}: {
   # 注意修改这里的用户名与用户目录
   home.username = "chen";
   home.homeDirectory = "/home/chen";
-
 
   # 直接将当前文件夹的配置文件，链接到 Home 目录下的指定位置
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
@@ -31,9 +31,7 @@
   # 通过 home.packages 安装一些常用的软件
   # 这些软件将仅在当前用户下可用，不会影响系统级别的配置
   # 建议将所有 GUI 软件，以及与 OS 关系不大的 CLI 软件，都通过 home.packages 安装
-  home.packages = with pkgs;[
-
-
+  home.packages = with pkgs; [
     # nix
     nixd
     nil
@@ -51,17 +49,17 @@
 
     # python
     python3Full
-    
+
     # go
     go
 
     # rust
-    rustup 
+    rustup
 
     # ruby
     ruby
     ruby-lsp
-  
+
     # node
     nodejs_22
     pnpm
@@ -126,17 +124,16 @@
     zoxide
     dysk
     tealdeer
-    
 
     # networking tools
     mtr # A network diagnostic tool
     iperf3
-    dnsutils  # `dig` + `nslookup`
+    dnsutils # `dig` + `nslookup`
     ldns # replacement of `dig`, it provide the command `drill`
     aria2 # A lightweight multi-protocol & multi-source command-line download utility
     socat # replacement of openbsd-netcat
     nmap # A utility for network discovery and security auditing
-    ipcalc  # it is a calculator for the IPv4/v6 addresses
+    ipcalc # it is a calculator for the IPv4/v6 addresses
 
     # misc
     cowsay
@@ -160,7 +157,7 @@
     hugo # static site generator
     glow # markdown previewer in terminal
 
-    btop  # replacement of htop/nmon
+    btop # replacement of htop/nmon
     htop
     iotop # io monitoring
     iftop # network monitoring
@@ -245,60 +242,61 @@
   # programs.zoxide.enable = true;
   # programs.zoxide.enableFishIntegration= true;
   programs.vscode = {
-  enable = true;
-  profiles.default.extensions = with pkgs.vscode-extensions; [
-    yzhang.markdown-all-in-one
-    golang.go
-    github.github-vscode-theme
-    jnoortheen.nix-ide
-    vscodevim.vim
-    ms-python.python
-    ms-python.debugpy
-    kamadorueda.alejandra
-  ];
-};
-programs.kitty = pkgs.lib.mkForce {
-  enable = true;
-  themeFile = "GitHub_Light";
-  shellIntegration.enableFishIntegration = true;
-  settings = {
-    font_family = "CaskaydiaMono Nerd Font Mono";
-    # include = "current-theme.conf";
-    # confirm_os_window_close = 0;
-    # dynamic_background_opacity = true;
-    enable_audio_bell = false;
-    # mouse_hide_wait = "-1.0";
-    # window_padding_width = 10;
-    # background_opacity = "0.5";
-    # background_blur = 5;
-    symbol_map = let
-      mappings = [
-        "U+4E00-U+9FFF"
-	"U+3400-U+4DBF"
-        # "U+23FB-U+23FE"
-        # "U+2B58"
-        # "U+E200-U+E2A9"
-        # "U+E0A0-U+E0A3"
-        # "U+E0B0-U+E0BF"
-        # "U+E0C0-U+E0C8"
-        # "U+E0CC-U+E0CF"
-        # "U+E0D0-U+E0D2"
-        # "U+E0D4"
-        # "U+E700-U+E7C5"
-        # "U+F000-U+F2E0"
-        # "U+2665"
-        # "U+26A1"
-        # "U+F400-U+F4A8"
-        # "U+F67C"
-        # "U+E000-U+E00A"
-        # "U+F300-U+F313"
-        # "U+E5FA-U+E62B"
-      ];
-    in
-      (builtins.concatStringsSep "," mappings) + " Noto Sans CJK SC";
-      # (builtins.concatStringsSep "," mappings) + " Symbols Nerd Font";
+    enable = true;
+    profiles.default.extensions = with pkgs.vscode-extensions; [
+      yzhang.markdown-all-in-one
+      golang.go
+      github.github-vscode-theme
+      jnoortheen.nix-ide
+      vscodevim.vim
+      ms-python.python
+      ms-python.debugpy
+      kamadorueda.alejandra
+      asvetliakov.vscode-neovim
+    ];
   };
-};
+  programs.kitty = pkgs.lib.mkForce {
+    enable = true;
+    themeFile = "GitHub_Light";
+    shellIntegration.enableFishIntegration = true;
+    settings = {
+      font_family = "CaskaydiaMono Nerd Font Mono";
+      # include = "current-theme.conf";
+      # confirm_os_window_close = 0;
+      # dynamic_background_opacity = true;
+      enable_audio_bell = false;
+      # mouse_hide_wait = "-1.0";
+      # window_padding_width = 10;
+      # background_opacity = "0.5";
+      # background_blur = 5;
+      symbol_map = let
+        mappings = [
+          "U+4E00-U+9FFF"
+          "U+3400-U+4DBF"
+          # "U+23FB-U+23FE"
+          # "U+2B58"
+          # "U+E200-U+E2A9"
+          # "U+E0A0-U+E0A3"
+          # "U+E0B0-U+E0BF"
+          # "U+E0C0-U+E0C8"
+          # "U+E0CC-U+E0CF"
+          # "U+E0D0-U+E0D2"
+          # "U+E0D4"
+          # "U+E700-U+E7C5"
+          # "U+F000-U+F2E0"
+          # "U+2665"
+          # "U+26A1"
+          # "U+F400-U+F4A8"
+          # "U+F67C"
+          # "U+E000-U+E00A"
+          # "U+F300-U+F313"
+          # "U+E5FA-U+E62B"
+        ];
+      in
+        (builtins.concatStringsSep "," mappings) + " Noto Sans CJK SC";
+      # (builtins.concatStringsSep "," mappings) + " Symbols Nerd Font";
+    };
+  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -310,4 +308,3 @@ programs.kitty = pkgs.lib.mkForce {
   # changes in each release.
   home.stateVersion = "25.05";
 }
-

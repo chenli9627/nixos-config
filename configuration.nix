@@ -1,15 +1,17 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-{ config, lib, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      # <home-manager/nixos>
-    ];
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    # <home-manager/nixos>
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -17,22 +19,22 @@
   boot.loader.systemd-boot.configurationLimit = 10;
   # boot.loader.grub.configurationLimit = 10;
   boot.loader.efi.canTouchEfiVariables = true;
-#  boot.loader = {
-#    grub = {
-#      enable = true;
-#      device = "nixos";
-#     efiSupport = true;
-#    };
-#    efi = {
-#    canTouchEfiVariables = true;
-#	efiSysMountPoint = "/boot";
-#};	
-#};
+  #  boot.loader = {
+  #    grub = {
+  #      enable = true;
+  #      device = "nixos";
+  #     efiSupport = true;
+  #    };
+  #    efi = {
+  #    canTouchEfiVariables = true;
+  #	efiSysMountPoint = "/boot";
+  #};
+  #};
 
   networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
@@ -44,26 +46,25 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
-   i18n.defaultLocale = "en_US.UTF-8";
-i18n.supportedLocales =
-[ "zh_CN.UTF-8/UTF-8" "en_US.UTF-8/UTF-8"  ];
+  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.supportedLocales = ["zh_CN.UTF-8/UTF-8" "en_US.UTF-8/UTF-8"];
   # console = {
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
-	i18n.inputMethod = {
-	  enable = true;
-	  type = "fcitx5";
-	  fcitx5.addons = with pkgs; [ fcitx5-lua fcitx5-configtool fcitx5-chinese-addons fcitx5-gtk ];
-	  fcitx5.waylandFrontend = true;
-	};
+  i18n.inputMethod = {
+    enable = true;
+    type = "fcitx5";
+    fcitx5.addons = with pkgs; [fcitx5-lua fcitx5-configtool fcitx5-chinese-addons fcitx5-gtk];
+    fcitx5.waylandFrontend = true;
+  };
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  
-environment.variables.EDITOR = "vim";
+
+  environment.variables.EDITOR = "vim";
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -86,58 +87,57 @@ environment.variables.EDITOR = "vim";
   users.users.chen = {
     isNormalUser = true;
     shell = pkgs.fish;
-    extraGroups = [ "wheel" "docker" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "docker" "networkmanager"]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];
   };
 
-nixpkgs.config.allowUnfree = true;
-#   programs.firefox.enable = true;
-programs.clash-verge.enable = true;
-programs.clash-verge.autoStart = true;
-programs.fish.enable = true;
-# programs.zoxide.enable
-	#    programs = {
-	# firefox.enable = true;
-	# nix-ld.enable = true;
-	# clash-verge.enable = true;
-	# clash-verge.autoStart = true;
-	# fish.enable = true;
-	# zoxide.enable = true;
-	# zoxide.enableFishIntegration = true;
-	# yazi.enable = true;
-	#    };
+  nixpkgs.config.allowUnfree = true;
+  #   programs.firefox.enable = true;
+  programs.clash-verge.enable = true;
+  programs.clash-verge.autoStart = true;
+  programs.fish.enable = true;
+  # programs.zoxide.enable
+  #    programs = {
+  # firefox.enable = true;
+  # nix-ld.enable = true;
+  # clash-verge.enable = true;
+  # clash-verge.autoStart = true;
+  # fish.enable = true;
+  # zoxide.enable = true;
+  # zoxide.enableFishIntegration = true;
+  # yazi.enable = true;
+  #    };
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
-fonts.packages = with pkgs; [
-	  noto-fonts
-	  noto-fonts-cjk-sans
-   noto-fonts-cjk-serif
-	  noto-fonts-emoji
-	  liberation_ttf
-	  fira-code
-	  fira-code-symbols
-	  nerd-fonts.caskaydia-mono
-	];
-
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
+    noto-fonts-emoji
+    liberation_ttf
+    fira-code
+    fira-code-symbols
+    nerd-fonts.caskaydia-mono
+  ];
 
   environment.systemPackages = with pkgs; [
-	      # wl-clipboard
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    # wl-clipboard
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     neovim
-# kitty
-fish
+    # kitty
+    fish
     wget
-#     gnomeExtensions.just-perfection
-# 	gnomeExtensions.appindicator
-# gnomeExtensions.kimpanel
+    #     gnomeExtensions.just-perfection
+    # 	gnomeExtensions.appindicator
+    # gnomeExtensions.kimpanel
     git
     gcc
     # llvm
     # clang
     clash-verge-rev
-# gnome-tweaks
+    # gnome-tweaks
     # albert
     # btop
     # scala
@@ -175,23 +175,23 @@ fish
     # cherry-studio
     # localsend
     # vscode-extensions.shd101wyy.markdown-preview-enhanced
-   ];
+  ];
 
-virtualisation.docker = {
-  storageDriver = "btrfs";
-  enable = true;
-  rootless = {
+  virtualisation.docker = {
+    storageDriver = "btrfs";
     enable = true;
-    setSocketVariable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+    daemon.settings.registry-mirrors = ["https://docker.m.daocloud.io"];
   };
-  daemon.settings.registry-mirrors = [ "https://docker.m.daocloud.io" ];
-};
-environment.variables = {
-    GTK_IM_MODULE="fcitx";
-    QT_IM_MODULE="fcitx";
-    XMODIFIERS="@im=fcitx";
+  environment.variables = {
+    GTK_IM_MODULE = "fcitx";
+    QT_IM_MODULE = "fcitx";
+    XMODIFIERS = "@im=fcitx";
     # SDL_IM_MODULE=fcitx;
-    GLFW_IM_MODULE="ibus";
+    GLFW_IM_MODULE = "ibus";
   };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -199,7 +199,7 @@ environment.variables = {
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
-   };
+  };
 
   # List services that you want to enable:
 
@@ -234,8 +234,7 @@ environment.variables = {
   # and migrated your data accordingly.
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  nix.settings.substituters = [ "https://mirrors.ustc.edu.cn/nix-channels/store" ]; 
+  nix.settings.substituters = ["https://mirrors.ustc.edu.cn/nix-channels/store"];
   system.stateVersion = "25.05"; # Did you read the comment?
   nix.settings.experimental-features = "nix-command flakes";
 }
-

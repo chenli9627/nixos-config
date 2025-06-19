@@ -12,7 +12,7 @@
       # the `inputs.nixpkgs` of the current flake,
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
-  };
+    };
   };
 
   # outputs = { self, nixpkgs, ... }@inputs: {
@@ -26,7 +26,12 @@
   #     ];
   #   };
   # };
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  }: {
     nixosConfigurations = {
       # 这里的 my-nixos 替换成你的主机名称
       nixos = nixpkgs.lib.nixosSystem {
@@ -44,7 +49,7 @@
             # 这里的 ryan 也得替换成你的用户名
             # 这里的 import 函数在前面 Nix 语法中介绍过了，不再赘述
             # home-manager.users.chen = import ./home.nix;
-            home-manager.users.chen =  ./home.nix;
+            home-manager.users.chen = ./home.nix;
 
             # 使用 home-manager.extraSpecialArgs 自定义传递给 ./home.nix 的参数
             # # 取消注释下面这一行，就可以在 home.nix 中使用 flake 的所有 inputs 参数了
