@@ -44,11 +44,13 @@
     nodejs_22
     pnpm
 
-    # Gui Apps
+    # gui Apps
+    ventoy
     albert
     strawberry
     wpsoffice-cn
     google-chrome
+    zathura
     goldendict-ng
     localsend
     cherry-studio
@@ -171,12 +173,19 @@
     firefox.enable = true;
     # clash-verge.enable = true;
     # clash-verge.autoStart = true;
+    
     fish.enable = true;
     zoxide.enable = true;
     zoxide.enableFishIntegration = true;
     yazi.enable = true;
     yazi.enableFishIntegration = true;
     yazi.shellWrapperName = "y";
+    zathura.enable = true;
+    zathura.mappings = {
+      "<Right>" = "navigate next";
+      D = "toggle_page_mode";
+      "[fullscreen] <C-i>" = "zoom in";
+    };
   };
   programs.vscode = {
     enable = true;
@@ -204,6 +213,9 @@
       userSettings = {
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
         "workbench.colorTheme" = "GitHub Light";
+	"extensions.experimental.affinity" = {
+	  "asvetliakov.vscode-neovim": 1;
+	};
       };
     };
   };
