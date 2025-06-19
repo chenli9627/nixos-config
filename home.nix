@@ -45,7 +45,6 @@
     pnpm
 
     # gui Apps
-    ventoy
     albert
     strawberry
     wpsoffice-cn
