@@ -247,15 +247,13 @@
   programs.vscode = {
   enable = true;
   profiles.default.extensions = with pkgs.vscode-extensions; [
-    # dracula-theme.theme-dracula
-    # vscodevim.vim
     yzhang.markdown-all-in-one
+    golang.go
     github.github-vscode-theme
     jnoortheen.nix-ide
     vscodevim.vim
     ms-python.python
     ms-python.debugpy
-    # brettm12345.nixfmt-vscode
     kamadorueda.alejandra
   ];
 };
