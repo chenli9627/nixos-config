@@ -261,9 +261,11 @@
 };
 programs.kitty = pkgs.lib.mkForce {
   enable = true;
+  themeFile = "Github_Light.conf";
+  kitty.shellIntegration.enableFishIntegration = true;
   settings = {
     font_family = "CaskaydiaMono Nerd Font Mono";
-    include = "current-theme.conf";
+    # include = "current-theme.conf";
     # confirm_os_window_close = 0;
     # dynamic_background_opacity = true;
     enable_audio_bell = false;
