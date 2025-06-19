@@ -214,7 +214,7 @@
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
         "workbench.colorTheme" = "GitHub Light";
 	"extensions.experimental.affinity" = {
-	  "asvetliakov.vscode-neovim": 1;
+	  "asvetliakov.vscode-neovim" = 1;
 	};
       };
     };
