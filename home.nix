@@ -240,6 +240,7 @@
     zoxide.enableFishIntegration = true;
     yazi.enable = true;
     yazi.enableFishIntegration = true;
+    yazi.shellWrapperName = "y";
   };
   # programs.zoxide.enable = true;
   # programs.zoxide.enableFishIntegration= true;
