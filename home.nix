@@ -33,6 +33,7 @@
   # 建议将所有 GUI 软件，以及与 OS 关系不大的 CLI 软件，都通过 home.packages 安装
   home.packages = with pkgs;[
 
+
     # nix
     nixd
     nil
@@ -123,6 +124,8 @@
     mermaid-cli
     yazi
     zoxide
+    dysk
+    tealdeer
     
 
     # networking tools

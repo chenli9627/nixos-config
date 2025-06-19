@@ -1,5 +1,5 @@
 {
-  description = "A simple NixOS flake";
+  # description = "A simple NixOS flake";
 
   inputs = {
     # NixOS 官方软件源，这里使用 nixos-25.05 分支
