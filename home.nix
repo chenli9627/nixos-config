@@ -180,7 +180,7 @@
   };
   programs.vscode = {
     enable = true;
-    mutableExtensionsDi = false;
+    mutableExtensionsDir = false;
     profiles.default.extensions = with pkgs.vscode-extensions; [
       yzhang.markdown-all-in-one
       golang.go
