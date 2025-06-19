@@ -10,7 +10,6 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    # <home-manager/nixos>
   ];
 
   # Use the systemd-boot EFI boot loader.
@@ -94,21 +93,9 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-  #   programs.firefox.enable = true;
   programs.clash-verge.enable = true;
   programs.clash-verge.autoStart = true;
   programs.fish.enable = true;
-  # programs.zoxide.enable
-  #    programs = {
-  # firefox.enable = true;
-  # nix-ld.enable = true;
-  # clash-verge.enable = true;
-  # clash-verge.autoStart = true;
-  # fish.enable = true;
-  # zoxide.enable = true;
-  # zoxide.enableFishIntegration = true;
-  # yazi.enable = true;
-  #    };
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   fonts.packages = with pkgs; [
@@ -123,59 +110,17 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # wl-clipboard
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     neovim
-    # kitty
     fish
     tree
     wget
-    #     gnomeExtensions.just-perfection
-    # 	gnomeExtensions.appindicator
-    # gnomeExtensions.kimpanel
     git
     gcc
-    # llvm
-    # clang
-    clash-verge-rev
-    # gnome-tweaks
-    # albert
-    # btop
-    # scala
-    # scala-cli
-    # metals
-    # sbt
-    # wpsoffice-cn
-    # google-chrome
-    # nodejs_22
+    # clash-verge-rev
     curl
     wget
-    # strawberry
-    # ruby-lsp
-    # ruby
-    # pnpm
-    # rustup
-    # go
-    # python3Full
-    # lua
-    # luarocks
-    # fzf
-    # ripgrep
-    # fd
-    # lazygit
-    # unzip
-    # zulu
-    # ghostscript
-    # mermaid-cli
     sqlite
-    # vscode
-    # yazi
-    # zoxide
-    # lazydocker
-    # goldendict-ng
-    # cherry-studio
-    # localsend
-    # vscode-extensions.shd101wyy.markdown-preview-enhanced
   ];
 
   virtualisation.docker = {

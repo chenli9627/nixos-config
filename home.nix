@@ -3,35 +3,12 @@
   pkgs,
   ...
 }: {
-  # 注意修改这里的用户名与用户目录
   home.username = "chen";
   home.homeDirectory = "/home/chen";
 
-  # 直接将当前文件夹的配置文件，链接到 Home 目录下的指定位置
-  # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
-
-  # 递归将某个文件夹中的文件，链接到 Home 目录下的指定位置
-  # home.file.".config/i3/scripts" = {
-  #   source = ./scripts;
-  #   recursive = true;   # 递归整个文件夹
-  #   executable = true;  # 将其中所有文件添加「执行」权限
-  # };
-
-  # 直接以 text 的方式，在 nix 配置文件中硬编码文件内容
-  # home.file.".xxx".text = ''
-  #     xxx
-  # '';
-
-  # 设置鼠标指针大小以及字体 DPI（适用于 4K 显示器）
-  # xresources.properties = {
-  #   "Xcursor.size" = 16;
-  #   "Xft.dpi" = 172;
-  # };
-
-  # 通过 home.packages 安装一些常用的软件
-  # 这些软件将仅在当前用户下可用，不会影响系统级别的配置
-  # 建议将所有 GUI 软件，以及与 OS 关系不大的 CLI 软件，都通过 home.packages 安装
   home.packages = with pkgs; [
+    # typeset
+    pandoc
     typst
     typstyle
 
@@ -76,6 +53,7 @@
     localsend
     cherry-studio
     calibre
+    clash-verge-rev
 
     # scala
     scala
@@ -100,7 +78,6 @@
     # terminal
     kitty
 
-    # 如下是我常用的一些命令行工具，你可以根据自己的需要进行增删
     neofetch
     fastfetch
     # nnn # terminal file manager
@@ -189,52 +166,14 @@
   };
   programs.lazygit.enable = true;
 
-  # 启用 starship，这是一个漂亮的 shell 提示符
-  # programs.starship = {
-  #   enable = true;
-  #   # 自定义配置
-  #   settings = {
-  #     add_newline = false;
-  #     aws.disabled = true;
-  #     gcloud.disabled = true;
-  #     line_break.disabled = true;
-  #   };
-  # };
-
-  # alacritty - 一个跨平台终端，带 GPU 加速功能
-  # programs.alacritty = {
-  #   enable = true;
-  #   # 自定义配置
-  #   settings = {
-  #     env.TERM = "xterm-256color";
-  #     font = {
-  #       size = 12;
-  #       draw_bold_text_with_bright_colors = true;
-  #     };
-  #     scrolling.multiplier = 5;
-  #     selection.save_to_clipboard = true;
-  #   };
-  # };
-
   programs = {
     bash = {
       enable = true;
       enableCompletion = true;
-      # TODO 在这里添加你的自定义 bashrc 内容
-      # bashrcExtra = ''
-      #   export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-      # '';
-
-      # TODO 设置一些别名方便使用，你可以根据自己的需要进行增删
-      # shellAliases = {
-      #   k = "kubectl";
-      #   urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
-      #   urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
-      # };
     };
     firefox.enable = true;
-    # clash-verge.enable = true;
-    # clash-verge.autoStart = true;
+    clash-verge.enable = true;
+    clash-verge.autoStart = true;
     fish.enable = true;
     zoxide.enable = true;
     zoxide.enableFishIntegration = true;
@@ -242,8 +181,6 @@
     yazi.enableFishIntegration = true;
     yazi.shellWrapperName = "y";
   };
-  # programs.zoxide.enable = true;
-  # programs.zoxide.enableFishIntegration= true;
   programs.vscode = {
     enable = true;
     profiles.default.extensions = with pkgs.vscode-extensions; [
@@ -270,40 +207,14 @@
     shellIntegration.enableFishIntegration = true;
     settings = {
       font_family = "CaskaydiaMono Nerd Font Mono";
-      # include = "current-theme.conf";
-      # confirm_os_window_close = 0;
-      # dynamic_background_opacity = true;
       enable_audio_bell = false;
-      # mouse_hide_wait = "-1.0";
-      # window_padding_width = 10;
-      # background_opacity = "0.5";
-      # background_blur = 5;
       symbol_map = let
         mappings = [
           "U+4E00-U+9FFF"
           "U+3400-U+4DBF"
-          # "U+23FB-U+23FE"
-          # "U+2B58"
-          # "U+E200-U+E2A9"
-          # "U+E0A0-U+E0A3"
-          # "U+E0B0-U+E0BF"
-          # "U+E0C0-U+E0C8"
-          # "U+E0CC-U+E0CF"
-          # "U+E0D0-U+E0D2"
-          # "U+E0D4"
-          # "U+E700-U+E7C5"
-          # "U+F000-U+F2E0"
-          # "U+2665"
-          # "U+26A1"
-          # "U+F400-U+F4A8"
-          # "U+F67C"
-          # "U+E000-U+E00A"
-          # "U+F300-U+F313"
-          # "U+E5FA-U+E62B"
         ];
       in
         (builtins.concatStringsSep "," mappings) + " Noto Sans CJK SC";
-      # (builtins.concatStringsSep "," mappings) + " Symbols Nerd Font";
     };
   };
 
