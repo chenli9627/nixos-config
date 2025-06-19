@@ -203,6 +203,7 @@
       ];
       userSettings = {
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
+        "workbench.colorTheme" = "GitHub Light";
       };
     };
   };
