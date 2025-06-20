@@ -150,7 +150,7 @@
     };
     virtualbox = {
       host.enable = true;
-      enableExtensionPack = true;
+      host.enableExtensionPack = true;
       guest.enable = true;
       guest.dragAndDrop = true;
     };
