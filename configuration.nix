@@ -150,14 +150,15 @@
     };
     virtualbox = {
       host.enable = true;
-      host.enableExtensionPack = true;
+      # do not set this to true avoiding recompiling virtualbox
+      # host.enableExtensionPack = true;
       guest.enable = true;
       guest.dragAndDrop = true;
     };
   };
   # virtualisation.virtualbox.host.enable = true;
   # virtualisation.virtualbox.host.enableExtensionPack = true;
-  # users.extraGroups.vboxusers.members = ["user-with-access-to-virtualbox"];
+  users.extraGroups.vboxusers.members = ["chen"];
   /*
     virtualisation.docker = {
     storageDriver = "btrfs";
@@ -218,6 +219,7 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   nix.settings.substituters = ["https://mirrors.ustc.edu.cn/nix-channels/store"];
+  nix.settings.trusted-users = ["chen"];
   system.stateVersion = "25.05"; # Did you read the comment?
   nix.settings.experimental-features = "nix-command flakes";
 }
