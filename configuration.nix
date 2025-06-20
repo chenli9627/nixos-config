@@ -152,7 +152,8 @@
       host.enable = true;
       # do not set this to true avoiding recompiling virtualbox
       # host.enableExtensionPack = true;
-      guest.enable = true;
+      # it makes rebuild too slow
+      # guest.enable = true;
       guest.dragAndDrop = true;
     };
   };
