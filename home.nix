@@ -7,44 +7,25 @@
   home.homeDirectory = "/home/chen";
 
   home.packages = with pkgs; [
-    # typeset
+    mycli
+    gcc
     pandoc
     typst
     typstyle
-
-    # nix
     nixd
     nil
-
-    # dev tools
     vscode
     jetbrains.idea-community-bin
-
-    # java
     zulu
-
-    # lua
     lua
     luarocks
-
-    # python
     python3Full
-
-    # go
     go
-
-    # rust
     rustup
-
-    # ruby
     ruby
     ruby-lsp
-
-    # node
     nodejs_22
     pnpm
-
-    # gui Apps
     albert
     strawberry
     wpsoffice-cn
@@ -54,44 +35,28 @@
     localsend
     cherry-studio
     calibre
-    # clash-verge-rev
-
-    # scala
     scala
     scala-cli
     sbt
     metals
-
-    # C/C++
     clang
     llvm
-
-    # Gnome things
     wl-clipboard
     gnome-tweaks
     gnomeExtensions.just-perfection
     gnomeExtensions.appindicator
     gnomeExtensions.kimpanel
-
-    # terminal
     kitty
-
     neofetch
     fastfetch
-    # nnn # terminal file manager
-
-    # archives
     zip
     xz
     unzip
     unrar
     p7zip
-
-    # utils
     ripgrep # recursively searches directories for a regex pattern
     jq # A lightweight and flexible command-line JSON processor
     yq-go # yaml processor https://github.com/mikefarah/yq
-    eza # A modern replacement for ‘ls’
     fzf # A command-line fuzzy finder
     fd
     lazygit
@@ -102,19 +67,10 @@
     zoxide
     dysk
     tealdeer
-
-    # networking tools
-    mtr # A network diagnostic tool
     iperf3
-    dnsutils # `dig` + `nslookup`
-    ldns # replacement of `dig`, it provide the command `drill`
     aria2 # A lightweight multi-protocol & multi-source command-line download utility
     socat # replacement of openbsd-netcat
     nmap # A utility for network discovery and security auditing
-    ipcalc # it is a calculator for the IPv4/v6 addresses
-
-    # misc
-    cowsay
     file
     which
     tree
@@ -124,35 +80,21 @@
     zstd
     gnupg
     trashy
-
-    # nix related
-    #
-    # it provides the command `nom` works just like `nix`
-    # with more details log output
     nix-output-monitor
-
-    # productivity
-    hugo # static site generator
     glow # markdown previewer in terminal
-
     btop # replacement of htop/nmon
     htop
     iotop # io monitoring
     iftop # network monitoring
     nvtopPackages.amd
-
-    # system call monitoring
     strace # system call monitoring
     ltrace # library call monitoring
     lsof # list open files
-
-    # system tools
     sysstat
     lm_sensors # for `sensors` command
     ethtool
     pciutils # lspci
     usbutils # lsusb
-    ncpamixer
     pavucontrol
   ];
 
@@ -172,7 +114,7 @@
     firefox.enable = true;
     # clash-verge.enable = true;
     # clash-verge.autoStart = true;
-    
+
     fish.enable = true;
     zoxide.enable = true;
     zoxide.enableFishIntegration = true;
@@ -212,9 +154,10 @@
       userSettings = {
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
         "workbench.colorTheme" = "GitHub Light";
-	"extensions.experimental.affinity" = {
-	  "asvetliakov.vscode-neovim" = 1;
-	};
+        "explorer.confirmDragAndDrop" = false;
+        "extensions.experimental.affinity" = {
+          "asvetliakov.vscode-neovim" = 1;
+        };
       };
     };
   };

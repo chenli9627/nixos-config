@@ -13,11 +13,18 @@
   ];
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
+  # boot.loader.systemd-boot.enable = true;
   # do not need to keep too much generations
-  boot.loader.systemd-boot.configurationLimit = 10;
+  # boot.loader.systemd-boot.configurationLimit = 10;
   # boot.loader.grub.configurationLimit = 10;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    efi.canTouchEfiVariables = true;
+    systemd-boot = {
+      enable = true;
+      configurationLimit = 10;
+    };
+  };
   #  boot.loader = {
   #    grub = {
   #      enable = true;
@@ -62,7 +69,7 @@
   services.xserver.enable = true;
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  environment.gnome.excludePackages = with pkgs; [baobab orca gnome-usage gnome-music simple-scan gnome-weather decibels yelp gnome-maps gnome-tour gnome-secrets gnome-system-monitor gnome-logs gnome-tecla];
+  environment.gnome.excludePackages = with pkgs; [totem baobab orca gnome-usage gnome-music simple-scan gnome-weather decibels yelp gnome-maps gnome-tour gnome-secrets gnome-system-monitor gnome-logs gnome-tecla gnome-contacts];
 
   environment.variables.EDITOR = "vim";
   # Configure keymap in X11
@@ -70,7 +77,7 @@
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
 
   # Enable CUPS to print documents.
-  # services.printing.enable = true;
+  services.printing.enable = true;
 
   # Enable sound.
   # services.pulseaudio.enable = true;
@@ -87,7 +94,7 @@
   users.users.chen = {
     isNormalUser = true;
     shell = pkgs.fish;
-    extraGroups = ["wheel" "docker" "networkmanager"]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel" "docker" "networkmanager" "vboxusers"]; # Enable ‘sudo’ for the user.
     # packages = with pkgs; [
     #   tree
     # ];
@@ -104,11 +111,18 @@
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
     noto-fonts-emoji
+    noto-fonts-color-emoji
     liberation_ttf
     fira-code
     fira-code-symbols
     nerd-fonts.caskaydia-mono
   ];
+  # fontconfig.defaultFonts = {
+  #     serif = ["Noto Serif" "Noto Color Emoji"];
+  #     sansSerif = ["Noto Sans" "Noto Color Emoji"];
+  #     monospace = ["JetBrainsMono Nerd Font" "Noto Color Emoji"];
+  #     emoji = ["Noto Color Emoji"];
+  # };
 
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
@@ -117,14 +131,35 @@
     tree
     wget
     git
-    gcc
+    # gcc
     clash-verge-rev
     curl
     wget
     sqlite
   ];
 
-  virtualisation.docker = {
+  virtuallisation = {
+    docker = {
+      storageDriver = "btrfs";
+      enable = true;
+      rootless = {
+        enable = true;
+        setSocketVariable = true;
+      };
+      daemon.settings.registry-mirrors = ["https://docker.m.daocloud.io"];
+    };
+    virtualbox = {
+      host.enable = true;
+      enableExtensionPack = true;
+      guest.enable = true;
+      guest.dragAndDrop = true;
+    };
+  };
+  # virtualisation.virtualbox.host.enable = true;
+  # virtualisation.virtualbox.host.enableExtensionPack = true;
+  # users.extraGroups.vboxusers.members = ["user-with-access-to-virtualbox"];
+  /*
+    virtualisation.docker = {
     storageDriver = "btrfs";
     enable = true;
     rootless = {
@@ -133,6 +168,7 @@
     };
     daemon.settings.registry-mirrors = ["https://docker.m.daocloud.io"];
   };
+  */
   environment.variables = {
     GTK_IM_MODULE = "fcitx";
     QT_IM_MODULE = "fcitx";
