@@ -138,7 +138,7 @@
     sqlite
   ];
 
-  virtuallisation = {
+  virtualisation = {
     docker = {
       storageDriver = "btrfs";
       enable = true;
