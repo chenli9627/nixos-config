@@ -39,7 +39,7 @@
     scala-cli
     sbt
     metals
-    clang
+    # clang
     llvm
     wl-clipboard
     gnome-tweaks
