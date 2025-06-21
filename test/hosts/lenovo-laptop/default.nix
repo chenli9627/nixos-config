@@ -67,12 +67,12 @@
   #   keyMap = "us";
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
-  i18n.inputMethod = {
-    enable = true;
-    type = "fcitx5";
-    fcitx5.addons = with pkgs; [fcitx5-lua fcitx5-configtool fcitx5-chinese-addons fcitx5-gtk];
-    fcitx5.waylandFrontend = true;
-  };
+  #  i18n.inputMethod = {
+  #    enable = true;
+  #    type = "fcitx5";
+  #    fcitx5.addons = with pkgs; [fcitx5-lua fcitx5-configtool fcitx5-chinese-addons fcitx5-gtk];
+  #    fcitx5.waylandFrontend = true;
+  #  };
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
   # services.xserver.displayManager.gdm.enable = true;
