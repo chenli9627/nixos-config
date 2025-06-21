@@ -1,5 +1,5 @@
 {
-  config,
+  # config,
   pkgs,
   ...
 }: {
@@ -7,7 +7,6 @@
   home.homeDirectory = "/home/chen";
 
   home.packages = with pkgs; [
-  alejandra
     mycli
     gcc
     pandoc
