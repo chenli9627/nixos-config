@@ -19,6 +19,7 @@
         specialArgs = {inherit username;};
       in
         nixpkgs.lib.nixosSystem {
+          inherit specialArgs;
           system = "x86_64-linux";
           modules = [
             # ./configuration.nix
