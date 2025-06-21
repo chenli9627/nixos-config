@@ -18,24 +18,25 @@
   # boot.loader.systemd-boot.configurationLimit = 10;
   # boot.loader.grub.configurationLimit = 10;
   # boot.loader.efi.canTouchEfiVariables = true;
+  # boot.loader = {
+  #   efi.canTouchEfiVariables = true;
+  #   systemd-boot = {
+  #     enable = true;
+  #    configurationLimit = 10;
+  #  };
+  #};
   boot.loader = {
-    efi.canTouchEfiVariables = true;
-    systemd-boot = {
+    grub = {
       enable = true;
-      configurationLimit = 10;
+      device = "nixos";
+      efiSupport = true;
+      useOSProber = true;
+    };
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot";
     };
   };
-  #  boot.loader = {
-  #    grub = {
-  #      enable = true;
-  #      device = "nixos";
-  #     efiSupport = true;
-  #    };
-  #    efi = {
-  #    canTouchEfiVariables = true;
-  #	efiSysMountPoint = "/boot";
-  #};
-  #};
 
   networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
