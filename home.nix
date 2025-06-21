@@ -114,7 +114,17 @@
     firefox.enable = true;
     # clash-verge.enable = true;
     # clash-verge.autoStart = true;
-
+    obs-studio = {
+      enable = true;
+      plugins = with pkgs.obs-studio-plugins; [
+        wlrobs
+        obs-backgroundremoval
+        obs-pipewire-audio-capture
+        obs-vaapi #optional AMD hardware acceleration
+        obs-gstreamer
+        obs-vkcapture
+      ];
+    };
     fish.enable = true;
     zoxide.enable = true;
     zoxide.enableFishIntegration = true;
