@@ -26,10 +26,12 @@
   #  };
   #};
   boot.loader = {
+    systemd-boot.enable = false;
     grub = {
       enable = true;
       # device = "nixos";
-      device = "/dev/disk/by-uuid/7D6C-950A";
+      # device = "/dev/disk/by-uuid/7D6C-950A";
+      device = "nodev";
       efiSupport = true;
       useOSProber = true;
     };
