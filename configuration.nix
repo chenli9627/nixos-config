@@ -31,7 +31,8 @@
       enable = true;
       # device = "nixos";
       # device = "/dev/disk/by-uuid/7D6C-950A";
-      device = "nodev";
+      # device = "nodev";
+      device = "/dev/nvme0n1p1";
       efiSupport = true;
       useOSProber = true;
     };
