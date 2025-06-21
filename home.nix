@@ -168,6 +168,7 @@
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
         "workbench.colorTheme" = "GitHub Light";
         "explorer.confirmDragAndDrop" = false;
+        "nix.formatterPath" = "alejandra";
         "extensions.experimental.affinity" = {
           "asvetliakov.vscode-neovim" = 1;
         };
