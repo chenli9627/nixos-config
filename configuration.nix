@@ -22,8 +22,9 @@
     efi.canTouchEfiVariables = true;
     systemd-boot = {
       enable = true;
-     configurationLimit = 10;
-   };
+      consoleMode = "auto";
+      configurationLimit = 10;
+    };
   };
   # boot.loader = {
   #   systemd-boot.enable = false;
@@ -193,7 +194,15 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  # services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    settings = {
+      PasswordAuthentication = true;
+      PermitRootLogin = "yes";
+      allowSFTP = true;
+    };
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
