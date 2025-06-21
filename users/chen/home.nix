@@ -9,7 +9,7 @@
   imports = [
     ../../home/core.nix
 
-    ../../home/fcitx5
+    # ../../home/fcitx5
     # ../../home/gnome
     # ../../home/neovim
     ../../home/programs
