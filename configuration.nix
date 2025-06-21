@@ -28,7 +28,8 @@
   boot.loader = {
     grub = {
       enable = true;
-      device = "nixos";
+      # device = "nixos";
+      device = "/dev/disk/by-uuid/7D6C-950A";
       efiSupport = true;
       useOSProber = true;
     };
