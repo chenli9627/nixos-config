@@ -112,6 +112,7 @@
       enableCompletion = true;
     };
     firefox.enable = true;
+    mpv.enable = true;
     # clash-verge.enable = true;
     # clash-verge.autoStart = true;
     obs-studio = {
