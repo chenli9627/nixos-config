@@ -31,8 +31,8 @@
               home-manager.useUserPackages = true;
 
               # home-manager.users.chen = ./home.nix;
-              # home-manager.users.${username} = import ./users/${username}/home.nix;
-              home-manager.users.username = import ./users/username/home.nix;
+              home-manager.users.${username} = import ./users/${username}/home.nix;
+              # home-manager.users.username = import ./users/username/home.nix;
 
               # 取消注释下面这一行，就可以在 home.nix 中使用 flake 的所有 inputs 参数了
               home-manager.extraSpecialArgs = inputs // specialArgs;
