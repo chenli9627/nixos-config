@@ -198,6 +198,7 @@
   services.openssh = {
     enable = true;
     allowSFTP = true;
+    startWhenNeeded = true;
     settings = {
       PasswordAuthentication = true;
       PermitRootLogin = "yes";
