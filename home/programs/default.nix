@@ -9,6 +9,7 @@
     ./obs.nix
     ./bash.nix
     ./zathura.nix
+    ./direnv.nix
     ./neovim
   ];
 }
