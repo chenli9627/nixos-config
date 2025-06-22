@@ -12,7 +12,11 @@
   };
   home.packages = with pkgs; [
     mycli
+    tree-sitter
     gcc
+    lua-language-server
+    sqlite
+    gopls
     pandoc
     typst
     typstyle
@@ -22,6 +26,7 @@
     jetbrains.idea-community-bin
     zulu
     lua
+    luajit
     luarocks
     python3Full
     go
