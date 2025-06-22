@@ -108,13 +108,6 @@
     clash-verge.enable = true;
     clash-verge.autoStart = true;
     fish.enable = true;
-    nix-ld = {
-      enable = true;
-      libraries = with pkgs; [
-        stdenv.cc.cc
-        openssl
-      ];
-    };
   };
   virtualisation = {
     docker = {

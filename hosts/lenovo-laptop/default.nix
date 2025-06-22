@@ -10,17 +10,12 @@
   imports = [
     ../../modules/system.nix
     ../../modules/gnome.nix
+    ../../modules/nix-ld.nix
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ];
 
-  # Use the systemd-boot EFI boot loader.
-  # boot.loader.systemd-boot.enable = true;
-  # do not need to keep too much generations
-  # boot.loader.systemd-boot.configurationLimit = 10;
-  # boot.loader.grub.configurationLimit = 10;
-  # boot.loader.efi.canTouchEfiVariables = true;
   boot.loader = {
     efi.canTouchEfiVariables = true;
     systemd-boot = {
