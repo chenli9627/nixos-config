@@ -5,5 +5,6 @@
     ./kitty.nix
     ./vscode.nix
     ./fcitx5.nix
+    ./fish.nix
   ];
 }

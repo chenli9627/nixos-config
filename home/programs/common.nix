@@ -5,7 +5,7 @@
     firefox.enable = true;
     lazygit.enable = true;
     mpv.enable = true;
-    fish.enable = true;
+    # fish.enable = true;
     zoxide.enable = true;
     zoxide.enableFishIntegration = true;
     yazi.enable = true;
