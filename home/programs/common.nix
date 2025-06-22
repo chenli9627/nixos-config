@@ -1,38 +1,14 @@
 {pkgs, ...}: {
-  # programs.lazygit.enable = true;
   programs = {
     # nix-ld.enable = true;
     firefox.enable = true;
     lazygit.enable = true;
     mpv.enable = true;
-    # fish.enable = true;
     zoxide.enable = true;
     zoxide.enableFishIntegration = true;
     yazi.enable = true;
     yazi.enableFishIntegration = true;
     yazi.shellWrapperName = "y";
-
-    zathura.enable = true;
-    zathura.mappings = {
-      "<Right>" = "navigate next";
-      D = "toggle_page_mode";
-      "[fullscreen] <C-i>" = "zoom in";
-    };
-    bash = {
-      enable = true;
-      enableCompletion = true;
-    };
-    obs-studio = {
-      enable = true;
-      plugins = with pkgs.obs-studio-plugins; [
-        wlrobs
-        obs-backgroundremoval
-        obs-pipewire-audio-capture
-        obs-vaapi #optional AMD hardware acceleration
-        obs-gstreamer
-        obs-vkcapture
-      ];
-    };
   };
   home.packages = with pkgs; [
     mycli

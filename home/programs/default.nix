@@ -6,5 +6,8 @@
     ./vscode.nix
     ./fcitx5.nix
     ./fish.nix
+    ./obs.nix
+    ./bash.nix
+    ./zathura.nix
   ];
 }
