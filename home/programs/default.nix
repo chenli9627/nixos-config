@@ -9,5 +9,6 @@
     ./obs.nix
     ./bash.nix
     ./zathura.nix
+    ./neovim
   ];
 }
