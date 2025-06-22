@@ -102,4 +102,53 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
+
+  environment.variables.EDITOR = "nvim";
+  programs = {
+    clash-verge.enable = true;
+    clash-verge.autoStart = true;
+    fish.enable = true;
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        stdenv.cc.cc
+        openssl
+      ];
+    };
+  };
+  virtualisation = {
+    docker = {
+      storageDriver = "btrfs";
+      enable = true;
+      rootless = {
+        enable = true;
+        setSocketVariable = true;
+      };
+      daemon.settings.registry-mirrors = ["https://docker.m.daocloud.io"];
+    };
+    virtualbox = {
+      host.enable = true;
+      # do not set this to true avoiding recompiling virtualbox
+      # host.enableExtensionPack = true;
+      # it makes rebuild too slow
+      # guest.enable = true;
+      guest.dragAndDrop = true;
+    };
+  };
+  environment.variables = {
+    GTK_IM_MODULE = "fcitx";
+    QT_IM_MODULE = "fcitx";
+    XMODIFIERS = "@im=fcitx";
+    # SDL_IM_MODULE=fcitx;
+    GLFW_IM_MODULE = "ibus";
+  };
+  # Some programs need SUID wrappers, can be configured further or are
+  # started in user sessions.
+  programs.mtr.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
+
+  system.stateVersion = "25.05"; # Did you read the comment?
 }

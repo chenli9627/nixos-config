@@ -79,7 +79,7 @@
   # services.xserver.desktopManager.gnome.enable = true;
   # environment.gnome.excludePackages = with pkgs; [totem baobab orca gnome-usage gnome-music simple-scan gnome-weather decibels yelp gnome-maps gnome-tour gnome-secrets gnome-system-monitor gnome-logs gnome-tecla gnome-contacts];
 
-  environment.variables.EDITOR = "nvim";
+  # environment.variables.EDITOR = "nvim";
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -112,18 +112,18 @@
   # programs.clash-verge.enable = true;
   # programs.clash-verge.autoStart = true;
   # programs.fish.enable = true;
-  programs = {
-    clash-verge.enable = true;
-    clash-verge.autoStart = true;
-    fish.enable = true;
-    nix-ld = {
-      enable = true;
-      libraries = with pkgs; [
-        stdenv.cc.cc
-        openssl
-      ];
-    };
-  };
+  # programs = {
+  # clash-verge.enable = true;
+  # clash-verge.autoStart = true;
+  # fish.enable = true;
+  # nix-ld = {
+  # enable = true;
+  # libraries = with pkgs; [
+  # stdenv.cc.cc
+  # openssl
+  # ];
+  # };
+  # };
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   # fonts.packages = with pkgs; [
@@ -158,25 +158,25 @@
   #    sqlite
   #  ];
 
-  virtualisation = {
-    docker = {
-      storageDriver = "btrfs";
-      enable = true;
-      rootless = {
-        enable = true;
-        setSocketVariable = true;
-      };
-      daemon.settings.registry-mirrors = ["https://docker.m.daocloud.io"];
-    };
-    virtualbox = {
-      host.enable = true;
-      # do not set this to true avoiding recompiling virtualbox
-      # host.enableExtensionPack = true;
-      # it makes rebuild too slow
-      # guest.enable = true;
-      guest.dragAndDrop = true;
-    };
-  };
+  # virtualisation = {
+  #   docker = {
+  #     storageDriver = "btrfs";
+  #     enable = true;
+  #     rootless = {
+  #       enable = true;
+  #       setSocketVariable = true;
+  #     };
+  #     daemon.settings.registry-mirrors = ["https://docker.m.daocloud.io"];
+  #   };
+  #   virtualbox = {
+  #     host.enable = true;
+  #     # do not set this to true avoiding recompiling virtualbox
+  #     # host.enableExtensionPack = true;
+  #     # it makes rebuild too slow
+  #     # guest.enable = true;
+  #     guest.dragAndDrop = true;
+  #   };
+  # };
   # virtualisation.virtualbox.host.enable = true;
   # virtualisation.virtualbox.host.enableExtensionPack = true;
   # users.extraGroups.vboxusers.members = ["chen"];
@@ -191,20 +191,20 @@
     daemon.settings.registry-mirrors = ["https://docker.m.daocloud.io"];
   };
   */
-  environment.variables = {
-    GTK_IM_MODULE = "fcitx";
-    QT_IM_MODULE = "fcitx";
-    XMODIFIERS = "@im=fcitx";
-    # SDL_IM_MODULE=fcitx;
-    GLFW_IM_MODULE = "ibus";
-  };
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  programs.mtr.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
+  # environment.variables = {
+  #   GTK_IM_MODULE = "fcitx";
+  #   QT_IM_MODULE = "fcitx";
+  #   XMODIFIERS = "@im=fcitx";
+  #   # SDL_IM_MODULE=fcitx;
+  #   GLFW_IM_MODULE = "ibus";
+  # };
+  # # Some programs need SUID wrappers, can be configured further or are
+  # # started in user sessions.
+  # programs.mtr.enable = true;
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
 
   # List services that you want to enable:
 
@@ -250,6 +250,6 @@
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   # nix.settings.substituters = ["https://mirrors.ustc.edu.cn/nix-channels/store"];
   # nix.settings.trusted-users = ["chen"];
-  system.stateVersion = "25.05"; # Did you read the comment?
+  # system.stateVersion = "25.05"; # Did you read the comment?
   # nix.settings.experimental-features = "nix-command flakes";
 }
