@@ -4,6 +4,7 @@
     shellAbbrs = {
       lzg = "lazygit";
       lzd = "lazydocker";
+      n = "nvim";
     };
   };
 }
