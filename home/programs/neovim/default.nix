@@ -12,4 +12,5 @@ in {
   # xdg.configFile."doom".source = config.lib.file.mkOutOfStoreSymlink doomPath;
 
   # other configurations
+  programs.neovim.enable = true;
 }
