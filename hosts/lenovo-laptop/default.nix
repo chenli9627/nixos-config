@@ -109,9 +109,21 @@
   #  };
 
   # nixpkgs.config.allowUnfree = true;
-  programs.clash-verge.enable = true;
-  programs.clash-verge.autoStart = true;
-  programs.fish.enable = true;
+  # programs.clash-verge.enable = true;
+  # programs.clash-verge.autoStart = true;
+  # programs.fish.enable = true;
+  programs = {
+    clash-verge.enable = true;
+    clash-verge.autoStart = true;
+    fish.enable = true;
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        stdenv.cc.cc
+        openssl
+      ];
+    };
+  };
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   # fonts.packages = with pkgs; [

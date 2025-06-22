@@ -10,6 +10,5 @@
     ./bash.nix
     ./zathura.nix
     ./neovim
-    ./nix-ld.nix
   ];
 }
