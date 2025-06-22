@@ -25,7 +25,6 @@
     vscode
     jetbrains.idea-community-bin
     zulu
-    lua
     luajit
     luarocks
     python3Full
