@@ -20,8 +20,8 @@
   nix.settings = {
     trusted-users = [username];
     substituters = [
+      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       "https://mirrors.ustc.edu.cn/nix-channels/store"
-      "https://cache.nixos.org"
     ];
     experimental-features = "nix-command flakes";
     builders-use-substitutes = true;
