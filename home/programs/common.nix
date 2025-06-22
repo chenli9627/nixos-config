@@ -68,6 +68,7 @@
     # clang
     llvm
     wl-clipboard
+    xclip
     gnome-tweaks
     gnomeExtensions.just-perfection
     gnomeExtensions.appindicator
