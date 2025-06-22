@@ -1,8 +1,8 @@
 {pkgs, ...}: {
   # programs.lazygit.enable = true;
   programs = {
-    clash-verge.enable = true;
-    clash-verge.autoStart = true;
+    # clash-verge.enable = true;
+    # clash-verge.autoStart = true;
     # nix-ld.enable = true;
     firefox.enable = true;
     lazygit.enable = true;
