@@ -4,7 +4,7 @@
   ...
 }: let
   # path to your nvim config directory
-  nvimPath = "${config.home.homeDirectory}/nix-config/home/programs/neovim/configfiles";
+  nvimPath = "${config.home.homeDirectory}/nixos-config/home/programs/neovim/configfiles";
   # path to your doom emacs config directory
   # doomPath = "${config.home.homeDirectory}/nix-config/home/doom";
 in {
