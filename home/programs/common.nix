@@ -1,8 +1,6 @@
 {pkgs, ...}: {
   # programs.lazygit.enable = true;
   programs = {
-    # clash-verge.enable = true;
-    # clash-verge.autoStart = true;
     # nix-ld.enable = true;
     firefox.enable = true;
     lazygit.enable = true;
@@ -13,13 +11,6 @@
     yazi.enable = true;
     yazi.enableFishIntegration = true;
     yazi.shellWrapperName = "y";
-    # Some programs need SUID wrappers, can be configured further or are
-    # started in user sessions.
-    programs.mtr.enable = true;
-    programs.gnupg.agent = {
-      enable = true;
-      enableSSHSupport = true;
-    };
 
     zathura.enable = true;
     zathura.mappings = {
