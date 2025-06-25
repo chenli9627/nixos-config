@@ -12,6 +12,7 @@
   };
   home.packages = with pkgs; [
     ulauncher
+    wmctrl
     mycli
     tree-sitter
     gcc
