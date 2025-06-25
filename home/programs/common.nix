@@ -11,6 +11,7 @@
     yazi.shellWrapperName = "y";
   };
   home.packages = with pkgs; [
+    ulauncher
     mycli
     tree-sitter
     gcc
