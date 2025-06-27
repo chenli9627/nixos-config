@@ -12,6 +12,7 @@
   };
   home.packages = with pkgs; [
     mycli
+    smartmontools
     tree-sitter
     gcc
     lua-language-server
