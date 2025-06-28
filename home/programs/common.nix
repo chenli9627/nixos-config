@@ -14,6 +14,7 @@
     mycli
     smartmontools
     tree-sitter
+    ffmpeg
     gcc
     lua-language-server
     sqlite
