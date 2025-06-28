@@ -19,6 +19,7 @@
         ms-vscode.cpptools-extension-pack
         ms-vscode.cpptools
         ms-vscode.cmake-tools
+        mkhl.direnv
         rust-lang.rust-analyzer
         tomoki1207.pdf
         ecmel.vscode-html-css
