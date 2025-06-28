@@ -7,7 +7,7 @@
       # theme = "dracula";
       theme = "catppuccin-latte";
       auto_start = false;
-      default_layout = "compact";
+      # default_layout = "compact";
     };
   };
 }
