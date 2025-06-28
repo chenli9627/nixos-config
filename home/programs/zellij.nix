@@ -3,8 +3,8 @@
     enable = true;
     enableBashIntegration = true;
     enableFishIntegration = true;
-    settings = {
-      theme = "catppuccin-latte";
-    };
+    # settings = {
+    #   theme = "catppuccin-latte";
+    # };
   };
 }
