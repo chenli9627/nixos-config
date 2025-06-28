@@ -12,6 +12,7 @@
         github.github-vscode-theme
         catppuccin.catppuccin-vsc
         jnoortheen.nix-ide
+        scalameta.metals
         ms-python.python
         ms-python.debugpy
         kamadorueda.alejandra
@@ -29,6 +30,7 @@
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
         "workbench.colorTheme" = "GitHub Light";
         "explorer.confirmDragAndDrop" = false;
+        "extensions.autoUpdate"= false;
         "nix.formatterPath" = "alejandra";
         "extensions.experimental.affinity" = {
           "asvetliakov.vscode-neovim" = 1;
