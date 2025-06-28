@@ -3,11 +3,9 @@
     enable = true;
     enableBashIntegration = true;
     enableFishIntegration = true;
-    # themes = [
-    #   catppuccin-latte
-    # ];
     settings = {
-      theme = "dracula";
+      # theme = "dracula";
+      theme = "catppuccin-latte";
     };
   };
 }
