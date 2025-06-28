@@ -10,8 +10,8 @@
         golang.go
         myriad-dreamin.tinymist
         github.github-vscode-theme
+        catppuccin.catppuccin-vsc
         jnoortheen.nix-ide
-        # vscodevim.vim
         ms-python.python
         ms-python.debugpy
         kamadorueda.alejandra
