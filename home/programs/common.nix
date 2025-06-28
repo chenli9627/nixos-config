@@ -31,8 +31,8 @@
     luarocks
     python3Full
     go
-    rustup
     ruby
+    cargo
     ruby-lsp
     nodejs_22
     pnpm
