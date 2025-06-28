@@ -11,7 +11,6 @@
     yazi.shellWrapperName = "y";
   };
   home.packages = with pkgs; [
-    zellij
     mycli
     smartmontools
     tree-sitter
