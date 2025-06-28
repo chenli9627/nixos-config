@@ -29,6 +29,7 @@
     zulu
     luajit
     luarocks
+    openssl
     pkg-config
     python3Full
     go
