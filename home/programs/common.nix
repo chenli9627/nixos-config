@@ -29,6 +29,7 @@
     zulu
     luajit
     luarocks
+    pkg-config
     python3Full
     go
     ruby
