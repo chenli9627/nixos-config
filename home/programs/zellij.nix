@@ -7,7 +7,7 @@
     #   catppuccin-latte
     # ];
     settings = {
-      themes  ="catppuccin-latte";
+      theme = "dracula";
     };
   };
 }
