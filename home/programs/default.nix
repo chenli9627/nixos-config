@@ -12,5 +12,6 @@
     ./direnv.nix
     ./neovim
     ./zellij.nix
+    ./nixconf.nix
   ];
 }
