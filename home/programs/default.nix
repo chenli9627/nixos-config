@@ -11,5 +11,6 @@
     ./zathura.nix
     ./direnv.nix
     ./neovim
+    ./zellij.nix
   ];
 }
