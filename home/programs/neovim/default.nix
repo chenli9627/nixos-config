@@ -11,6 +11,18 @@ in {
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink nvimPath;
   # xdg.configFile."doom".source = config.lib.file.mkOutOfStoreSymlink doomPath;
 
-  # other configurations
-  programs.neovim.enable = true;
+  programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+    defaultEditor = true;
+    extraPackages = with pkgs; [
+      lua-language-server
+      nil
+      nixd
+      nixpkgs-fmt
+      stylua
+    ];
+  };
 }
