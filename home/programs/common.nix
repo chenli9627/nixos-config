@@ -22,7 +22,7 @@
     pandoc
     typst
     typstyle
-    # nixd
+    nixd
     nil
     vscode
     jetbrains.idea-community-bin
