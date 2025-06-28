@@ -32,6 +32,7 @@
     python3Full
     go
     ruby
+    devenv
     cargo
     ruby-lsp
     nodejs_22
