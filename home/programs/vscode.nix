@@ -18,7 +18,7 @@
         asvetliakov.vscode-neovim
         ms-vscode.cpptools-extension-pack
         ms-vscode.cpptools
-        ms-vscode.cmaketools
+        ms-vscode.cmake-tools
         rust-lang.rust-analyzer
         tomoki1207.pdf
         ecmel.vscode-html-css
