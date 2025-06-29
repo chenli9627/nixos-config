@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs = {
     # nix-ld.enable = true;
     firefox.enable = true;
@@ -32,7 +33,6 @@
     python3Full
     go
     ruby
-    devenv
     cargo
     ruby-lsp
     nodejs_22
