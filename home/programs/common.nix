@@ -16,7 +16,7 @@
     tree-sitter
     ffmpeg
     lua-language-server
-    nixfmt
+    nixfmt-rfc-style
     sqlite
     gopls
     pandoc
