@@ -17,6 +17,7 @@
     ffmpeg
     lua-language-server
     nixfmt-rfc-style
+    openjdk
     sqlite
     gopls
     pandoc
@@ -45,10 +46,12 @@
     goldendict-ng
     localsend
     cherry-studio
+    keyd
     calibre
     scala
     scala-cli
     sbt
+    mill
     metals
     # clang
     llvm
