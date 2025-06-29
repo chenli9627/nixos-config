@@ -17,7 +17,6 @@
     ffmpeg
     lua-language-server
     nixfmt-rfc-style
-    openjdk
     sqlite
     gopls
     pandoc
