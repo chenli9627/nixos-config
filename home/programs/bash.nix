@@ -2,7 +2,7 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    shellAlias = {
+    shellAliases = {
       n = "nvim";
       lzd = "lazydocker";
       lzg = "lazygit";
