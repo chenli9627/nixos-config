@@ -16,6 +16,7 @@
     tree-sitter
     ffmpeg
     lua-language-server
+    nixfmt
     sqlite
     gopls
     pandoc
