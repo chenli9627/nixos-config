@@ -27,9 +27,7 @@
     };
   };
   boot.kernelParams = [
-    ''
-      "amdgpu.dcdebugmask=0x10"
-    ''
+    "amdgpu.dcdebugmask=0x10"
   ];
 
   # boot = {
