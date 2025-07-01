@@ -6,11 +6,11 @@
   lib,
   pkgs,
   ...
-}:
-{
+}: {
   imports = [
     ../../modules/system.nix
     ../../modules/gnome.nix
+    # ../../modules/hyprland.nix
     ../../modules/nix-ld.nix
     ../../modules/virtualisation.nix
 
