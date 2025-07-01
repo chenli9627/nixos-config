@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.fish = {
     enable = true;
     generateCompletions = true;
@@ -8,6 +9,7 @@
       lzd = "lazydocker";
       n = "nvim";
       ":q" = "exit";
+      clr = "clear";
     };
     shellInit = ''
       direnv hook fish | source
