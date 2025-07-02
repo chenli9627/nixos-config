@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  systemd.services.keyd.enable = false;
   services.keyd = {
     enable = true;
     keyboards = {
