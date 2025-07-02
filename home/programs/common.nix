@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs = {
     # nix-ld.enable = true;
     firefox.enable = true;
@@ -28,7 +27,7 @@
     vscode
     jetbrains.idea-community-bin
     zulu
-    luajit
+    lua
     luarocks
     python3Full
     go

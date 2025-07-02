@@ -6,13 +6,13 @@
   lib,
   pkgs,
   ...
-}:
-{
+}: {
   imports = [
     ../../modules/system.nix
     ../../modules/gnome.nix
     ../../modules/nix-ld.nix
     ../../modules/virtualisation.nix
+    ../../modules/keyd.nix
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
