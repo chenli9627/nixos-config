@@ -28,16 +28,11 @@
       ];
       userSettings = {
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
-        "editor.semanticHighlighting.enabled" = true;
         "workbench.colorTheme" = "GitHub Light";
         "explorer.confirmDelete" = false;
         "explorer.confirmDragAndDrop" = false;
         "extensions.autoUpdate" = false;
         "update.mode" = "none";
-        "files.watcherExclude" = {
-          "**/.bloop" = true;
-          "**/.metals" = true;
-        };
         # "nix.formatterPath" = "alejandra";
         "extensions.experimental.affinity" = {
           "asvetliakov.vscode-neovim" = 1;

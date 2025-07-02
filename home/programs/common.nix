@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs = {
     # nix-ld.enable = true;
     firefox.enable = true;
@@ -46,13 +47,14 @@
     cherry-studio
     keyd
     calibre
-    scala
-    scala-cli
-    scalafmt
-    ammonite
-    sbt
-    mill
-    metals
+    # scala
+    # scala-cli
+    # scalafmt
+    # ammonite
+    # coursier
+    # sbt
+    # mill
+    # metals
     # clang
     llvm
     wl-clipboard
