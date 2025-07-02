@@ -28,6 +28,7 @@
       ];
       userSettings = {
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
+        "editor.semanticHighlighting.enabled" = true;
         "workbench.colorTheme" = "GitHub Light";
         "explorer.confirmDelete" = false;
         "explorer.confirmDragAndDrop" = false;
