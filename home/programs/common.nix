@@ -48,6 +48,8 @@
     calibre
     scala
     scala-cli
+    scalafmt
+    ammonite
     sbt
     mill
     metals
