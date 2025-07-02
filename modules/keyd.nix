@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   services.keyd = {
-    # enable = true;
+    enable = true;
     keyboards = {
       # The name is just the name of the configuration file, it does not really matter
       default = {
