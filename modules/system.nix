@@ -4,7 +4,8 @@
   username,
   lib,
   ...
-}: {
+}:
+{
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${username} = {
     isNormalUser = true;
@@ -18,11 +19,11 @@
     #   tree
     # ];
   };
-  users.extraGroups.vboxusers.members = [username];
+  users.extraGroups.vboxusers.members = [ username ];
 
   # nix.settings.trusted-users = [username];
   nix.settings = {
-    trusted-users = [username];
+    trusted-users = [ username ];
     substituters = [
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       "https://mirrors.ustc.edu.cn/nix-channels/store"
@@ -64,6 +65,12 @@
     fira-code
     fira-code-symbols
     nerd-fonts.caskaydia-mono
+    # Maple Mono (Ligature TTF unhinted)
+    maple-mono.truetype
+    # Maple Mono NF (Ligature unhinted)
+    maple-mono.NF-unhinted
+    # Maple Mono NF CN (Ligature unhinted)
+    maple-mono.NF-CN-unhinted
   ];
 
   programs.dconf.enable = true;
