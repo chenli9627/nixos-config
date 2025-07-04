@@ -59,6 +59,7 @@
     llvm
     wl-clipboard
     xclip
+    brightnessctl
     gnome-tweaks
     gnomeExtensions.just-perfection
     gnomeExtensions.appindicator
