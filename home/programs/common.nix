@@ -7,9 +7,6 @@
     mpv.enable = true;
     zoxide.enable = true;
     zoxide.enableFishIntegration = true;
-    yazi.enable = true;
-    yazi.enableFishIntegration = true;
-    yazi.shellWrapperName = "y";
   };
   home.packages = with pkgs; [
     mycli
@@ -65,8 +62,6 @@
     gnomeExtensions.appindicator
     gnomeExtensions.kimpanel
     kitty
-    neofetch
-    fastfetch
     zip
     xz
     unzip
@@ -83,9 +78,7 @@
     lazydocker
     ghostscript
     mermaid-cli
-    yazi
     zoxide
-    dysk
     tealdeer
     iperf3
     aria2 # A lightweight multi-protocol & multi-source command-line download utility
