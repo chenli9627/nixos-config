@@ -9,6 +9,7 @@ let
   hyprPath = "${config.home.homeDirectory}/nixos-config/home/hyprland/config/hypr";
   waybarPath = "${config.home.homeDirectory}/nixos-config/home/hyprland/config/waybar";
   wofiPath = "${config.home.homeDirectory}/nixos-config/home/hyprland/config/wofi";
+
 in
 {
   xdg.configFile."hypr".source = config.lib.file.mkOutOfStoreSymlink hyprPath;
@@ -35,4 +36,5 @@ in
     portalPackage = null;
   };
   # programs.hyprland.withUWSM = true;
+  NIXOS_OZONE_WL = 1;
 }
