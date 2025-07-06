@@ -57,10 +57,6 @@
     wl-clipboard
     xclip
     brightnessctl
-    gnome-tweaks
-    gnomeExtensions.just-perfection
-    gnomeExtensions.appindicator
-    gnomeExtensions.kimpanel
     kitty
     zip
     xz
