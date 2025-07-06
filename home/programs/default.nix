@@ -14,5 +14,7 @@
     ./zellij.nix
     ./nixconf.nix
     ./eza.nix
+    ./yazi.nix
+    ./nautilus.nix
   ];
 }

@@ -7,6 +7,7 @@
     ../../home/core.nix
 
     ../../home/programs
-    ../../home/desktop-manager
+
+    ../../home/hyprland
   ];
 }

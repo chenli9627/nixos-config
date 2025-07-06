@@ -9,6 +9,7 @@
   };
   home.packages = with pkgs; [
     mycli
+    hypr
     smartmontools
     tree-sitter
     ffmpeg

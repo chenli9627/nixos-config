@@ -1,4 +1,0 @@
-{pkgs, ...}: {
-  homePackages = with pkgs; [
-  ];
-}
