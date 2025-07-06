@@ -9,7 +9,7 @@
       recursive = true;
     };
     ".config/waybar" = {
-      source = ./waybar;
+      source = ./config/waybar;
       recursive = true;
     };
   };
