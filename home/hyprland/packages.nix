@@ -1,11 +1,13 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     blueberry
     pamixer
     hyprshot
-    hyprpicker
+    # hyprpicker
     nautilus
     libnotify
+    nwg-look
     playerctl
     bibata-cursors
     gnome-themes-extra
