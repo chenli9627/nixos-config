@@ -6,7 +6,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ../../modules/system.nix
     # ../../modules/gnome.nix

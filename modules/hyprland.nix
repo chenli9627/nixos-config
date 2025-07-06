@@ -2,7 +2,8 @@
   pkgs,
   config,
   ...
-}: {
+}:
+{
   # Initial login experience
   services.greetd = {
     enable = true;
@@ -11,9 +12,13 @@
   programs.hyprland.enable = true;
 
   services.blueman.enable = true;
-  security.pam.services.hyprlock = {};
+  security.pam.services.hyprlock = { };
   programs.nautilus-open-any-terminal = {
     enable = true;
     terminal = "kitty";
+  };
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
   };
 }
