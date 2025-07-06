@@ -18,10 +18,10 @@
     nixosConfigurations = {
       nixos = let
         username = "chen";
-        specialArgs = {inherit username;};
+        # specialArgs = {inherit username;};
       in
         nixpkgs.lib.nixosSystem {
-          inherit specialArgs;
+          # inherit specialArgs;
           system = "x86_64-linux";
           modules = [
             # ./configuration.nix
@@ -38,7 +38,11 @@
               # home-manager.users.username = import ./users/username/home.nix;
 
               # 取消注释下面这一行，就可以在 home.nix 中使用 flake 的所有 inputs 参数了
-              home-manager.extraSpecialArgs = inputs // specialArgs;
+              # home-manager.extraSpecialArgs = inputs // specialArgs;
+              home-manager.extraSpecialArgs = {
+                inherit (inputs) nixpkgs home-manager hyprland;
+                inherit username;
+              };
             }
           ];
         };
