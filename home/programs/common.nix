@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs = {
     # nix-ld.enable = true;
     firefox.enable = true;
@@ -59,6 +58,7 @@
     brightnessctl
     kitty
     zip
+    powertop
     xz
     unzip
     unrar

@@ -13,5 +13,6 @@
     ./neovim
     ./zellij.nix
     ./nixconf.nix
+    ./eza.nix
   ];
 }
