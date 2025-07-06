@@ -21,4 +21,5 @@
     enable = true;
     powerOnBoot = true;
   };
+  services.power-profiles-daemon.enable = true;
 }
