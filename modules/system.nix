@@ -21,7 +21,7 @@
   users.extraGroups.vboxusers.members = [username];
 
   nix.settings = {
-    trusted-users = [username root];
+    trusted-users = [username];
     substituters = [
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       "https://mirrors.ustc.edu.cn/nix-channels/store"
