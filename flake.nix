@@ -18,10 +18,10 @@
     nixosConfigurations = {
       nixos = let
         username = "chen";
-        # specialArgs = {inherit username;};
+        specialArgs = {inherit username;};
       in
         nixpkgs.lib.nixosSystem {
-          # inherit specialArgs;
+          inherit specialArgs;
           system = "x86_64-linux";
           modules = [
             # ./configuration.nix
