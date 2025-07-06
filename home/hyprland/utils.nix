@@ -39,7 +39,7 @@
   services.hyprpaper = {
     enable = true;
   };
-  services.hyprlock = {
+  programs.hyprlock = {
     enable = true;
   };
 }
