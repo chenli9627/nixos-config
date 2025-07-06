@@ -22,7 +22,7 @@
     enable = true;
     xwayland.enable = true;
     systemd.variables = ["--all"];
-    # systemd.enable = false;
+    systemd.enable = false;
 
     # set the flake package
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
