@@ -1,18 +1,19 @@
-{pkgs, ...}: {
-  home.file = {
-    ".config/hypr" = {
-      source = ./config/hypr;
-      recursive = true;
-    };
-    ".config/wofi" = {
-      source = ./config/wofi;
-      recursive = true;
-    };
-    ".config/waybar" = {
-      source = ./config/waybar;
-      recursive = true;
-    };
-  };
+{ pkgs, ... }:
+{
+  # home.file = {
+  #   ".config/hypr" = {
+  #     source = ./config/hypr;
+  #     recursive = true;
+  #   };
+  #   ".config/wofi" = {
+  #     source = ./config/wofi;
+  #     recursive = true;
+  #   };
+  #   ".config/waybar" = {
+  #     source = ./config/waybar;
+  #     recursive = true;
+  #   };
+  # };
   services.mako = {
     enable = true;
   };

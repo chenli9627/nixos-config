@@ -4,13 +4,16 @@
   config,
   ...
 }:
-# let
-#   hyprPath = "${config.home.homeDirectory}/nixos-config/home/hyprland/config/hypr";
-#   waybarPath = "${config.home.homeDirectory}/nixos-config/home/hyprland/config/waybar";
-# in
+
+let
+  hyprPath = "${config.home.homeDirectory}/nixos-config/home/hyprland/config/hypr";
+  waybarPath = "${config.home.homeDirectory}/nixos-config/home/hyprland/config/waybar";
+  wofiPath = "${config.home.homeDirectory}/nixos-config/home/hyprland/config/wofi";
+in
 {
-  # xdg.configFile."hypr".source = config.lib.file.mkOutOfStoreSymlink hyprPath;
-  # xdg.configFile."waybar".source = config.lib.file.mkOutOfStoreSymlink waybarPath;
+  xdg.configFile."hypr".source = config.lib.file.mkOutOfStoreSymlink hyprPath;
+  xdg.configFile."waybar".source = config.lib.file.mkOutOfStoreSymlink waybarPath;
+  xdg.configFile."wofi".source = config.lib.file.mkOutOfStoreSymlink wofiPath;
 
   imports = [
     ./packages.nix
@@ -21,7 +24,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    systemd.variables = ["--all"];
+    systemd.variables = [ "--all" ];
     systemd.enable = false;
 
     # set the flake package
