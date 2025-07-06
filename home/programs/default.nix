@@ -13,6 +13,5 @@
     ./neovim
     ./zellij.nix
     ./nixconf.nix
-    ./gnome.nix
   ];
 }
