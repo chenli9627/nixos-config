@@ -41,8 +41,7 @@
               # home-manager.extraSpecialArgs = inputs // specialArgs;
               home-manager.extraSpecialArgs = {
                 # inherit (inputs) nixpkgs home-manager hyprland;
-                inherit inputs;
-                inherit username;
+                inherit inputs username;
               };
             }
           ];
