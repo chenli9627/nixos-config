@@ -21,7 +21,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    # systemd.variables = ["--all"];
+    systemd.variables = ["--all"];
     systemd.enable = false;
 
     # set the flake package

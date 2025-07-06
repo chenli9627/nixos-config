@@ -34,7 +34,7 @@
     ruby-lsp
     nodejs_22
     pnpm
-    albert
+    # albert
     strawberry
     wpsoffice-cn
     google-chrome
