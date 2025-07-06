@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  homePackages = with pkgs; [
+  home.packages = with pkgs; [
     blueberry
     pamixer
     hyprshot
