@@ -22,6 +22,7 @@
       in
         nixpkgs.lib.nixosSystem {
           # inherit specialArgs;
+          inherit username;
           system = "x86_64-linux";
           modules = [
             # ./configuration.nix
