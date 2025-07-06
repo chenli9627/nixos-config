@@ -15,5 +15,6 @@
     hyprls
     hypridle
     hyprsysteminfo
+    waybar
   ];
 }
