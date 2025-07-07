@@ -8,6 +8,7 @@
     nautilus
     libnotify
     nwg-look
+    gparted
     playerctl
     bibata-cursors
     gnome-themes-extra
