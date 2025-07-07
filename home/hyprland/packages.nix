@@ -11,6 +11,10 @@
     gparted
     playerctl
     bibata-cursors
+    sushi # for file quick previewer
+    code-nautilus
+    gvfs
+    openssh
     gnome-themes-extra
     hyprpaper
     hyprcursor

@@ -32,5 +32,4 @@ in {
     # portalPackage = null;
   };
   # programs.hyprland.withUWSM = true;
-  # NIXOS_OZONE_WL = 1;
 }
