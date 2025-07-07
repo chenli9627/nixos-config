@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   # home.file = {
   #   ".config/hypr" = {
   #     source = ./config/hypr;
@@ -17,9 +16,10 @@
   services.mako = {
     enable = true;
   };
-  services.hyprpolkitagent = {
-    enable = true;
-  };
+  # services.hyprpolkitagent = {
+  # enable = true;
+  # };
+  services.polkit-gnome.enable = true;
   programs.waybar = {
     enable = true;
     # systemd.enable = true;
