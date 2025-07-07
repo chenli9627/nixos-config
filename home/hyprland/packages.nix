@@ -13,6 +13,7 @@
     sushi # for file quick previewer
     code-nautilus
     qimgv
+    adwaita-icon-theme
     # gsettings-desktop-schemas
     openssh
     glib
