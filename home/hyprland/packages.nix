@@ -15,6 +15,7 @@
     # gvfs
     gnome.gvfs
     openssh
+    glib
     gnome-themes-extra
     hyprpaper
     hyprcursor
