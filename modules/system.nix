@@ -125,13 +125,13 @@
     fish.enable = true;
   };
 
-  environment.variables = {
-    # GTK_IM_MODULE = "fcitx";
-    QT_IM_MODULE = "fcitx";
-    XMODIFIERS = "@im=fcitx";
-    SDL_IM_MODULE = "fcitx";
-    GLFW_IM_MODULE = "ibus";
-  };
+  # environment.variables = {
+  #   # GTK_IM_MODULE = "fcitx";
+  #   QT_IM_MODULE = "fcitx";
+  #   XMODIFIERS = "@im=fcitx";
+  #   SDL_IM_MODULE = "fcitx";
+  #   GLFW_IM_MODULE = "ibus";
+  # };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.mtr.enable = true;
