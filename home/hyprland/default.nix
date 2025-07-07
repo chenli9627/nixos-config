@@ -37,4 +37,5 @@ in
   };
   # programs.hyprland.withUWSM = true;
   # NIXOS_OZONE_WL = 1;
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 }
