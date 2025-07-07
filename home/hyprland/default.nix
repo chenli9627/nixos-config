@@ -32,5 +32,4 @@ in {
     # portalPackage = null;
   };
   # programs.hyprland.withUWSM = true;
-  services.gvfs.enable = true;
 }
