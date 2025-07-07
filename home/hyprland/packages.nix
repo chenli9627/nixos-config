@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   home.packages = with pkgs; [
     blueberry
     pamixer
@@ -7,6 +6,7 @@
     # hyprpicker
     nautilus
     libnotify
+    xorg-xrdb
     # nwg-look
     gparted
     playerctl
