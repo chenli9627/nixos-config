@@ -7,7 +7,7 @@
     # hyprpicker
     nautilus
     libnotify
-    nwg-look
+    # nwg-look
     gparted
     playerctl
     bibata-cursors

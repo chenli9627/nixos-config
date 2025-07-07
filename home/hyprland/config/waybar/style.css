@@ -12,8 +12,9 @@
 
 #workspaces button {
   all: initial;
-  padding: 2px 6px;
+  padding: 1px 3px;
   margin-right: 3px;
+  color: #000000
 }
 
 #custom-dropbox,

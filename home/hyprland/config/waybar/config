@@ -31,6 +31,7 @@
       "7": "7",
       "8": "8",
       "9": "9",
+      "10": "10",
       "active": "󱓻"
     },
     "persistent-workspaces": {
@@ -68,7 +69,8 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "alacritty -e iwctl"
+    "on-click": "kitty -e nmtui"
+    // "on-click": "alacritty -e iwctl"
   },
   "battery": {
     "format": "{capacity}% {icon}",
@@ -115,13 +117,13 @@
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "GTK_THEME=Adwaita-dark blueberry"
+    "on-click": "GTK_THEME=Adwaita blueberry"
   },
   "pulseaudio": {
     "format": "",
     "format-muted": "󰝟",
     "scroll-step": 5,
-    "on-click": "GTK_THEME=Adwaita-dark pavucontrol",
+    "on-click": "GTK_THEME=Adwaita pavucontrol",
     "tooltip-format": "Playing at {volume}%",
     "on-click-right": "pamixer -t",
     "ignored-sinks": [
