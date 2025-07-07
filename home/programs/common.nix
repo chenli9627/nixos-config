@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs = {
     # nix-ld.enable = true;
     firefox.enable = true;
@@ -36,6 +37,7 @@
     pnpm
     # albert
     strawberry
+    clang
     wpsoffice-cn
     google-chrome
     zathura

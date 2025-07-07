@@ -12,4 +12,4 @@ content_halign=fill
 insensitive=true
 allow_images=true
 image_size=40
-gtk_dark=true
+# gtk_dark=true
