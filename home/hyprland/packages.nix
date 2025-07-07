@@ -14,6 +14,7 @@
     sushi # for file quick previewer
     code-nautilus
     gvfs
+    gnome.gvfs
     openssh
     gnome-themes-extra
     hyprpaper
