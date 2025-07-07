@@ -11,8 +11,8 @@
     gparted
     playerctl
     sushi # for file quick previewer
-    geeqie
     code-nautilus
+    qimgv
     # gsettings-desktop-schemas
     openssh
     glib
