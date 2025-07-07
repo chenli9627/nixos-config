@@ -11,6 +11,7 @@
     gparted
     playerctl
     sushi # for file quick previewer
+    geeqie
     code-nautilus
     # gsettings-desktop-schemas
     openssh
