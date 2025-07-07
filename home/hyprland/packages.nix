@@ -6,7 +6,7 @@
     # hyprpicker
     nautilus
     libnotify
-    xorg-xrdb
+    xorg.xrdb
     # nwg-look
     gparted
     playerctl
