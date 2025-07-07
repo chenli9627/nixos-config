@@ -125,7 +125,7 @@
   };
 
   environment.variables = {
-    # GTK_IM_MODULE = "fcitx";
+    # GTK_IM_MODULE = "fcitx"; # hyprland not allow
     QT_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
     SDL_IM_MODULE = "fcitx";
