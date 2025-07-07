@@ -18,7 +18,7 @@ in
 
   imports = [
     ./packages.nix
-    ./theme.nix
+    # ./theme.nix
     ./plugins.nix
     ./utils.nix
   ];
