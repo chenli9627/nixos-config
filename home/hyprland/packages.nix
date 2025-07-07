@@ -10,10 +10,9 @@
     # nwg-look
     gparted
     playerctl
-    bibata-cursors
     sushi # for file quick previewer
     code-nautilus
-    gvfs
+    # gvfs
     gnome.gvfs
     openssh
     gnome-themes-extra
