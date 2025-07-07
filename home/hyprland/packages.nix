@@ -12,8 +12,9 @@
     playerctl
     sushi # for file quick previewer
     code-nautilus
-    # gvfs
-    gnome.gvfs
+    gvfs
+    gsettings-desktop-schemas
+    # gnome.gvfs
     openssh
     glib
     gnome-themes-extra
