@@ -35,9 +35,9 @@
     ruby-lsp
     nodejs_22
     pnpm
-    # albert
     strawberry
     clang
+    readest
     wpsoffice-cn
     google-chrome
     zathura
