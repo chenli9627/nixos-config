@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
-  systemd.services.keyd.enable = false;
-  systemd.services.keyd.wantedBy = [ ];
+  # systemd.services.keyd.enable = false;
   services.keyd = {
     enable = true;
     keyboards = {
