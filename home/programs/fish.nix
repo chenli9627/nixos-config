@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   programs.fish = {
     enable = true;
@@ -10,6 +9,7 @@
       n = "nvim";
       ":q" = "exit";
       clr = "clear";
+      notes = "nvim ~/notes";
     };
     shellInit = ''
       direnv hook fish | source

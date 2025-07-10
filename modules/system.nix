@@ -4,7 +4,8 @@
   username,
   lib,
   ...
-}: {
+}:
+{
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${username} = {
     isNormalUser = true;
@@ -18,16 +19,16 @@
     #   tree
     # ];
   };
-  users.extraGroups.vboxusers.members = [username];
+  users.extraGroups.vboxusers.members = [ username ];
 
   nix.settings = {
-    trusted-users = [username];
+    trusted-users = [ username ];
     substituters = [
       "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
       "https://mirrors.ustc.edu.cn/nix-channels/store"
       "https://hyprland.cachix.org"
     ];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
     experimental-features = "nix-command flakes";
     builders-use-substitutes = true;
   };
@@ -124,13 +125,14 @@
     fish.enable = true;
   };
 
-  environment.variables = {
-    # GTK_IM_MODULE = "fcitx"; # hyprland not allow
-    QT_IM_MODULE = "fcitx";
-    XMODIFIERS = "@im=fcitx";
-    SDL_IM_MODULE = "fcitx";
-    GLFW_IM_MODULE = "ibus";
-  };
+  # environment.variables = {
+  #   # GTK_IM_MODULE = "fcitx"; # hyprland not allow
+  #   # QT_IM_MODULE = "fcitx";
+  #   QT_IM_MODULE = "wayland"; # for qt6 apps
+  #   XMODIFIERS = "@im=fcitx";
+  #   SDL_IM_MODULE = "fcitx";
+  #   GLFW_IM_MODULE = "ibus";
+  # };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.mtr.enable = true;
