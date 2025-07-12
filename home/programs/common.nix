@@ -12,6 +12,7 @@
     mycli
     pgcli
     litecli
+    gemini-cli
     hypr
     smartmontools
     tree-sitter
