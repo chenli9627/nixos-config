@@ -10,6 +10,8 @@
   };
   home.packages = with pkgs; [
     mycli
+    pgcli
+    litecli
     hypr
     smartmontools
     tree-sitter
