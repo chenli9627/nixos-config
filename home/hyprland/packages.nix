@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   home.packages = with pkgs; [
     blueberry
     pamixer
@@ -14,6 +15,7 @@
     code-nautilus
     qimgv
     adwaita-icon-theme
+    cheese
     # gsettings-desktop-schemas
     openssh
     glib
