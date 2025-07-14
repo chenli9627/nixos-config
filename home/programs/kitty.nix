@@ -14,7 +14,7 @@
             "U+3400-U+4DBF"
           ];
         in
-        (builtins.concatStringsSep "," mappings) + " Noto Sans CJK SC Bold";
+        (builtins.concatStringsSep "," mappings) + " Noto Sans CJK SC Medium";
     };
   };
 }
