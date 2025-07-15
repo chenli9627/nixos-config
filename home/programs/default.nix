@@ -13,7 +13,7 @@
     ./direnv.nix
     ./neovim
     ./zellij.nix
-    ./nixconf.nix
+    # ./nixconf.nix
     ./eza.nix
     ./yazi.nix
   ];
