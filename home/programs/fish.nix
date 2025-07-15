@@ -10,6 +10,8 @@
       ":q" = "exit";
       clr = "clear";
       notes = "nvim ~/notes";
+      "keydon" = "sudo systemctl start keyd";
+      "keydoff" = "sudo systemctl stop keyd";
     };
     shellInit = ''
       direnv hook fish | source
