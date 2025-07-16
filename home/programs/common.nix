@@ -13,6 +13,7 @@
     pgcli
     litecli
     hypr
+    xfce.mousepad
     smartmontools
     tree-sitter
     ffmpeg
