@@ -16,5 +16,6 @@
     # ./nixconf.nix
     ./eza.nix
     ./yazi.nix
+    ./ssh.nix
   ];
 }
