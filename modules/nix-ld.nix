@@ -1,10 +1,8 @@
 {
-  config,
   pkgs,
-  username,
-  lib,
   ...
-}: {
+}:
+{
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [

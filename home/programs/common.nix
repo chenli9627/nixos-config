@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   programs = {
-    # nix-ld.enable = true;
     firefox.enable = true;
     lazygit.enable = true;
     mpv.enable = true;
@@ -28,6 +27,9 @@
     nixd
     nil
     vscode
+    openjdk
+    llvm
+    gnome-font-viewer
     jetbrains.idea-community-bin
     # jetbrains.idea-ultimate
     # zulu
