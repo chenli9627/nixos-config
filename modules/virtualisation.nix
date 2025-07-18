@@ -1,10 +1,4 @@
 {
-  lib,
-  username,
-  pkgs,
-  config,
-  ...
-}: {
   virtualisation = {
     docker = {
       storageDriver = "btrfs";
@@ -13,7 +7,7 @@
         enable = true;
         setSocketVariable = true;
       };
-      daemon.settings.registry-mirrors = ["https://docker.m.daocloud.io"];
+      daemon.settings.registry-mirrors = [ "https://docker.m.daocloud.io" ];
     };
     virtualbox = {
       host.enable = true;
