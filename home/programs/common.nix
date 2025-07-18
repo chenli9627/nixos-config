@@ -29,8 +29,8 @@
     nil
     vscode
     jetbrains.idea-community-bin
-    jetbrains.idea-ultimate
-    zulu
+    # jetbrains.idea-ultimate
+    # zulu
     lua
     luarocks
     python3Full
