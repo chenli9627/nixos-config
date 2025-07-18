@@ -37,6 +37,21 @@
   margin: 0 7.5px;
 }
 
+/* 悬浮样式 */
+#tray:hover,
+#cpu:hover,
+#battery:hover,
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#clock:hover,
+#custom-power-menu:hover {
+  /* color: #ffffff; /* 文字变白 */ */
+  color:#000000;
+  /* background-color: #3a3a3a; /* 背景变深灰色 */ */
+  /* border-radius: 5px; /* 圆角 */ */
+}
+
 #custom-expand-icon {
   margin-right: 12px;
 }
