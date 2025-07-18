@@ -29,6 +29,7 @@
     nil
     vscode
     jetbrains.idea-community-bin
+    jetbrains.idea-ultimate
     zulu
     lua
     luarocks
