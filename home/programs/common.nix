@@ -14,6 +14,7 @@
     litecli
     hypr
     xfce.mousepad
+    nwg-look
     smartmontools
     tree-sitter
     ffmpeg
