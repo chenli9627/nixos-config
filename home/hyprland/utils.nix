@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # home.file = {
   #   ".config/hypr" = {
   #     source = ./config/hypr;
@@ -41,4 +42,5 @@
   programs.hyprlock = {
     enable = true;
   };
+  services.gnome-keyring.enable = true;
 }
