@@ -15,6 +15,7 @@
     code-nautilus
     qimgv
     adwaita-icon-theme
+    gnome-keyring
     cheese
     # gsettings-desktop-schemas
     openssh
