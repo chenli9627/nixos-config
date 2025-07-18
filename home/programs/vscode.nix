@@ -31,6 +31,7 @@
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
         "chat.agent.enabled" = false;
         "chat.commandCenter.enabled" = false;
+        "metals.javaVersion" = "21";
         "workbench.colorTheme" = "GitHub Light";
         "explorer.confirmDelete" = false;
         "explorer.confirmDragAndDrop" = false;
