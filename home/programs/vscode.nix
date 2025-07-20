@@ -26,8 +26,16 @@
         tomoki1207.pdf
         ecmel.vscode-html-css
         ms-azuretools.vscode-docker
-        # redhat.java
+        redhat.java
+        vscjava.vscode-maven
+        vscjava.vscode-gradle
+        vscjava.vscode-java-dependency
+        vscjava.vscode-java-debug
+        vscjava.vscode-java-test
+        visualstudioexptteam.vscodeintellicode
         vscjava.vscode-java-pack
+        # vscjava.vscode-spring-initializr
+        spring-boot-cli
       ];
       userSettings = {
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
