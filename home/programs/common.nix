@@ -30,6 +30,7 @@
     openjdk
     gradle
     maven
+    gnome-solanum
     llvm
     gnome-font-viewer
     jetbrains.idea-community-bin
