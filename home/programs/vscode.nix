@@ -2,7 +2,7 @@
 {
   programs.vscode = {
     enable = true;
-    mutableExtensionsDir = false;
+    mutableExtensionsDir = true;
     profiles.default = {
       enableExtensionUpdateCheck = false;
       enableUpdateCheck = false;
@@ -26,6 +26,8 @@
         tomoki1207.pdf
         ecmel.vscode-html-css
         ms-azuretools.vscode-docker
+        # redhat.java
+        vscjava.vscode-java-pack
       ];
       userSettings = {
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
