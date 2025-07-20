@@ -28,6 +28,8 @@
     nil
     vscode
     openjdk
+    gradle
+    maven
     llvm
     gnome-font-viewer
     jetbrains.idea-community-bin
