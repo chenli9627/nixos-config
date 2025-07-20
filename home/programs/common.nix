@@ -31,6 +31,7 @@
     gradle
     maven
     gnome-solanum
+    spring-boot-cli
     llvm
     gnome-font-viewer
     jetbrains.idea-community-bin

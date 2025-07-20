@@ -35,7 +35,6 @@
         visualstudioexptteam.vscodeintellicode
         vscjava.vscode-java-pack
         # vscjava.vscode-spring-initializr
-        spring-boot-cli
       ];
       userSettings = {
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
