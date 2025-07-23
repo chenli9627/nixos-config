@@ -12,6 +12,7 @@
       notes = "nvim ~/notes";
       "keydon" = "sudo systemctl start keyd";
       "keydoff" = "sudo systemctl stop keyd";
+      "waybar-reload" = "pkill waybar && hyprctl dispatch exec waybar";
     };
     shellInit = ''
       direnv hook fish | source

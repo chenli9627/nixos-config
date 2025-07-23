@@ -37,6 +37,7 @@
         # vscjava.vscode-spring-initializr
       ];
       userSettings = {
+        "redhat.telemetry.enabled" = false;
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
         "chat.agent.enabled" = false;
         "chat.commandCenter.enabled" = false;
