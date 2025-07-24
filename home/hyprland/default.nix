@@ -19,6 +19,8 @@ in
     ./plugins.nix
     ./utils.nix
     ./walker.nix
+
+    inputs.walker.homeManagerModules.default
   ];
   wayland.windowManager.hyprland = {
     enable = true;
