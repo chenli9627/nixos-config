@@ -6,7 +6,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
-    walker.url = "github:abenz1267/walker";
   };
 
   outputs =
@@ -15,7 +14,6 @@
       nixpkgs,
       home-manager,
       hyprland,
-      walker,
       ...
     }:
     {
