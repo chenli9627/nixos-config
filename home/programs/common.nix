@@ -58,7 +58,6 @@
     keyd
     calibre
     satty
-    walker
     # scala
     # scala-cli
     # scalafmt
