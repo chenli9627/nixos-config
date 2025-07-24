@@ -48,7 +48,6 @@
     pnpm
     strawberry
     clang
-    readest
     wpsoffice-cn
     google-chrome
     zathura
