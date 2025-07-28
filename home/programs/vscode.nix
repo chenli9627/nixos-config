@@ -13,7 +13,7 @@
         github.github-vscode-theme
         catppuccin.catppuccin-vsc
         jnoortheen.nix-ide
-        scalameta.metals
+        # scalameta.metals
         ms-python.python
         ms-python.debugpy
         kamadorueda.alejandra
@@ -41,7 +41,7 @@
         "editor.fontFamily" = "CaskaydiaMono Nerd Font Mono";
         "chat.agent.enabled" = false;
         "chat.commandCenter.enabled" = false;
-        "metals.javaVersion" = "21";
+        # "metals.javaVersion" = "21";
         "workbench.colorTheme" = "GitHub Light";
         "explorer.confirmDelete" = false;
         "explorer.confirmDragAndDrop" = false;

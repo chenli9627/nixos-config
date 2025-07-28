@@ -29,6 +29,12 @@
   services.cliphist = {
     enable = true;
     allowImages = true;
+    extraOptions = [
+      "-max-items"
+      "1000"
+      "max-dedupe-search"
+      "200"
+    ];
   };
   services.udiskie = {
     enable = true;
