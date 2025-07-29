@@ -68,6 +68,7 @@
       # metals
       # clang
       llvm
+      alsa-utils
       wl-clipboard
       xclip
       brightnessctl
