@@ -17,6 +17,5 @@
     ./eza.nix
     ./yazi.nix
     ./ssh.nix
-    # ./zen-browser.nix
   ];
 }
