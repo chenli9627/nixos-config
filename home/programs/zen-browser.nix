@@ -1,7 +1,7 @@
 { inputs, ... }:
 
 let
-  zenRelease = "twilight"; # beta, twilight, twilight-official
+  zenRelease = "beta"; # beta, twilight, twilight-official
 in
 {
   imports = [ inputs.zen-browser.homeModules.${zenRelease} ];
