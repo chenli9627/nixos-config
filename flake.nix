@@ -6,14 +6,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      # IMPORTANT: we're using "libgbm" and is only available in unstable so ensure
-      # to have it up-to-date or simply don't specify the nixpkgs input
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    # zen-browser.url = "github:youwen5/zen-browser-flake";
-    # zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+    # zen-browser = {
+    #   url = "github:0xc000022070/zen-browser-flake";
+    #   # IMPORTANT: we're using "libgbm" and is only available in unstable so ensure
+    #   # to have it up-to-date or simply don't specify the nixpkgs input
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+    zen-browser.url = "github:youwen5/zen-browser-flake";
+    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
