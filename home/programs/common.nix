@@ -123,6 +123,8 @@
       pciutils # lspci
       usbutils # lsusb
       pavucontrol
+      boxes
+      fortune-kind
     ])
     ++ [
       # inputs.zen-browser.packages.${pkgs.system}.default

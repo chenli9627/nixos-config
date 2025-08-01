@@ -19,6 +19,7 @@
       set -g direnv_fish_mode eval_after_arrow
       set -gx GO111MODULE on
       set -gx GOPROXY https://goproxy.cn
+      fortune | boxes -d parchment
     '';
   };
 }
