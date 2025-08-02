@@ -103,7 +103,7 @@
     tree
     wget
     git
-    clash-verge-rev
+    # clash-verge-rev
     curl
     wget
     sqlite
