@@ -107,6 +107,7 @@
     curl
     # clash-nyanpasu
     wget
+    flclash
     sqlite
   ];
 
@@ -125,7 +126,7 @@
   environment.variables.EDITOR = "nvim";
   programs = {
     clash-verge.enable = true;
-    clash-verge.autoStart = true;
+    # clash-verge.autoStart = true;
     fish.enable = true;
   };
 

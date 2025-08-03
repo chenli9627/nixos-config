@@ -14,6 +14,7 @@
       litecli
       hypr
       xfce.mousepad
+      xfce.thunar
       nwg-look
       smartmontools
       tree-sitter
@@ -27,7 +28,7 @@
       typstyle
       nixd
       nil
-      vscode
+      # vscode
       openjdk
       gradle
       maven
@@ -112,6 +113,7 @@
       btop # replacement of htop/nmon
       htop
       iotop # io monitoring
+      gdu
       iftop # network monitoring
       nvtopPackages.amd
       strace # system call monitoring
