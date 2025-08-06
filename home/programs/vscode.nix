@@ -25,7 +25,7 @@
         rust-lang.rust-analyzer
         tomoki1207.pdf
         ecmel.vscode-html-css
-        bierner.markdown-mermaid
+        # bierner.markdown-mermaid
         ms-azuretools.vscode-docker
         redhat.java
         vscjava.vscode-maven
