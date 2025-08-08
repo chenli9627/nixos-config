@@ -116,6 +116,7 @@
       gdu
       duf
       bun
+      nvme-cli
       iftop # network monitoring
       nvtopPackages.amd
       strace # system call monitoring
