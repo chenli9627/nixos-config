@@ -114,6 +114,7 @@
       htop
       iotop # io monitoring
       gdu
+      duf
       iftop # network monitoring
       nvtopPackages.amd
       strace # system call monitoring
