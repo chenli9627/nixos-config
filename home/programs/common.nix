@@ -114,6 +114,7 @@
       htop
       iotop # io monitoring
       gdu
+      radeontop
       duf
       bun
       nvme-cli
