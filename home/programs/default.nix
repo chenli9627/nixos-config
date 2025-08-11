@@ -18,5 +18,6 @@
     ./yazi.nix
     ./ssh.nix
     ./zen-browser.nix
+    ./fzf.nix
   ];
 }
