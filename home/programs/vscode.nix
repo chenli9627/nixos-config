@@ -23,6 +23,7 @@
         ms-vscode.cmake-tools
         mkhl.direnv
         rust-lang.rust-analyzer
+        dbaeumer.vscode-eslint
         tomoki1207.pdf
         ecmel.vscode-html-css
         # bierner.markdown-mermaid
