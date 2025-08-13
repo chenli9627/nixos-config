@@ -4,8 +4,9 @@
   programs.kitty = {
     enable = true;
     # themeFile = "GitHub_Light";
-    theme = "Gruvbox_Dark_Soft";
+    themeFile = "GruvboxMaterialDarkSoft";
     shellIntegration.enableFishIntegration = true;
+    shellIntegration.enableBashIntegration = true;
     # extraPackages = with pkgs; [ kitty-themes ];
     settings = {
       font_family = "CaskaydiaMono Nerd Font Mono";
