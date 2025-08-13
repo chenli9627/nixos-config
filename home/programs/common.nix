@@ -89,6 +89,7 @@
       yq-go # yaml processor https://github.com/mikefarah/yq
       # fzf # A command-line fuzzy finder
       fd
+      quickemu
       lazygit
       lazydocker
       ghostscript
