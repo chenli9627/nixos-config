@@ -21,4 +21,6 @@
       name = "Adwaita-dark";
     };
   };
+
+  home.sessionVariables.GTK_THEME = "Adwaita-dark";
 }
