@@ -107,7 +107,7 @@
     curl
     # clash-nyanpasu
     wget
-    flclash
+    # flclash
     sqlite
   ];
 
