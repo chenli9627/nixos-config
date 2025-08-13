@@ -24,6 +24,7 @@
         mkhl.direnv
         rust-lang.rust-analyzer
         dbaeumer.vscode-eslint
+        dart-code.flutter
         tomoki1207.pdf
         ecmel.vscode-html-css
         # bierner.markdown-mermaid
