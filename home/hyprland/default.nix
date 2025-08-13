@@ -18,9 +18,7 @@ in
     ./packages.nix
     ./plugins.nix
     ./utils.nix
-    ./qt.nix
-    ./gtk.nix
-    ./pointerCursor.nix
+    ./theme.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;

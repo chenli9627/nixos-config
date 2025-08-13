@@ -23,4 +23,30 @@
   };
 
   home.sessionVariables.GTK_THEME = "Adwaita-dark";
+  qt = {
+    enable = true;
+    platformTheme.name = "adwaita";
+    style = {
+      name = "adwaita-dark";
+      package = pkgs.adwaita-qt;
+    };
+  };
+  home.pointerCursor = {
+    enable = true;
+    package = pkgs.adwaita-icon-theme;
+    gtk.enable = true;
+    hyprcursor = {
+      enable = true;
+      size = 24;
+    };
+    name = "Adwaita";
+    size = 24;
+    x11.enable = true;
+  };
+  services.xsettingsd = {
+    enable = true;
+    settings = {
+      "Xft/dpi" = 192;
+    };
+  };
 }
