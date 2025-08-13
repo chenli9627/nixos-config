@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  pointCursor = {
+  home.pointCursor = {
     enable = true;
     package = pkgs.adwaita-icon-theme;
     gtk.enable = true;
