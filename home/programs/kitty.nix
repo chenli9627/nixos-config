@@ -1,9 +1,10 @@
 { pkgs, ... }:
 {
-  programs.kitty = pkgs.lib.mkForce {
+  # programs.kitty = pkgs.lib.mkForce {
+  programs.kitty = {
     enable = true;
     # themeFile = "GitHub_Light";
-    themeFile = "Gruvbox_Dark_Soft";
+    theme = "Gruvbox_Dark_Soft";
     shellIntegration.enableFishIntegration = true;
     extraPackages = with pkgs; [ kitty-themes ];
     settings = {
