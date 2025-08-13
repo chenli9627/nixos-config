@@ -25,6 +25,7 @@
         rust-lang.rust-analyzer
         dbaeumer.vscode-eslint
         dart-code.flutter
+        jdinhlife.gruvbox
         tomoki1207.pdf
         ecmel.vscode-html-css
         # bierner.markdown-mermaid
