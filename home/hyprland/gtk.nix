@@ -2,11 +2,11 @@
 {
   gtk = {
     enable = true;
-    cursorTheme = {
-      name = "Adwaita";
-      package = pkgs.adwaita-icon-theme;
-      size = 24;
-    };
+    # cursorTheme = {
+    #   name = "Adwaita";
+    #   package = pkgs.adwaita-icon-theme;
+    #   size = 24;
+    # };
     font = {
       name = "CaskaydiaMono Nerd Font Regular";
       package = pkgs.nerd-fonts.caskaydia-mono;
