@@ -4,7 +4,7 @@
   programs.kitty = {
     enable = true;
     # themeFile = "GitHub_Light";
-    themeFile = "GruvboxMaterialDarkSoft";
+    themeFile = "GruvboxMaterialDarkMedium";
     shellIntegration.enableFishIntegration = true;
     shellIntegration.enableBashIntegration = true;
     # extraPackages = with pkgs; [ kitty-themes ];
