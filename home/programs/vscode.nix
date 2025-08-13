@@ -46,7 +46,7 @@
         "chat.agent.enabled" = false;
         "chat.commandCenter.enabled" = false;
         # "metals.javaVersion" = "21";
-        "workbench.colorTheme" = "GitHub Light";
+        "workbench.colorTheme" = "Gruvbox Dark Hard";
         "explorer.confirmDelete" = false;
         "explorer.confirmDragAndDrop" = false;
         "extensions.autoUpdate" = false;
