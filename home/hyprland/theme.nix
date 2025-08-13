@@ -43,10 +43,13 @@
     size = 24;
     x11.enable = true;
   };
-  services.xsettingsd = {
-    enable = true;
-    settings = {
-      "Xft/dpi" = "192";
-    };
+  xresources.properties = {
+    "Xft.dpi" = 192; # 根据缩放比例调整（96 × 缩放系数）
   };
+  # services.xsettingsd = {
+  #   enable = true;
+  #   settings = {
+  #     "Xft/dpi" = "192";
+  #   };
+  # };
 }
