@@ -2,7 +2,8 @@
 {
   programs.kitty = pkgs.lib.mkForce {
     enable = true;
-    themeFile = "GitHub_Light";
+    # themeFile = "GitHub_Light";
+    themeFile = "Gruvbox_Dark_Soft";
     shellIntegration.enableFishIntegration = true;
     settings = {
       font_family = "CaskaydiaMono Nerd Font Mono";
