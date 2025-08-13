@@ -46,7 +46,7 @@
   services.xsettingsd = {
     enable = true;
     settings = {
-      "Xft/dpi" = 192;
+      "Xft/dpi" = "192";
     };
   };
 }
