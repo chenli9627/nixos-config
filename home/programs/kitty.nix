@@ -6,7 +6,7 @@
     # themeFile = "GitHub_Light";
     theme = "Gruvbox_Dark_Soft";
     shellIntegration.enableFishIntegration = true;
-    extraPackages = with pkgs; [ kitty-themes ];
+    # extraPackages = with pkgs; [ kitty-themes ];
     settings = {
       font_family = "CaskaydiaMono Nerd Font Mono";
       enable_audio_bell = false;
