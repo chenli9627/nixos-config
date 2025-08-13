@@ -50,7 +50,7 @@
       pnpm
       strawberry
       clang
-      # wpsoffice-cn
+      wpsoffice-cn
       google-chrome
       # zathura
       goldendict-ng
