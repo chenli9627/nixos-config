@@ -20,7 +20,7 @@ in
     ./utils.nix
     ./qt.nix
     ./gtk.nix
-    ./pointCursor.nix
+    ./pointerCursor.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;
