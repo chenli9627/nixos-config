@@ -65,7 +65,7 @@
   # networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp1s0.useDHCP = lib.mkDefault true;
   networking = {
-    useDHCP = false;
+    # useDHCP = false;
     hostName = "nixos"; # Define your hostname.
     # Pick only one of the below networking options.
     wireless.enable = true; # Enables wireless support via wpa_supplicant.
