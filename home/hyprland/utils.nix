@@ -36,9 +36,6 @@
       "1000"
     ];
   };
-  programs.fuzzel = {
-    enable = true;
-  };
   services.udiskie = {
     enable = true;
   };
