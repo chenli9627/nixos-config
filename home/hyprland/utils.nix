@@ -48,7 +48,7 @@
   programs.hyprlock = {
     enable = true;
   };
-  programs.hyprsunset = {
+  services.hyprsunset = {
     enable = true;
   };
   services.gnome-keyring.enable = true;
