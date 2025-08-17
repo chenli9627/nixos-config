@@ -30,10 +30,10 @@
     enable = true;
     allowImages = true;
     extraOptions = [
+      "-max-dedupe-search"
+      "200"
       "-max-items"
       "1000"
-      "max-dedupe-search"
-      "200"
     ];
   };
   services.udiskie = {
@@ -46,6 +46,9 @@
     enable = true;
   };
   programs.hyprlock = {
+    enable = true;
+  };
+  programs.hyprsunset = {
     enable = true;
   };
   services.gnome-keyring.enable = true;

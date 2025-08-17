@@ -27,5 +27,6 @@
     hypridle
     hyprsysteminfo
     waybar
+    hyprpicker
   ];
 }
