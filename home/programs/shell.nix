@@ -22,4 +22,20 @@
       fortune | boxes -d parchment
     '';
   };
+  programs.bash = {
+    enable = true;
+    enableCompletion = true;
+    shellAliases = {
+      n = "nvim";
+      lzd = "lazydocker";
+      lzg = "lazygit";
+      ":q" = "exit";
+      ".." = "cd ..";
+      clr = "clear";
+    };
+    bashrcExtra = ''
+      eval "$(direnv hook bash)"
+    '';
+  };
+
 }
