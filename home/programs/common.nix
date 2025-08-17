@@ -52,8 +52,8 @@
       clang
       wpsoffice-cn
       google-chrome
-      # zathura
       goldendict-ng
+      mission-center
       localsend
       cherry-studio
       keyd
