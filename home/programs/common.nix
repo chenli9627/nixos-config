@@ -53,7 +53,6 @@
       wpsoffice-cn
       google-chrome
       goldendict-ng
-      mission-center
       localsend
       cherry-studio
       keyd
