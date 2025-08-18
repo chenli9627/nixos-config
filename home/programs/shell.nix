@@ -13,6 +13,7 @@
       "keydon" = "sudo systemctl start keyd";
       "keydoff" = "sudo systemctl stop keyd";
       "waybar-reload" = "pkill waybar && hyprctl dispatch exec waybar";
+      "nixosconfig" = "nvim ~/nixos-config";
     };
     shellInit = ''
       direnv hook fish | source
