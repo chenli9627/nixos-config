@@ -41,7 +41,10 @@
     };
     name = "Adwaita";
     size = 24;
-    x11.enable = true;
+    x11 = {
+      enable = true;
+      defaultCursor = "Adwaita";
+    };
   };
   xresources.properties = {
     "Xft.dpi" = 192; # 根据缩放比例调整（96 × 缩放系数）
@@ -54,6 +57,7 @@
     "Xft.antialias" = 1;
     "Xft.rgba" = "rgb";
     # I wish these above may effect how xwayland apps behaves
+    # update: it runs well😄
   };
   # services.xsettingsd = {
   #   enable = true;
