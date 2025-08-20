@@ -41,10 +41,10 @@
     };
     name = "Adwaita";
     size = 24;
-    x11 = {
-      enable = true;
-      # defaultCursor = "Adwaita";
-    };
+    # x11 = {
+    #   enable = true;
+    #   # defaultCursor = "Adwaita";
+    # };
   };
   xresources.properties = {
     "Xft.dpi" = 192; # 根据缩放比例调整（96 × 缩放系数）
