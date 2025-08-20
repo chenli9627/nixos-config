@@ -36,6 +36,7 @@
     "iommu=soft"
     "pcie_aspm=off"
     "pcie_port_pm=off"
+    "mem_sleep_default=deep"
   ];
 
   # boot = {
@@ -71,6 +72,19 @@
     networkmanager.enable = true; # Easiest to use and most distros use this by default.
     useDHCP = false;
     dhcpcd.enable = false;
-    networkmanager.wifi.powersave = true;
+    # networkmanager.wifi.powersave = true;
+  };
+
+  services.power-profiles-daemon.enable = true;
+  services.logind = {
+    lidSwitch = "suspend-then-hibernate";
+    powerKey = "suspend";
+    powerKeyLongPress = "poweroff";
+  };
+  systemd.sleep = {
+    extraConfig = ''
+      HibernateDelaySec=30m
+      SuspendState=mem
+    '';
   };
 }
