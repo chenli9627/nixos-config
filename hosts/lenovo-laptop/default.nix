@@ -31,9 +31,9 @@
   };
   boot.kernelParams = [
     "amdgpu.dcdebugmask=0x10"
-    # "nvme.noacpi=1"
+    "nvme.noacpi=1"
     "nvme_core.default_ps_max_latency_us=0"
-    # "iommu=soft"
+    "iommu=soft"
     "pcie_aspm=off"
     "pcie_port_pm=off"
   ];
