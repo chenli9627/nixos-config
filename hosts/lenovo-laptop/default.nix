@@ -36,7 +36,7 @@
     "iommu=soft"
     "pcie_aspm=off"
     "pcie_port_pm=off"
-    "mem_sleep_default=deep"
+    # "mem_sleep_default=deep"
   ];
 
   # boot = {
