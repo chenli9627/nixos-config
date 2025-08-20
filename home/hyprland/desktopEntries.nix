@@ -21,6 +21,16 @@ in
         "WordProcessor"
       ];
     };
+    et = {
+      name = "WPS Speardsheets (scaled)";
+      genericName = "Office Suite";
+      exec = "${launchScript "wps"}/bin/et-scaled %F";
+      terminal = false;
+      categories = [
+        "Office"
+        "WordProcessor"
+      ];
+    };
 
     wpp = {
       name = "WPS Presentation (scaled)";
