@@ -43,7 +43,7 @@
     size = 24;
     x11 = {
       enable = true;
-      defaultCursor = "Adwaita";
+      # defaultCursor = "Adwaita";
     };
   };
   xresources.properties = {

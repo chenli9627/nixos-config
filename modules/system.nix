@@ -146,6 +146,7 @@
     enableSSHSupport = true;
   };
   security.polkit.enable = true;
+  security.rtkit.enable = true;
 
   system.stateVersion = "25.05"; # Did you read the comment?
 }

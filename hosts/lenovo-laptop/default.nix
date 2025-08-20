@@ -15,7 +15,7 @@
     ../../modules/nix-ld.nix
     ../../modules/virtualisation.nix
     ../../modules/keyd.nix
-    ../../modules/flatpak.nix
+    # ../../modules/flatpak.nix
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
