@@ -1,10 +1,4 @@
 {
-  # config,
-  pkgs,
-  inputs,
-  ...
-}:
-{
   imports = [
     ../../home/core.nix
 

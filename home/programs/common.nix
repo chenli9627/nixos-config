@@ -54,6 +54,7 @@
       google-chrome
       goldendict-ng
       localsend
+      monolith
       cherry-studio
       keyd
       calibre
