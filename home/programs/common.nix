@@ -52,6 +52,7 @@
       clang
       wpsoffice-cn
       google-chrome
+      miniserve
       goldendict-ng
       localsend
       monolith
