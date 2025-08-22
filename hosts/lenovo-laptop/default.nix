@@ -76,16 +76,16 @@
   };
 
   services.power-profiles-daemon.enable = true;
-  services.logind = {
-    # This laptop doesn't support s3 suspend
-    lidSwitch = "suspend-then-hibernate";
-    powerKey = "suspend";
-    powerKeyLongPress = "poweroff";
-  };
-  systemd.sleep = {
-    extraConfig = ''
-      HibernateDelaySec=30m
-      SuspendState=mem
-    '';
-  };
+  # services.logind = {
+  #   # This laptop doesn't support s3 suspend
+  #   lidSwitch = "suspend-then-hibernate";
+  #   powerKey = "suspend";
+  #   powerKeyLongPress = "poweroff";
+  # };
+  # systemd.sleep = {
+  #   extraConfig = ''
+  #     HibernateDelaySec=30m
+  #     SuspendState=mem
+  #   '';
+  # };
 }
