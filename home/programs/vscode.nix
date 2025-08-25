@@ -28,7 +28,7 @@
         jdinhlife.gruvbox
         tomoki1207.pdf
         ecmel.vscode-html-css
-        bierner.markdown-mermaid
+        # bierner.markdown-mermaid # something wrong with this extension
         ms-azuretools.vscode-docker
         redhat.java
         vscjava.vscode-maven
