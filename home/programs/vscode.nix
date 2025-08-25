@@ -28,7 +28,7 @@
         jdinhlife.gruvbox
         tomoki1207.pdf
         ecmel.vscode-html-css
-        # bierner.markdown-mermaid
+        bierner.markdown-mermaid
         ms-azuretools.vscode-docker
         redhat.java
         vscjava.vscode-maven
@@ -46,7 +46,7 @@
         "chat.agent.enabled" = false;
         "chat.commandCenter.enabled" = false;
         # "metals.javaVersion" = "21";
-        "workbench.colorTheme" = "Github Dark";
+        "workbench.colorTheme" = "Gruvbox Dark Hard";
         "explorer.confirmDelete" = false;
         "explorer.confirmDragAndDrop" = false;
         "extensions.autoUpdate" = false;
@@ -63,7 +63,7 @@
           when = "textInputFocus";
         }
         {
-          key = "ctrl+shift+e";
+          key = "ctrl+e";
           command = "workbench.view.explorer";
           when = "viewContainer.workbench.view.explorer.enabled";
         }
