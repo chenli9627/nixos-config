@@ -56,6 +56,18 @@
           "asvetliakov.vscode-neovim" = 1;
         };
       };
+      keybindings = [
+        {
+          key = "ctrl+c";
+          command = "editor.action.clipboardCopyAction";
+          when = "textInputFocus";
+        }
+        {
+          key = "ctrl+shift+e";
+          command = "workbench.view.explorer";
+          when = "viewContainer.workbench.view.explorer.enabled";
+        }
+      ];
     };
   };
 }
