@@ -30,6 +30,7 @@
         ecmel.vscode-html-css
         # bierner.markdown-mermaid # something wrong with this extension
         ms-azuretools.vscode-docker
+        streetsidesoftware.code-spell-checker
         redhat.java
         vscjava.vscode-maven
         vscjava.vscode-gradle
