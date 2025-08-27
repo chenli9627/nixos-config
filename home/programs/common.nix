@@ -53,6 +53,8 @@
       wpsoffice-cn
       google-chrome
       miniserve
+      bruno
+      bruno-cli
       goldendict-ng
       localsend
       monolith
