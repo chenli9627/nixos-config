@@ -18,5 +18,6 @@
     ./zen-browser.nix
     ./fzf.nix
     ./ghostty.nix
+    ./satty.nix
   ];
 }

@@ -28,7 +28,6 @@
       typstyle
       nixd
       nil
-      # vscode
       openjdk
       gradle
       maven
@@ -61,7 +60,6 @@
       cherry-studio
       keyd
       calibre
-      satty
       # scala
       # scala-cli
       # scalafmt
