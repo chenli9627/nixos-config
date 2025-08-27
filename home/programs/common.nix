@@ -58,7 +58,7 @@
       localsend
       monolith
       cherry-studio
-      keyd
+      satty
       calibre
       # scala
       # scala-cli
