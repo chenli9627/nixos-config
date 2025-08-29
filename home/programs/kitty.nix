@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   # programs.kitty = pkgs.lib.mkForce {
   programs.kitty = {
