@@ -133,6 +133,7 @@
       pavucontrol
       boxes
       fortune-kind
+      mongosh
     ])
     ++ [
       # inputs.zen-browser.packages.${pkgs.system}.default
