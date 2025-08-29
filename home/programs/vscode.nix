@@ -20,6 +20,7 @@
         asvetliakov.vscode-neovim
         ms-vscode.cpptools-extension-pack
         ms-vscode.cpptools
+        sainnhe.gruvbox-material
         ms-vscode.cmake-tools
         mkhl.direnv
         rust-lang.rust-analyzer
