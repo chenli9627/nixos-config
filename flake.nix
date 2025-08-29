@@ -22,7 +22,7 @@
       nixpkgs,
       home-manager,
       hyprland,
-      zen-browser,
+      # zen-browser,
       ...
     }:
     {
