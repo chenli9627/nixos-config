@@ -2,7 +2,6 @@
 {
   systemd.services.keyd.wantedBy = lib.mkForce [ ];
   services.keyd = {
-    wantedBy = [ ];
     enable = true;
     keyboards = {
       # The name is just the name of the configuration file, it does not really matter
@@ -11,13 +10,18 @@
         # Everything but the ID section:
         settings = {
           # The main layer, if you choose to declare it in Nix
+          altmeta = {
+            leftalt = "leftmeta";
+            leftmeta = "leftalt";
+            rightalt = "rightmeta";
+          };
           main = {
             # capslock = "layer(control)"; # you might need to also enclose the key in quotes if it contains non-alphabetical symbols
             capslock = "overload(control, esc)";
             esc = "capslock";
-            leftalt = "leftmeta";
-            rightalt = "rightmeta";
-            leftmeta = "leftalt";
+            leftalt = "layer(altmeta)";
+            rightalt = "layer(altmeta)";
+            leftmeta = "layer(altmeta)";
           };
           otherlayer = { };
         };
