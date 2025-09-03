@@ -9,13 +9,7 @@
 }:
 {
   imports = [
-    ../../modules/system.nix
-    # ../../modules/gnome.nix
-    ../../modules/hyprland.nix
-    ../../modules/nix-ld.nix
-    ../../modules/virtualisation.nix
-    ../../modules/keyd.nix
-    # ../../modules/flatpak.nix
+    ../../modules/default.nix
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
