@@ -23,6 +23,9 @@
       configurationLimit = 10;
     };
   };
+  boot.kernel.sysctl = {
+    "vm.swappiness" = 30;
+  };
   boot.kernelParams = [
     "amdgpu.dcdebugmask=0x10"
     # "nvme.noacpi=1" # seems to break something
