@@ -10,18 +10,13 @@
         # Everything but the ID section:
         settings = {
           # The main layer, if you choose to declare it in Nix
-          altmeta = {
-            leftalt = "leftmeta";
-            leftmeta = "leftalt";
-            rightalt = "rightmeta";
-          };
           main = {
             # capslock = "layer(control)"; # you might need to also enclose the key in quotes if it contains non-alphabetical symbols
             capslock = "overload(control, esc)";
             esc = "capslock";
-            leftalt = "layer(altmeta)";
-            rightalt = "layer(altmeta)";
-            leftmeta = "layer(altmeta)";
+            rightalt = "layer(meta)";
+            leftmeta = "layer(alt)";
+            leftalt = "layer(meta)";
           };
           otherlayer = { };
         };
