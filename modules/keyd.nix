@@ -1,5 +1,6 @@
+{ lib, ... }:
 {
-  # systemd.services.keyd.enable = false;
+  systemd.services.keyd.wantedBy = lib.mkForce [ ];
   services.keyd = {
     wantedBy = [ ];
     enable = true;
