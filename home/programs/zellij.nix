@@ -1,4 +1,10 @@
 { pkgs, ... }:
+let
+  zellij-autolock = pkgs.fetchurl {
+    url = "https://github.com/fresh2dev/zellij-autolock/releases/latest/download/zellij-autolock.wasm";
+    hash = "194fgd421w2j77jbpnq994y2ma03qzdlz932cxfhfznrpw3mdjb9";
+  };
+in
 {
   programs.zellij = {
     enable = true;
@@ -8,18 +14,12 @@
       theme = "catppuccin-macchiato";
       # default_layout = "compact";
       autolock = {
-        location = "builtin:autolock";
+        location = "${zellij-autolock}";
         triggers = "nvim|vim|v|nv";
         watch_triggers = "fzf|zoxide|atuin|atac";
         watch_interval = "1.0";
       };
     };
-    plugins = [
-      {
-        name = "autolock";
-        url = "https://github.com/fresh2dev/zellij-autolock/releases/latest/download/zellij-autolock.wasm";
-      }
-    ];
   };
 }
 # ...
