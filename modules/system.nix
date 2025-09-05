@@ -67,6 +67,7 @@
     liberation_ttf
     fira-code
     fira-code-symbols
+    nerd-fonts.caskaydia-cove
     nerd-fonts.caskaydia-mono
     # Maple Mono (Ligature TTF unhinted)
     maple-mono.truetype
