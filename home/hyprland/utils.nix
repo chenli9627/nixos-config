@@ -1,21 +1,11 @@
 { pkgs, ... }:
 {
-  # home.file = {
-  #   ".config/hypr" = {
-  #     source = ./config/hypr;
-  #     recursive = true;
-  #   };
-  #   ".config/wofi" = {
-  #     source = ./config/wofi;
-  #     recursive = true;
-  #   };
-  #   ".config/waybar" = {
-  #     source = ./config/waybar;
-  #     recursive = true;
-  #   };
-  # };
   services.mako = {
     enable = true;
+    settings = {
+      background-color = "#282828";
+      border-color = "#504945";
+    };
   };
   services.hyprpolkitagent.enable = true;
   # services.polkit-gnome.enable = true;
