@@ -28,7 +28,7 @@
     platformTheme.name = "adwaita";
     style = {
       name = "adwaita-dark";
-      package = pkgs.adwaita-qt;
+      package = pkgs.adwaita-qt6;
     };
   };
   home.pointerCursor = {
