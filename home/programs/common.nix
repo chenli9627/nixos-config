@@ -11,6 +11,7 @@
     (with pkgs; [
       mycli
       pgcli
+      font-family
       litecli
       hypr
       xfce.mousepad
