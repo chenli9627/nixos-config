@@ -15,7 +15,7 @@
     ./eza.nix
     ./yazi.nix
     ./ssh.nix
-    # ./zen-browser.nix
+    ./zen-browser.nix
     ./fzf.nix
     ./zed.nix
     ./ghostty.nix
