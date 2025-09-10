@@ -24,7 +24,7 @@
     };
   };
   boot.kernel.sysctl = {
-    "vm.swappiness" = 20;
+    "vm.swappiness" = 15;
   };
   boot.kernelParams = [
     "amdgpu.dcdebugmask=0x10"
