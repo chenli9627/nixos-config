@@ -1,14 +1,18 @@
 {
+  home.shellAliases = {
+    ":q" = "exit";
+    clr = "clear";
+    lzd = "lazydocker";
+    lzg = "lazygit";
+    zj = "zellij";
+  };
+  home.shell.enableShellIntegration = true;
   programs.fish = {
     enable = true;
     generateCompletions = true;
     preferAbbrs = true;
     shellAbbrs = {
-      lzg = "lazygit";
-      lzd = "lazydocker";
       n = "nvim";
-      ":q" = "exit";
-      clr = "clear";
       notes = "nvim ~/notes";
       "keydon" = "sudo systemctl start keyd";
       "keydoff" = "sudo systemctl stop keyd";
@@ -28,11 +32,7 @@
     enableCompletion = true;
     shellAliases = {
       n = "nvim";
-      lzd = "lazydocker";
-      lzg = "lazygit";
-      ":q" = "exit";
       ".." = "cd ..";
-      clr = "clear";
     };
     bashrcExtra = ''
       eval "$(direnv hook bash)"
