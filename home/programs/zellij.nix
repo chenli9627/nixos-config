@@ -6,7 +6,7 @@
       # theme = "gruvbox-dark";
       auto_start = false;
       theme = "catppuccin-macchiato";
-      # default_layout = "compact";
+      default_layout = "compact";
     };
   };
 }
