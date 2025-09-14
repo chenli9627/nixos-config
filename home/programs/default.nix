@@ -10,7 +10,6 @@
     ./obs.nix
     ./zathura.nix
     ./direnv.nix
-    ./neovim
     ./zellij.nix
     ./eza.nix
     ./yazi.nix
@@ -18,6 +17,7 @@
     ./zen-browser.nix
     ./fzf.nix
     ./zed.nix
+    ./nvim.nix
     ./ghostty.nix
     ./satty.nix
   ];
