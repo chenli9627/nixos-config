@@ -4,7 +4,6 @@
     clr = "clear";
     lzd = "lazydocker";
     lzg = "lazygit";
-    zj = "zellij";
   };
   home.shell.enableShellIntegration = true;
   programs.fish = {
