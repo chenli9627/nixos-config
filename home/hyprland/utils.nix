@@ -34,9 +34,10 @@
       "ssh"
       "recursivebrowser"
       "combi"
+      "keys"
     ];
     extraConfig = {
-      combi-modes = "drun,ssh,emoji,vpn";
+      combi-modes = "drun,ssh,emoji";
     };
   };
 
