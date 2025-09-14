@@ -11,13 +11,3 @@
 
   };
 }
-
-# layout {
-#     pane size=1 borderless=true {
-#         plugin location="tab-bar"
-#     }
-#     pane
-#     pane size=1 borderless=true {
-#         plugin location="status-bar"
-#     }
-# }
