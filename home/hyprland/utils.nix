@@ -13,9 +13,33 @@
     enable = true;
     # systemd.enable = true;
   };
+
   programs.wofi = {
-    enable = true;
+    enable = false;
   };
+  programs.rofi = {
+    enable = true;
+    cycle = true;
+    plugins = with pkgs; [
+      rofi-emoji-wayland
+      rofi-calc
+      rofi-file-browser
+    ];
+    terminal = "kitty";
+    theme = "gruvbox-dark";
+    font = "Cascadia Code 18";
+    modes = [
+      "drun"
+      "emoji"
+      "ssh"
+      "recursivebrowser"
+      "combi"
+    ];
+    extraConfig = {
+      combi-modes = "drun,ssh,emoji,vpn";
+    };
+  };
+
   services.cliphist = {
     enable = true;
     allowImages = true;
