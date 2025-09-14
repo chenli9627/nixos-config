@@ -1,1 +1,1 @@
-### chenli's NixOS config files
+# NixOS Config
