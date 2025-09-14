@@ -10,7 +10,6 @@
     ./obs.nix
     ./zathura.nix
     ./direnv.nix
-    ./zellij.nix
     ./eza.nix
     ./yazi.nix
     ./ssh.nix
