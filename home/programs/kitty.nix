@@ -1,5 +1,4 @@
 {
-  # programs.kitty = pkgs.lib.mkForce {
   programs.kitty = {
     enable = true;
     # themeFile = "GitHub_Light";
@@ -7,6 +6,9 @@
     shellIntegration.enableFishIntegration = true;
     shellIntegration.enableBashIntegration = true;
     # extraPackages = with pkgs; [ kitty-themes ];
+    keybindings = {
+
+    };
     settings = {
       font_family = "CaskaydiaMono Nerd Font Mono";
       enable_audio_bell = false;
@@ -19,5 +21,9 @@
         in
         (builtins.concatStringsSep "," mappings) + " Noto Sans CJK SC Medium";
     };
+    extraConfig = "
+        map alt+l next_tab
+        map alt+h previous_tab
+      ";
   };
 }
