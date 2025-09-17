@@ -16,6 +16,7 @@
       hypr
       xfce.mousepad
       xfce.thunar
+      gnome-clocks
       nwg-look
       smartmontools
       tree-sitter
