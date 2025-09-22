@@ -2,11 +2,6 @@
 {
   gtk = {
     enable = true;
-    # cursorTheme = {
-    #   name = "Adwaita";
-    #   package = pkgs.adwaita-icon-theme;
-    #   size = 24;
-    # };
     font = {
       name = "CaskaydiaMono Nerd Font Regular";
       package = pkgs.nerd-fonts.caskaydia-mono;
@@ -22,7 +17,6 @@
     };
   };
 
-  home.sessionVariables.GTK_THEME = "Adwaita-dark";
   qt = {
     enable = true;
     platformTheme.name = "adwaita";
@@ -59,10 +53,6 @@
     # I wish these above may effect how xwayland apps behaves
     # update: it runs well😄
   };
-  # services.xsettingsd = {
-  #   enable = true;
-  #   settings = {
-  #     "Xft/dpi" = "192";
-  #   };
-  # };
+
+  home.sessionVariables.GTK_THEME = "Adwaita-dark";
 }
