@@ -1,5 +1,6 @@
 { pkgs, ... }:
 {
+
   services.mako = {
     enable = true;
     settings = {
@@ -10,7 +11,7 @@
   services.hyprpolkitagent.enable = true;
   # services.polkit-gnome.enable = true;
   programs.waybar = {
-    enable = true;
+    enable = false;
     # systemd.enable = true;
   };
 
