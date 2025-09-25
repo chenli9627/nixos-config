@@ -136,6 +136,7 @@
       boxes
       fortune-kind
       mongosh
+      kdePackages.okular
     ])
     ++ [
       # inputs.zen-browser.packages.${pkgs.system}.default

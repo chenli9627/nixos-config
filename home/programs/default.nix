@@ -1,6 +1,6 @@
 {
   imports = [
-    ./common.nix
+    ./packages.nix
     ./broot.nix
     ./git.nix
     ./kitty.nix
