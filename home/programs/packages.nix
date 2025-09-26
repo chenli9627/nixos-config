@@ -9,15 +9,11 @@
   };
   home.packages =
     (with pkgs; [
-      mycli
-      pgcli
       font-manager
-      litecli
       hypr
       xfce.mousepad
       xfce.thunar
       gnome-clocks
-      nwg-look
       smartmontools
       tree-sitter
       ffmpeg
@@ -26,57 +22,29 @@
       sqlite
       gopls
       pandoc
-      typst
       typstyle
       nixd
       nil
-      openjdk
-      gradle
-      maven
       gnome-solanum
-      spring-boot-cli
-      llvm
       gnome-font-viewer
       jetbrains.idea-community-bin
-      # jetbrains.idea-ultimate
-      # zulu
       lua
       luarocks
-      python3Full
-      go
-      ruby
-      cargo
-      ruby-lsp
-      nodejs_22
-      pnpm
       strawberry
       clang
       wpsoffice-cn
       google-chrome
       miniserve
       bruno
-      bruno-cli
       goldendict-ng
       localsend
       monolith
-      cherry-studio
       satty
       calibre
-      # scala
-      # scala-cli
-      # scalafmt
-      # ammonite
-      # coursier
-      # sbt
-      # mill
-      # metals
-      # clang
-      llvm
       alsa-utils
       wl-clipboard
       xclip
       brightnessctl
-      kitty
       zip
       powertop
       xz
@@ -96,8 +64,6 @@
       lazygit
       lazydocker
       ghostscript
-      mermaid-cli
-      zoxide
       tealdeer
       iperf3
       aria2 # A lightweight multi-protocol & multi-source command-line download utility
@@ -120,7 +86,6 @@
       gdu
       radeontop
       duf
-      bun
       nvme-cli
       iftop # network monitoring
       nvtopPackages.amd
@@ -135,7 +100,6 @@
       pavucontrol
       boxes
       fortune-kind
-      mongosh
       kdePackages.okular
     ])
     ++ [
