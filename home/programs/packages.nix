@@ -101,6 +101,11 @@
       boxes
       fortune-kind
       kdePackages.okular
+
+      ## for developing
+      nodejs_22
+      pnpm
+      bun
     ])
     ++ [
       # inputs.zen-browser.packages.${pkgs.system}.default
