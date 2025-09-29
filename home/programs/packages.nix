@@ -77,7 +77,7 @@
       gawk
       zstd
       gnupg
-      trashy
+      gtrash
       nix-output-monitor
       glow # markdown previewer in terminal
       btop # replacement of htop/nmon
