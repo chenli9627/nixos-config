@@ -55,6 +55,7 @@ in
     };
   };
 }
+
 # {
 #   xdg.desktopEntries = {
 #     wps = {
