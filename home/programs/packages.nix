@@ -28,6 +28,7 @@
       gnome-solanum
       gnome-font-viewer
       jetbrains.idea-community-bin
+      jetbrains.datagrip
       lua
       luarocks
       strawberry
