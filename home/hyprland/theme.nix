@@ -25,6 +25,7 @@
       package = pkgs.adwaita-qt6;
     };
   };
+
   home.pointerCursor = {
     enable = true;
     package = pkgs.adwaita-icon-theme;
@@ -55,4 +56,15 @@
   };
 
   home.sessionVariables.GTK_THEME = "Adwaita-dark";
+
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      emoji = [ "Noto Color Emoji" ];
+      monospace = [ "CaskaydiaMono Nerd Font Mono" ];
+      serif = [ "Noto Serif CJK SC" ];
+      # sansSerif = [ "Noto Sans CJK SC" ];
+      sansSerif = [ "CaskaydiaMono Nerd Font Mono" ];
+    };
+  };
 }
