@@ -1,25 +1,43 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
+
+  imports = [
+    # inputs.zen-browser.homeModules.${zenRelease}
+    inputs.stylix.homeManagerModules.stylix
+  ];
+
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
+    # autoEnable = true;
+    targets = {
+      hyprland.enable = false;
+      zed.enable = false;
+      neovim.enable = false;
+      fcitx5.enable = false;
+      vscode.enable = false;
+      qt.enable = true;
+    };
 
     fonts = {
       serif = {
-        package = pkgs.dejavu_fonts;
+        package = pkgs.noto-fonts-cjk-serif;
         name = "Noto Serif CJK SC";
         # name = "DejaVu Serif";
       };
 
       sansSerif = {
-        package = pkgs.dejavu_fonts;
-        name = "Noto Sans CJK SC";
+        package = pkgs.nerd-fonts.caskaydia-mono;
+        name = "CaskaydiaMono Nerd Font Mono";
+
+        # package = pkgs.noto-fonts-cjk-sans;
+        # name = "Noto Sans CJK SC";
         # name = "DejaVu Sans";
       };
 
       monospace = {
-        package = pkgs.dejavu_fonts;
-        name = "Cascadia Mono";
+        package = pkgs.nerd-fonts.caskaydia-mono;
+        name = "CaskaydiaMono Nerd Font Mono";
         # name = "DejaVu Sans Mono";
       };
 
@@ -28,14 +46,5 @@
         name = "Noto Color Emoji";
       };
     };
-
-    targets = {
-      gnome.enable = false;
-      kde.enable = false;
-      # qt.enable = true;
-      # rori.enable = true;
-      # mako.enable = true;
-    };
-    autoEnable = true;
   };
 }
