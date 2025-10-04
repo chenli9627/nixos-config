@@ -1,6 +1,7 @@
 {
   programs.kitty = {
     enable = true;
+    # themeFile = "rose-pine-moon";
     # themeFile = "GitHub_Light";
     themeFile = "GruvboxMaterialDarkMedium";
     shellIntegration.enableFishIntegration = true;
