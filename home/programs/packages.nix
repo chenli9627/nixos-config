@@ -30,6 +30,7 @@
       jetbrains.idea-community-bin
       jetbrains.datagrip
       lua
+      bc
       luarocks
       strawberry
       clang
