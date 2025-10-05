@@ -1,30 +1,32 @@
 { pkgs, ... }:
 {
-  gtk = {
-    enable = true;
-    font = {
-      name = "CaskaydiaMono Nerd Font Regular";
-      package = pkgs.nerd-fonts.caskaydia-mono;
-      size = 11;
-    };
-    iconTheme = {
-      package = pkgs.adwaita-icon-theme;
-      name = "Adwaita";
-    };
-    theme = {
-      package = pkgs.gnome-themes-extra;
-      name = "Adwaita-dark";
-    };
-  };
-
-  qt = {
-    enable = true;
-    platformTheme.name = "adwaita";
-    style = {
-      name = "adwaita-dark";
-      package = pkgs.adwaita-qt6;
-    };
-  };
+  # gtk = {
+  #   enable = true;
+  #   font = {
+  #     name = "CaskaydiaMono Nerd Font Regular";
+  #     package = pkgs.nerd-fonts.caskaydia-mono;
+  #     size = 11;
+  #   };
+  #   iconTheme = {
+  #     package = pkgs.adwaita-icon-theme;
+  #     name = "Adwaita";
+  #   };
+  #   theme = {
+  #     package = pkgs.gnome-themes-extra;
+  #     # name = "Adwaita";
+  #     name = "Adwaita-dark";
+  #   };
+  # };
+  #
+  # qt = {
+  #   enable = true;
+  #   platformTheme.name = "adwaita";
+  #   style = {
+  #     # name = "adwaita";
+  #     name = "adwaita-dark";
+  #     package = pkgs.adwaita-qt6;
+  #   };
+  # };
 
   home.pointerCursor = {
     enable = true;
@@ -55,16 +57,17 @@
     # update: it runs well😄
   };
 
-  home.sessionVariables.GTK_THEME = "Adwaita-dark";
+  # home.sessionVariables.GTK_THEME = "Adwaita-dark";
+  # home.sessionVariables.GTK_THEME = "Adwaita";
 
-  fonts.fontconfig = {
-    enable = true;
-    defaultFonts = {
-      emoji = [ "Noto Color Emoji" ];
-      monospace = [ "CaskaydiaMono Nerd Font Mono" ];
-      serif = [ "Noto Serif CJK SC" ];
-      # sansSerif = [ "Noto Sans CJK SC" ];
-      sansSerif = [ "CaskaydiaMono Nerd Font Mono" ];
-    };
-  };
+  # fonts.fontconfig = {
+  #   enable = true;
+  #   defaultFonts = {
+  #     emoji = [ "Noto Color Emoji" ];
+  #     monospace = [ "CaskaydiaMono Nerd Font Mono" ];
+  #     serif = [ "Noto Serif CJK SC" ];
+  #     # sansSerif = [ "Noto Sans CJK SC" ];
+  #     sansSerif = [ "CaskaydiaMono Nerd Font Mono" ];
+  #   };
+  # };
 }

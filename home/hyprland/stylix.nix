@@ -8,15 +8,19 @@
 
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
-    # autoEnable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
+    autoEnable = false;
     targets = {
-      hyprland.enable = false;
-      zed.enable = false;
-      neovim.enable = false;
-      fcitx5.enable = false;
-      vscode.enable = false;
+      # hyprland.enable = false;
+      # zed.enable = false;
+      # neovim.enable = false;
+      # fcitx5.enable = false;
+      # vscode.enable = false;
       qt.enable = true;
+      gtk.enable = true;
+      # rofi.enable = true; # rofi need its own font size
+      bat.enable = true;
+      kitty.enable = true;
     };
 
     fonts = {
@@ -44,6 +48,11 @@
       emoji = {
         package = pkgs.noto-fonts-emoji;
         name = "Noto Color Emoji";
+      };
+
+      sizes = {
+        applications = 11;
+        desktop = 9;
       };
     };
   };

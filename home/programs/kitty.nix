@@ -3,7 +3,7 @@
     enable = true;
     # themeFile = "rose-pine-moon";
     # themeFile = "GitHub_Light";
-    themeFile = "GruvboxMaterialDarkMedium";
+    # themeFile = "GruvboxMaterialDarkMedium";
     shellIntegration.enableFishIntegration = true;
     shellIntegration.enableBashIntegration = true;
     # extraPackages = with pkgs; [ kitty-themes ];

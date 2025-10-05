@@ -20,6 +20,7 @@
     ./utils.nix
     ./theme.nix
     ./desktopEntries.nix
+    ./stylix.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;
