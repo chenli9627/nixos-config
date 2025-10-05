@@ -23,6 +23,7 @@
     shellInit = ''
       direnv hook fish | source
       set -g direnv_fish_mode eval_after_arrow
+      gtrash completion fish > /dev/null
       # fortune | boxes -d parchment
     '';
   };
