@@ -19,7 +19,6 @@
     #   tree
     # ];
   };
-  users.extraGroups.vboxusers.members = [ username ];
 
   nix.settings = {
     trusted-users = [ username ];

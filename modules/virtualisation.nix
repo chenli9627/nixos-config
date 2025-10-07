@@ -9,13 +9,15 @@
       };
       daemon.settings.registry-mirrors = [ "https://docker.m.daocloud.io" ];
     };
-    virtualbox = {
-      host.enable = true;
-      # do not set this to true avoiding recompiling virtualbox
-      # host.enableExtensionPack = true;
-      # it makes rebuild too slow
-      # guest.enable = true;
-      guest.dragAndDrop = true;
-    };
+    # virtualbox = {
+    #   host.enable = true;
+    #   # do not set this to true avoiding recompiling virtualbox
+    #   # host.enableExtensionPack = true;
+    #   # it makes rebuild too slow
+    #   # guest.enable = true;
+    #   guest.dragAndDrop = true;
+    # };
   };
+
+  # users.extraGroups.vboxusers.members = [ username ];
 }
