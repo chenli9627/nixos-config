@@ -18,7 +18,6 @@
       "waybar-reload" = "pkill waybar && hyprctl dispatch exec waybar";
       "nixosconfig" = "nvim ~/nixos-config";
       pn = "pnpm";
-      chrome = "hyprctl dispatch exec \"google-chrome-stable --enable-features=TouchpadOverscrollHistoryNavigation\"";
     };
     shellInit = ''
       direnv hook fish | source
