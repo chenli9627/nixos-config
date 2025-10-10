@@ -63,6 +63,7 @@
       # fzf # A command-line fuzzy finder
       fd
       quickemu
+      quickgui
       lazygit
       lazydocker
       ghostscript
