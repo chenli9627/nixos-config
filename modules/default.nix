@@ -5,7 +5,6 @@
     ./nix-ld.nix
     ./virtualisation.nix
     ./keyd.nix
-    ./databases.nix
     ./flatpak.nix
   ];
 }
