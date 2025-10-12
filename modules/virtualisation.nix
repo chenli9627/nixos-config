@@ -18,6 +18,7 @@
     #   guest.dragAndDrop = true;
     # };
   };
-
+  services.spice-vdagentd.enable = true;
+  # above line for quickemu
   # users.extraGroups.vboxusers.members = [ username ];
 }
