@@ -74,6 +74,7 @@
     maple-mono.NF-unhinted
     # Maple Mono NF CN (Ligature unhinted)
     maple-mono.NF-CN-unhinted
+    nerd-fonts.jetbrains-mono
   ];
 
   programs.dconf.enable = true;
