@@ -18,6 +18,7 @@
       "waybar-reload" = "pkill waybar && hyprctl dispatch exec waybar";
       "nixosconfig" = "nvim ~/nixos-config";
       pn = "pnpm";
+      zj = "zellij";
     };
     shellInit = ''
       direnv hook fish | source
