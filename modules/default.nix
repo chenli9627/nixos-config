@@ -6,5 +6,6 @@
     ./virtualisation.nix
     ./keyd.nix
     ./flatpak.nix
+    ./network.nix
   ];
 }
