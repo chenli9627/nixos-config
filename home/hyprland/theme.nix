@@ -60,14 +60,14 @@
   # home.sessionVariables.GTK_THEME = "Adwaita-dark";
   # home.sessionVariables.GTK_THEME = "Adwaita";
 
-  # fonts.fontconfig = {
-  #   enable = true;
-  #   defaultFonts = {
-  #     emoji = [ "Noto Color Emoji" ];
-  #     monospace = [ "CaskaydiaMono Nerd Font Mono" ];
-  #     serif = [ "Noto Serif CJK SC" ];
-  #     # sansSerif = [ "Noto Sans CJK SC" ];
-  #     sansSerif = [ "CaskaydiaMono Nerd Font Mono" ];
-  #   };
-  # };
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      emoji = [ "Noto Color Emoji" ];
+      monospace = [ "CaskaydiaMono Nerd Font Mono" ];
+      serif = [ "Noto Serif CJK SC" ];
+      # sansSerif = [ "Noto Sans CJK SC" ];
+      sansSerif = [ "CaskaydiaMono Nerd Font Regular" ];
+    };
+  };
 }
