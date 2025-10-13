@@ -64,6 +64,7 @@
       fd
       quickemu
       quickgui
+      kitty
       lazygit
       lazydocker
       ghostscript

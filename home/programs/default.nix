@@ -3,7 +3,6 @@
     ./packages.nix
     ./broot.nix
     ./git.nix
-    ./kitty.nix
     ./vscode.nix
     ./fcitx5.nix
     ./shell.nix
@@ -19,5 +18,6 @@
     ./nvim.nix
     ./ghostty.nix
     ./satty.nix
+    ./zellij.nix
   ];
 }
