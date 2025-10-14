@@ -105,8 +105,6 @@
 
   environment.variables.EDITOR = "nvim";
   programs = {
-    clash-verge.enable = true;
-    clash-verge.autoStart = true;
     fish.enable = true;
   };
 
@@ -127,6 +125,8 @@
   };
   security.polkit.enable = true;
   security.rtkit.enable = true;
+
+  documentation.man.generateCaches = false;
 
   system.stateVersion = "25.05"; # Did you read the comment?
 }
