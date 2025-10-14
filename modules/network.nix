@@ -30,4 +30,11 @@
     0.0.0.0 www.v2ex.com
     0.0.0.0 www.xiaohongshu.com
     ";
+
+  programs = {
+    clash-verge.enable = true;
+    # clash-verge.autoStart = true;
+  };
+
+  services.v2raya.enable = true;
 }
