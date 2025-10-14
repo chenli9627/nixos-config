@@ -64,6 +64,8 @@
       fd
       quickemu
       quickgui
+      filezilla
+      remmina
       kitty
       lazygit
       lazydocker
