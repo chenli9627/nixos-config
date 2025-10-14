@@ -17,20 +17,6 @@
     };
   };
 
-  networking.extraHosts = "
-    0.0.0.0 www.bilibili.com
-    0.0.0.0 t.bilibili.com
-    0.0.0.0 live.bilibili.com
-    0.0.0.0 api.bilibili.com
-    0.0.0.0 data.bilibili.com
-    0.0.0.0 api.live.bilibili.com
-    0.0.0.0 i0.hdslb.com
-    0.0.0.0 www.douyin.com
-    0.0.0.0 weibo.com
-    0.0.0.0 www.v2ex.com
-    0.0.0.0 www.xiaohongshu.com
-    ";
-
   programs = {
     clash-verge.enable = true;
     # clash-verge.autoStart = true;
