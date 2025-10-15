@@ -1,4 +1,5 @@
 {
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
@@ -19,8 +20,7 @@
 
   programs = {
     clash-verge.enable = true;
-    # clash-verge.autoStart = true;
+    clash-verge.autoStart = true;
   };
 
-  services.v2raya.enable = true;
 }
