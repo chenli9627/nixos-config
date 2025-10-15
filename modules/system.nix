@@ -75,6 +75,7 @@
     # Maple Mono NF CN (Ligature unhinted)
     maple-mono.NF-CN-unhinted
     nerd-fonts.jetbrains-mono
+    lxgw-wenkai
   ];
 
   programs.dconf.enable = true;
