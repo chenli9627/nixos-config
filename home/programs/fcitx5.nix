@@ -11,6 +11,12 @@
       fcitx5-configtool
       fcitx5-chinese-addons
       fcitx5-gtk
+      fcitx5-table-extra
+      fcitx5-with-addons
+      fcitx5-rime
+      rime-ls
+      librime
+      librime-lua
     ];
     fcitx5.waylandFrontend = true;
   };
