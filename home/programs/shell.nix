@@ -19,6 +19,7 @@
       "nixosconfig" = "nvim ~/nixos-config";
       pn = "pnpm";
       zj = "zellij";
+      chrome = "hyprctl dispatch exec \"google-chrome-stable --enable-features=TouchpadOverscrollHistoryNavigation\"";
     };
     shellInit = ''
       direnv hook fish | source
