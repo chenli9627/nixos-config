@@ -26,7 +26,7 @@
       rofi-calc
       rofi-file-browser
     ];
-    theme = "Arc";
+    theme = "Arc-Dark";
     terminal = "kitty";
     font = "Cascadia Code 18";
     modes = [

@@ -11,7 +11,8 @@
     enable = true;
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-dawn.yaml";
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/default-light.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/default-dark.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/default-light.yaml";
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-hard.yaml";
     autoEnable = false;
     targets = {
