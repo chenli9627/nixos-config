@@ -7,5 +7,6 @@
     ./keyd.nix
     ./flatpak.nix
     ./network.nix
+    ./steam.nix
   ];
 }
