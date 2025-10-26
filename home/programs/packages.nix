@@ -8,7 +8,8 @@
     zoxide.enableFishIntegration = true;
   };
   home.packages =
-    (with pkgs; [
+    with pkgs;
+    [
       font-manager
       hypr
       xfce.mousepad
@@ -17,7 +18,6 @@
       smartmontools
       tree-sitter
       ffmpeg
-      lua-language-server
       nixfmt-rfc-style
       sqlite
       gopls
@@ -29,9 +29,7 @@
       gnome-font-viewer
       jetbrains.idea-community-bin
       jetbrains.datagrip
-      lua
       bc
-      luarocks
       strawberry
       clang
       wpsoffice-cn
@@ -107,12 +105,13 @@
       boxes
       fortune-kind
       kdePackages.okular
+      cherry-studio
 
       ## for developing
       nodejs_22
       pnpm
       bun
-    ])
+    ]
     ++ [
       # inputs.zen-browser.packages.${pkgs.system}.default
     ];

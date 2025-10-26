@@ -12,6 +12,9 @@
       nixd
       nixpkgs-fmt
       stylua
+      lua5_1
+      luarocks
+      statix
     ];
   };
 }
