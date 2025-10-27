@@ -8,5 +8,7 @@
     ./flatpak.nix
     ./network.nix
     ./steam.nix
+    ./wm.nix
+    ./niri.nix
   ];
 }

@@ -16,11 +16,10 @@
 
   imports = [
     ./packages.nix
-    ./plugins.nix
+    # ./plugins.nix
     ./utils.nix
     ./theme.nix
     ./stylix.nix
-    ./desktopEntries.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;

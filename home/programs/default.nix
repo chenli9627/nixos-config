@@ -19,5 +19,6 @@
     ./ghostty.nix
     ./satty.nix
     ./zellij.nix
+    ./desktopEntries.nix
   ];
 }

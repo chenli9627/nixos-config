@@ -4,6 +4,7 @@
 
     ../../home/programs
 
-    ../../home/hyprland
+    # ../../home/hyprland
+    ../../home/niri
   ];
 }
