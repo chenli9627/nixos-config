@@ -1,5 +1,5 @@
 {
-  config,
+  # config,
   pkgs,
   username,
   lib,
@@ -20,27 +20,29 @@
     # ];
   };
 
-  nix.settings = {
-    trusted-users = [ username ];
-    substituters = [
-      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-      "https://mirrors.ustc.edu.cn/nix-channels/store"
-      "https://hyprland.cachix.org"
-    ];
-    trusted-public-keys = [
-      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-    ];
-    experimental-features = "nix-command flakes";
-    builders-use-substitutes = true;
-  };
+  nix = {
+    settings = {
+      trusted-users = [ username ];
+      substituters = [
+        "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+        "https://mirrors.ustc.edu.cn/nix-channels/store"
+        "https://hyprland.cachix.org"
+      ];
+      trusted-public-keys = [
+        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+      ];
+      experimental-features = "nix-command flakes";
+      builders-use-substitutes = true;
+    };
 
-  # do garbage collection weekly to keep disk usage low
-  nix.gc = {
-    automatic = lib.mkDefault true;
-    dates = lib.mkDefault "weekly";
-    options = lib.mkDefault "--delete-older-than 7d";
+    # do garbage collection weekly to keep disk usage low
+    gc = {
+      automatic = lib.mkDefault true;
+      dates = lib.mkDefault "weekly";
+      options = lib.mkDefault "--delete-older-than 7d";
+    };
+    settings.auto-optimise-store = true;
   };
-  nix.settings.auto-optimise-store = true;
 
   nixpkgs.config.allowUnfree = true;
 
@@ -54,8 +56,12 @@
     "en_US.UTF-8/UTF-8"
   ];
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
+  services = {
+    # Enable CUPS to print documents.
+    printing.enable = true;
+    # Enable touchpad support (enabled default in most desktopManager).
+    libinput.enable = true;
+  };
 
   fonts.packages = with pkgs; [
     noto-fonts
@@ -78,8 +84,6 @@
     lxgw-wenkai
   ];
 
-  programs.dconf.enable = true;
-
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     neovim
@@ -101,12 +105,10 @@
     alsa.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
-
   environment.variables.EDITOR = "nvim";
   programs = {
     fish.enable = true;
+    dconf.enable = true;
   };
 
   # environment.variables = {

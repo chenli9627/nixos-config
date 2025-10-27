@@ -7,6 +7,8 @@
     };
   };
 
+  security.pam.services.swaylock = { };
+
   xdg.portal = {
     enable = true;
     extraPortals = [

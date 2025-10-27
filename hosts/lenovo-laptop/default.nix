@@ -9,46 +9,48 @@
     ./hardware-configuration.nix
   ];
 
-  boot.loader = {
-    efi.canTouchEfiVariables = true;
-    systemd-boot = {
-      enable = true;
-      consoleMode = "auto";
-      configurationLimit = 10;
+  boot = {
+    loader = {
+      efi.canTouchEfiVariables = true;
+      systemd-boot = {
+        enable = true;
+        consoleMode = "auto";
+        configurationLimit = 10;
+      };
     };
-  };
-  boot.kernel.sysctl = {
-    "vm.swappiness" = 15;
-  };
-  boot.kernelParams = [
-    "amdgpu.dcdebugmask=0x10"
-    # "nvme.noacpi=1" # seems to break something
-    "nvme_core.default_ps_max_latency_us=0"
-    # "iommu=soft"
-    # "pcie_aspm=off"
-    # "pcie_port_pm=off"
-    # "mem_sleep_default=deep"
-  ];
+    kernel.sysctl = {
+      "vm.swappiness" = 15;
+    };
+    kernelParams = [
+      "amdgpu.dcdebugmask=0x10"
+      # "nvme.noacpi=1" # seems to break something
+      "nvme_core.default_ps_max_latency_us=0"
+      # "iommu=soft"
+      # "pcie_aspm=off"
+      # "pcie_port_pm=off"
+      # "mem_sleep_default=deep"
+    ];
 
-  # boot = {
-  #   loader = {
-  #     systemd-boot.enable = false;
-  #     grub = {
-  #       enable = true;
-  #       # device = "nixos";
-  #       # device = "/dev/disk/by-uuid/7D6C-950A";
-  #       device = "nodev";
-  #       efiSupport = true;
-  #       # useOSProber = true;
-  #       fontSize = 22;
-  #       configurationLimit = 20;
-  #     };
-  #     efi = {
-  #       canTouchEfiVariables = true;
-  #       efiSysMountPoint = "/boot";
-  #     };
-  #   };
-  # };
+    # boot = {
+    #   loader = {
+    #     systemd-boot.enable = false;
+    #     grub = {
+    #       enable = true;
+    #       # device = "nixos";
+    #       # device = "/dev/disk/by-uuid/7D6C-950A";
+    #       device = "nodev";
+    #       efiSupport = true;
+    #       # useOSProber = true;
+    #       fontSize = 22;
+    #       configurationLimit = 20;
+    #     };
+    #     efi = {
+    #       canTouchEfiVariables = true;
+    #       efiSysMountPoint = "/boot";
+    #     };
+    #   };
+    # };
+  };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

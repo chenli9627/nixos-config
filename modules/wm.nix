@@ -3,7 +3,6 @@
     blueman.enable = true;
     gvfs.enable = true;
   };
-  security.pam.services.hyprlock = { };
   programs.nautilus-open-any-terminal = {
     enable = true;
     terminal = "kitty";
