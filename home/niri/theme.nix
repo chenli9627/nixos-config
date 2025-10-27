@@ -24,6 +24,7 @@
       qt.enable = true;
       gtk.enable = true;
       xresources.enable = true;
+      anki.enable = false;
       # rofi.enable = true; # rofi need its own font size
       # bat.enable = true;
       # kitty.enable = true;
@@ -71,6 +72,8 @@
     icons = {
       enable = true;
       package = pkgs.adwaita-icon-theme;
+      dark = "Adwaita-dark";
+      light = "Adwaita";
     };
   };
 

@@ -1,7 +1,8 @@
-{username, ...}: {
+{ username, ... }:
+{
   home = {
-    # inherit username;
-    username = username;
+    inherit username;
+    # username = username;
     homeDirectory = "/home/${username}";
   };
 

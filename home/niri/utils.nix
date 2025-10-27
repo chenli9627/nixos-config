@@ -42,20 +42,15 @@
     alacritty.enable = true;
     fuzzel.enable = true;
     swaylock.enable = true;
-
   };
 
-  home.packages = with pkgs; [
-    gcr # Provides org.gnome.keyring.SystemPrompter
-    swaybg
-    waybar
-  ];
+  # xdg.portal = {
+  #   enable = true;
+  #   extraPortals = [
+  #     pkgs.xdg-desktop-portal-gnome
+  #     pkgs.xdg-desktop-portal-gtk
+  #   ];
+  #   configPackages = [ pkgs.gnome.gnome-session ];
+  # };
 
-  xdg.portal = {
-    enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gnome
-      pkgs.xdg-desktop-portal-gtk
-    ];
-  };
 }
