@@ -2,9 +2,9 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    latest.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # hyprland.url = "github:hyprwm/Hyprland";
@@ -19,13 +19,10 @@
     #   inputs.hyprland.follows = "hyprland";
     # };
     stylix = {
-      url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "latest";
-    };
-    niri = {
-      url = "github:sodiboo/niri-flake";
+      url = "github:nix-community/stylix/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    daeuniverse.url = "github:daeuniverse/flake.nix";
   };
 
   outputs =
@@ -33,13 +30,11 @@
       self,
       nixpkgs,
       home-manager,
-      zen-browser,
-      niri,
       ...
     }:
     {
       nixosConfigurations = {
-        nixos =
+        xiaoxin =
           let
             username = "chen";
             specialArgs = { inherit username; };
@@ -51,6 +46,8 @@
               # ./configuration.nix
               ./hosts/lenovo-laptop
               # ./users/chen
+              inputs.daeuniverse.nixosModules.dae
+              inputs.daeuniverse.nixosModules.daed
 
               home-manager.nixosModules.home-manager
               {
@@ -66,7 +63,42 @@
                   # 取消注释下面这一行，就可以在 home.nix 中使用 flake 的所有 inputs 参数了
                   # home-manager.extraSpecialArgs = inputs // specialArgs;
                   extraSpecialArgs = {
-                    # inherit (inputs) nixpkgs home-manager hyprland;
+                    inherit inputs username;
+                  };
+                };
+              }
+            ];
+          };
+
+nixos_thinkpad =
+          let
+            username = "chen";
+            specialArgs = { inherit username; };
+          in
+          nixpkgs.lib.nixosSystem {
+            inherit specialArgs;
+            system = "x86_64-linux";
+            modules = [
+              # ./configuration.nix
+              ./hosts/thinkpad-t14-gen1
+              # ./users/chen
+              inputs.daeuniverse.nixosModules.dae
+              inputs.daeuniverse.nixosModules.daed
+
+              home-manager.nixosModules.home-manager
+              {
+                home-manager = {
+                  useGlobalPkgs = true;
+                  useUserPackages = true;
+
+                  # home-manager.users.chen = ./home.nix;
+                  users.${username} = import ./users/${username}/home.nix;
+
+                  # home-manager.users.username = import ./users/username/home.nix;
+
+                  # 取消注释下面这一行，就可以在 home.nix 中使用 flake 的所有 inputs 参数了
+                  # home-manager.extraSpecialArgs = inputs // specialArgs;
+                  extraSpecialArgs = {
                     inherit inputs username;
                   };
                 };
