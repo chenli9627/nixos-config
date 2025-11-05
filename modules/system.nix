@@ -101,6 +101,7 @@
     curl
     wget
     sqlite
+    alsa-utils
   ];
 
   # Enable sound.
