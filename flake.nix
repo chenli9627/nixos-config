@@ -23,6 +23,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     daeuniverse.url = "github:daeuniverse/flake.nix";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs =
@@ -70,7 +71,7 @@
             ];
           };
 
-nixos_thinkpad =
+        nixos_thinkpad =
           let
             username = "chen";
             specialArgs = { inherit username; };
@@ -84,6 +85,7 @@ nixos_thinkpad =
               # ./users/chen
               inputs.daeuniverse.nixosModules.dae
               inputs.daeuniverse.nixosModules.daed
+              inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen1
 
               home-manager.nixosModules.home-manager
               {

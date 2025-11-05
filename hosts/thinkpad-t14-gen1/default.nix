@@ -21,14 +21,17 @@
     kernel.sysctl = {
       "vm.swappiness" = 5;
     };
+
     # kernelParams = [
-    #   "amdgpu.dcdebugmask=0x10"
+    #   # "amdgpu.dcdebugmask=0x10"
     #   # "nvme.noacpi=1" # seems to break something
-    #   "nvme_core.default_ps_max_latency_us=0"
+    #   # "nvme_core.default_ps_max_latency_us=0"
     #   # "iommu=soft"
     #   # "pcie_aspm=off"
     #   # "pcie_port_pm=off"
     #   # "mem_sleep_default=deep"
+    #   "acpi_backlight=native"
+    #   "psmouse.synaptics_intertouch=0"
     # ];
 
     # boot = {
