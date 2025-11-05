@@ -1,3 +1,4 @@
+{ inputs, ... }:
 {
 
   # Open ports in the firewall.
@@ -20,7 +21,28 @@
 
   programs = {
     clash-verge.enable = true;
-    clash-verge.autoStart = true;
+    # clash-verge.autoStart = true;
   };
+
+  # imports = [
+  #   inputs.daeuniverse.nixosModules.dae
+  #   inputs.daeuniverse.nixosModules.daed
+  # ];
+
+  services.daed = {
+    enable = true;
+
+    openFirewall = {
+      enable = true;
+      port = 12345;
+    };
+  };
+
+  # nix.settings = {
+  #   substituters = [ "https://cache.garnix.io" ];
+  #   trusted-public-keys = [
+  #     "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+  #   ];
+  # };
 
 }
