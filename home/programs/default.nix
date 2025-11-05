@@ -20,5 +20,6 @@
     ./satty.nix
     ./zellij.nix
     ./desktopEntries.nix
+    ./syncthing.nix
   ];
 }
