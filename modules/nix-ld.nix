@@ -20,12 +20,13 @@
       util-linux
       xz
       systemd
+      glib
     ];
   };
-  environment.systemPackages = [
-    (pkgs.writeShellScriptBin "python" ''
-      export LD_LIBRARY_PATH=$NIX_LD_LIBRARY_PATH
-      exec ${pkgs.python3}/bin/python "$@"
-    '')
-  ];
+  # environment.systemPackages = [
+  #   (pkgs.writeShellScriptBin "python" ''
+  #     export LD_LIBRARY_PATH=$NIX_LD_LIBRARY_PATH
+  #     exec ${pkgs.python3}/bin/python "$@"
+  #   '')
+  # ];
 }
