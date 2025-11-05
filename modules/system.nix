@@ -30,7 +30,8 @@
       substituters = [
         "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
         "https://mirrors.ustc.edu.cn/nix-channels/store"
-        "https://hyprland.cachix.org"
+        "https://mirrors.cernet.edu.cn/nix-channels/store"
+        # "https://hyprland.cachix.org"
         "https://cache.garnix.io"
       ];
       trusted-public-keys = [
