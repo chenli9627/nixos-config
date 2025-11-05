@@ -1,6 +1,6 @@
 { lib, ... }:
 {
-  systemd.services.keyd.wantedBy = lib.mkForce [ ];
+  # systemd.services.keyd.wantedBy = lib.mkForce [ ];
   services.keyd = {
     enable = true;
     keyboards = {
