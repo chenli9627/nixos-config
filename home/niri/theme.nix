@@ -24,7 +24,6 @@
       qt.enable = true;
       gtk.enable = true;
       xresources.enable = true;
-      anki.enable = false;
       # rofi.enable = true; # rofi need its own font size
       # bat.enable = true;
       # kitty.enable = true;
@@ -72,9 +71,25 @@
     icons = {
       enable = true;
       package = pkgs.adwaita-icon-theme;
-      dark = "Adwaita-dark";
+      dark = "Adwaita";
       light = "Adwaita";
     };
+
+    polarity = "dark";
+  };
+
+  xresources.properties = {
+    "Xft.dpi" = 192; # 根据缩放比例调整（96 × 缩放系数）
+
+    # ! These might also be useful depending on your monitor and personal preference:
+    "Xft.autohint" = 0;
+    "Xft.lcdfilter" = "lcddefault";
+    "Xft.hintstyle" = "hintfull";
+    "Xft.hinting" = 1;
+    "Xft.antialias" = 1;
+    "Xft.rgba" = "rgb";
+    # I wish these above may effect how xwayland apps behaves
+    # update: it runs well😄
   };
 
 }
