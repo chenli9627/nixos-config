@@ -111,5 +111,7 @@
     nodejs_22
     pnpm
     bun
+
+    go
   ];
 }
