@@ -7,6 +7,7 @@
     ./flatpak.nix
     ./network.nix
     ./steam.nix
+    ./shell.nix
     ./wm.nix
     ./niri.nix
     # ./hyprland.nix

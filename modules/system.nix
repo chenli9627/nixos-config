@@ -7,17 +7,21 @@
 }:
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.${username} = {
-    isNormalUser = true;
-    shell = pkgs.fish;
-    extraGroups = [
-      "wheel"
-      "docker"
-      "networkmanager"
-    ]; # Enable ‘sudo’ for the user.
-    # packages = with pkgs; [
-    #   tree
-    # ];
+  users = {
+    defaultUserShell = pkgs.bash;
+    users.${username} = {
+      isNormalUser = true;
+      useDefaultShell = true;
+      # shell = pkgs.bash;
+      extraGroups = [
+        "wheel"
+        "docker"
+        "networkmanager"
+      ]; # Enable ‘sudo’ for the user.
+      # packages = with pkgs; [
+      #   tree
+      # ];
+    };
   };
 
   nix = {
@@ -27,9 +31,11 @@
         "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
         "https://mirrors.ustc.edu.cn/nix-channels/store"
         "https://hyprland.cachix.org"
+        "https://cache.garnix.io"
       ];
       trusted-public-keys = [
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+        "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
       ];
       experimental-features = "nix-command flakes";
       builders-use-substitutes = true;
@@ -107,7 +113,6 @@
 
   environment.variables.EDITOR = "nvim";
   programs = {
-    fish.enable = true;
     dconf.enable = true;
   };
 
