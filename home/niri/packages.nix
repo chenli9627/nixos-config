@@ -20,6 +20,7 @@
       waybar
       gcr # Provides org.gnome.keyring.SystemPrompter
       waypaper
+      bemoji # for fuzzel emoji picker
     ]
     ++ [
       inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.bzmenu
