@@ -97,10 +97,11 @@
     after = wantedBy;
     serviceConfig.Type = "oneshot";
     script = ''
-      echo 0 | tee /sys/class/leds/platform::micmute/brightness # from https://github.com/NixOS/nixos-hardware/issues/1658
+      # echo 0 | tee /sys/class/leds/platform::micmute/brightness # from https://github.com/NixOS/nixos-hardware/issues/1658
       # the original systemd service comes from https://discourse.nixos.org/t/mute-key-indicator-light-is-always-on/39528/11 and https://codeberg.org/AndrewKvalheim/configuration/src/commit/9b0b0f90a2220c635f67123d435d239182f73406/hosts/main/system.nix
-      # echo follow-route > /sys/class/sound/ctl-led/mic/mode
-      # echo off > /sys/class/sound/ctl-led/speaker/mode # follow-route pending https://discourse.nixos.org/t/20480
+      echo follow-route > /sys/class/sound/ctl-led/mic/mode
+      echo follow-mute > /sys/class/sound/ctl-led/speaker/mode # follow-route pending https://discourse.nixos.org/t/20480
+      # fixed F1 and F1 led problem
     '';
   };
 }
