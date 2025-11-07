@@ -70,10 +70,11 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-  # hardware.trackpoint = {
-  #   enable = true;
-  #   emulateWheel = true;
-  #   sensitivity = 50;
-  #   speed = 20;
-  # };
+  hardware.trackpoint = {
+    enable = true;
+    device = "TPPS/2 Elan TrackPoint";
+    emulateWheel = true;
+    sensitivity = 100;
+    speed = 12;
+  };
 }
