@@ -104,4 +104,13 @@
       # fixed F1 and F1 led problem
     '';
   };
+
+  hardware.trackpoint = {
+    enable = true;
+    device = "TPPS/2 Elan TrackPoint";
+    emulateWheel = true;
+    sensitivity = 100;
+    speed = 12;
+  };
+
 }
