@@ -7,6 +7,7 @@
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./power.nix
   ];
 
   boot = {
@@ -20,19 +21,20 @@
     };
     kernel.sysctl = {
       "vm.swappiness" = 5;
+      "kernel.sysrq" = 1;
     };
 
-    # kernelParams = [
-    #   # "amdgpu.dcdebugmask=0x10"
-    #   # "nvme.noacpi=1" # seems to break something
-    #   # "nvme_core.default_ps_max_latency_us=0"
-    #   # "iommu=soft"
-    #   # "pcie_aspm=off"
-    #   # "pcie_port_pm=off"
-    #   # "mem_sleep_default=deep"
-    #   "acpi_backlight=native"
-    #   "psmouse.synaptics_intertouch=0"
-    # ];
+    kernelParams = [
+      "quite"
+      "splash"
+    ];
+
+    extraModprobeConfig = ''
+      # example settings
+      # options yourmodulename optionA=valueA optionB=valueB # syntax
+      options thinkpad_acpi  fan_control=1                 # example #1 kernel module parameter
+      # options usbcore        blinkenlights=1               # example #2 kernel module parameter
+    '';
 
     # boot = {
     #   loader = {
@@ -62,7 +64,7 @@
   # networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp1s0.useDHCP = lib.mkDefault true;
   networking = {
-    hostName = "nixos_thinkpad"; # Define your hostname.
+    hostName = "nixos-thinkpad"; # Define your hostname.
     # Pick only one of the below networking options.
     # wireless.enable = true; # Enables wireless support via wpa_supplicant.
     networkmanager.enable = true; # Easiest to use and most distros use this by default.
@@ -70,27 +72,6 @@
     dhcpcd.enable = false;
     # networkmanager.wifi.powersave = true;
   };
-
-  services.power-profiles-daemon.enable = true;
-  # services.tlp = {
-  #   enable = true;
-  #   settings = {
-  #     CPU_SCALING_GOVERNOR_ON_AC = "performance";
-  #     CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-  #
-  #     CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
-  #     CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
-  #
-  #     CPU_MIN_PERF_ON_AC = 0;
-  #     CPU_MAX_PERF_ON_AC = 100;
-  #     CPU_MIN_PERF_ON_BAT = 0;
-  #     CPU_MAX_PERF_ON_BAT = 20;
-  #
-  #     # Optional helps save long term battery health
-  #     START_CHARGE_THRESH_BAT0 = 40; # 40 and bellow it starts to charge
-  #     STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
-  #   };
-  # };
 
   systemd.services.configure-sound-leds = rec {
     wantedBy = [ "sound.target" ];

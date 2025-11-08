@@ -7,6 +7,7 @@
 
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./power.nix
   ];
 
   boot = {
@@ -20,6 +21,7 @@
     };
     kernel.sysctl = {
       "vm.swappiness" = 15;
+      "kernel.sysrq" = 1;
     };
     kernelParams = [
       "amdgpu.dcdebugmask=0x10"
@@ -29,6 +31,9 @@
       # "pcie_aspm=off"
       # "pcie_port_pm=off"
       # "mem_sleep_default=deep"
+      "quite"
+      "splash"
+
     ];
 
     # boot = {
@@ -59,7 +64,7 @@
   # networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp1s0.useDHCP = lib.mkDefault true;
   networking = {
-    hostName = "nixos"; # Define your hostname.
+    hostName = "nixos-xiaoxin"; # Define your hostname.
     # Pick only one of the below networking options.
     # wireless.enable = true; # Enables wireless support via wpa_supplicant.
     networkmanager.enable = true; # Easiest to use and most distros use this by default.
@@ -68,7 +73,6 @@
     # networkmanager.wifi.powersave = true;
   };
 
-  services.power-profiles-daemon.enable = true;
   # services.logind = {
   #   # This laptop doesn't support s3 suspend
   #   lidSwitch = "suspend-then-hibernate";

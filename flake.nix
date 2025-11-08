@@ -8,12 +8,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # hyprland.url = "github:hyprwm/Hyprland";
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
-      # IMPORTANT: we're using "libgbm" and is only available in unstable so ensure
-      # to have it up-to-date or simply don't specify the nixpkgs input
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # zen-browser = {
+    #   url = "github:0xc000022070/zen-browser-flake";
+    #   # IMPORTANT: we're using "libgbm" and is only available in unstable so ensure
+    #   # to have it up-to-date or simply don't specify the nixpkgs input
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     # hyprland-plugins = {
     #   url = "github:hyprwm/hyprland-plugins";
     #   inputs.hyprland.follows = "hyprland";
@@ -24,6 +24,10 @@
     };
     daeuniverse.url = "github:daeuniverse/flake.nix";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    auto-cpufreq = {
+      url = "github:AdnanHodzic/auto-cpufreq";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   outputs =
@@ -49,6 +53,7 @@
               # ./users/chen
               inputs.daeuniverse.nixosModules.dae
               inputs.daeuniverse.nixosModules.daed
+              inputs.auto-cpufreq.nixosModules.default
 
               home-manager.nixosModules.home-manager
               {
@@ -71,7 +76,7 @@
             ];
           };
 
-        nixos_thinkpad =
+        thinkpad =
           let
             username = "chen";
             specialArgs = { inherit username; };
@@ -85,7 +90,8 @@
               # ./users/chen
               inputs.daeuniverse.nixosModules.dae
               inputs.daeuniverse.nixosModules.daed
-              inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen1
+              # inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen1
+              inputs.auto-cpufreq.nixosModules.default
 
               home-manager.nixosModules.home-manager
               {
