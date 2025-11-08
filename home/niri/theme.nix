@@ -2,7 +2,6 @@
 {
 
   imports = [
-    # inputs.zen-browser.homeModules.${zenRelease}
     # inputs.stylix.homeManagerModules.stylix
     inputs.stylix.homeModules.stylix
   ];
