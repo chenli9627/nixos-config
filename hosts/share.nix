@@ -1,8 +1,4 @@
 {
-  systemd.sleep.extraConfig = ''
-    HibernateDelaySec=2h
-  '';
-
   boot = {
     loader = {
       efi.canTouchEfiVariables = true;
