@@ -19,4 +19,10 @@
   };
 
   zramSwap.enable = true; # Creates a zram block device and uses it as a swap device
+
+  services.btrfs.autoScrub = {
+    enable = true;
+    interval = "weekly";
+    fileSystems = [ "/" ];
+  };
 }
