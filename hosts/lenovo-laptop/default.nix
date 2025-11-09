@@ -8,21 +8,10 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./power.nix
+    ../share.nix
   ];
 
   boot = {
-    loader = {
-      efi.canTouchEfiVariables = true;
-      systemd-boot = {
-        enable = true;
-        consoleMode = "auto";
-        configurationLimit = 10;
-      };
-    };
-    kernel.sysctl = {
-      "vm.swappiness" = 15;
-      "kernel.sysrq" = 1;
-    };
     kernelParams = [
       "amdgpu.dcdebugmask=0x10"
       # "nvme.noacpi=1" # seems to break something
@@ -31,9 +20,6 @@
       # "pcie_aspm=off"
       # "pcie_port_pm=off"
       # "mem_sleep_default=deep"
-      "quite"
-      "splash"
-
     ];
 
     # boot = {
@@ -85,4 +71,5 @@
   #     SuspendState=mem
   #   '';
   # };
+
 }

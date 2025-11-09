@@ -8,27 +8,10 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./power.nix
+    ../share.nix
   ];
 
   boot = {
-    loader = {
-      efi.canTouchEfiVariables = true;
-      systemd-boot = {
-        enable = true;
-        consoleMode = "auto";
-        configurationLimit = 10;
-      };
-    };
-    kernel.sysctl = {
-      "vm.swappiness" = 5;
-      "kernel.sysrq" = 1;
-    };
-
-    kernelParams = [
-      "quite"
-      "splash"
-    ];
-
     extraModprobeConfig = ''
       # example settings
       # options yourmodulename optionA=valueA optionB=valueB # syntax
