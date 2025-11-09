@@ -5,7 +5,17 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  networking.firewall.enable = false;
+  networking = {
+    firewall.enable = false;
+    timeServers = [
+      "ntp.ntsc.ac.cn"
+      "cn.ntp.org.cn"
+      "0.nixos.pool.ntp.org"
+      "1.nixos.pool.ntp.org"
+      "2.nixos.pool.ntp.org"
+      "3.nixos.pool.ntp.org"
+    ];
+  };
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
