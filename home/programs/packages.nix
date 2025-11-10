@@ -32,7 +32,6 @@
     bc
     strawberry
     clang
-    wpsoffice-cn
     google-chrome
     miniserve
     bruno
