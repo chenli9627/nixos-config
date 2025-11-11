@@ -14,8 +14,8 @@
         turbo = "auto";
         platform_profile = "low-power";
         enable_thresholds = true;
-        start_threshold = 20;
-        stop_threshold = 80;
+        start_threshold = 75;
+        stop_threshold = 81;
       };
     };
   };
