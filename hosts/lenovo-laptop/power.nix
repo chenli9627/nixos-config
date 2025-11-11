@@ -7,12 +7,14 @@
         governor = "performance";
         turbo = "auto";
         platform_profile = "performance";
+        energy_performance_preference = "performance";
       };
 
       battery = {
         governor = "powersave";
         turbo = "auto";
         platform_profile = "low-power";
+        energy_performance_preference = "power";
         ideapad_laptop_conservation_mode = true;
       };
     };
