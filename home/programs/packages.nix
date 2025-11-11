@@ -83,7 +83,8 @@
     gtrash
     nix-output-monitor
     glow # markdown previewer in terminal
-    btop # replacement of htop/nmon
+    # btop # replacement of htop/nmon
+    btop-rocm # for amd gpu usage
     htop
     iotop # io monitoring
     gdu

@@ -61,6 +61,8 @@
         gtrash completion fish > /dev/null
         set fish_greeting # Disable greeting
         fish_vi_key_bindings
+        go env -w GO111MODULE=on
+        go env -w GOPROXY=https://goproxy.cn,direct
       '';
     };
 
@@ -74,6 +76,8 @@
       bashrcExtra = ''
         eval "$(direnv hook bash)"
         gtrash completion bash > /dev/null
+        go env -w GO111MODULE=on
+        go env -w GOPROXY=https://goproxy.cn,direct
       '';
     };
   };
