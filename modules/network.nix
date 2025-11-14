@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ pkgs, inputs, ... }:
 {
 
   # Open ports in the firewall.
@@ -17,17 +17,39 @@
     ];
   };
 
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-  services.openssh = {
-    enable = true;
-    allowSFTP = true;
-    startWhenNeeded = true;
-    settings = {
-      PasswordAuthentication = true;
-      PermitRootLogin = "yes";
+  services = {
+
+    # Enable the OpenSSH daemon.
+    # services.openssh.enable = true;
+    openssh = {
+      enable = true;
+      allowSFTP = true;
+      startWhenNeeded = true;
+      settings = {
+        PasswordAuthentication = true;
+        PermitRootLogin = "yes";
+      };
     };
+
+    resolved = {
+      enable = true;
+    };
+
+    tailscale = {
+      enable = true;
+    };
+
+    daed = {
+      enable = true;
+      openFirewall = {
+        enable = true;
+        port = 12345;
+      };
+    };
+
   };
+
+  environment.systemPackages = with pkgs; [ tailscale ];
 
   programs = {
     clash-verge.enable = true;
@@ -38,15 +60,6 @@
   #   inputs.daeuniverse.nixosModules.dae
   #   inputs.daeuniverse.nixosModules.daed
   # ];
-
-  services.daed = {
-    enable = true;
-
-    openFirewall = {
-      enable = true;
-      port = 12345;
-    };
-  };
 
   # nix.settings = {
   #   substituters = [ "https://cache.garnix.io" ];
