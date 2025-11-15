@@ -53,7 +53,7 @@
 
   programs = {
     clash-verge.enable = true;
-    # clash-verge.autoStart = true;
+    clash-verge.autoStart = false;
   };
 
   # imports = [
