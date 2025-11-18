@@ -8,12 +8,9 @@
     zoxide.enableFishIntegration = true;
   };
   home.packages = with pkgs; [
+    nemo-with-extensions
     font-manager
     xfce.mousepad
-    xfce.thunar
-    xfce.tumbler
-    xfce.thunar-volman
-    xfce.thunar-archive-plugin
     gnome-clocks
     smartmontools
     tree-sitter
