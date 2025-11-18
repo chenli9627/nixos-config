@@ -4,7 +4,7 @@
     ./nix-ld.nix
     ./virtualisation.nix
     ./keyd.nix
-    ./flatpak.nix
+    # ./flatpak.nix
     ./network.nix
     ./steam.nix
     ./shell.nix
