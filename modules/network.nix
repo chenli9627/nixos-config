@@ -51,10 +51,10 @@
 
   environment.systemPackages = with pkgs; [ tailscale ];
 
-  programs = {
-    clash-verge.enable = true;
-    clash-verge.autoStart = false;
-  };
+  # programs = {
+  #   clash-verge.enable = true;
+  #   clash-verge.autoStart = false;
+  # };
 
   # imports = [
   #   inputs.daeuniverse.nixosModules.dae
