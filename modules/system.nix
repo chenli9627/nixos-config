@@ -102,6 +102,7 @@
     wget
     sqlite
     alsa-utils
+    dmidecode # for auto-cpufreq
   ];
 
   # Enable sound.
