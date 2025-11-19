@@ -70,26 +70,26 @@
     libinput.enable = true;
   };
 
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-cjk-serif
-    noto-fonts-emoji
-    noto-fonts-color-emoji
-    liberation_ttf
-    fira-code
-    fira-code-symbols
-    nerd-fonts.caskaydia-cove
-    nerd-fonts.caskaydia-mono
-    # Maple Mono (Ligature TTF unhinted)
-    maple-mono.truetype
-    # Maple Mono NF (Ligature unhinted)
-    maple-mono.NF-unhinted
-    # Maple Mono NF CN (Ligature unhinted)
-    maple-mono.NF-CN-unhinted
-    nerd-fonts.jetbrains-mono
-    lxgw-wenkai
-  ];
+  # fonts.packages = with pkgs; [
+  #   noto-fonts
+  #   noto-fonts-cjk-sans
+  #   noto-fonts-cjk-serif
+  #   noto-fonts-emoji
+  #   noto-fonts-color-emoji
+  #   liberation_ttf
+  #   fira-code
+  #   fira-code-symbols
+  #   nerd-fonts.caskaydia-cove
+  #   nerd-fonts.caskaydia-mono
+  #   # Maple Mono (Ligature TTF unhinted)
+  #   maple-mono.truetype
+  #   # Maple Mono NF (Ligature unhinted)
+  #   maple-mono.NF-unhinted
+  #   # Maple Mono NF CN (Ligature unhinted)
+  #   maple-mono.NF-CN-unhinted
+  #   nerd-fonts.jetbrains-mono
+  #   lxgw-wenkai
+  # ];
 
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.

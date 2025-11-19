@@ -19,5 +19,6 @@
     ./satty.nix
     ./zellij.nix
     ./syncthing.nix
+    ./fonts.nix
   ];
 }
