@@ -8,6 +8,7 @@
     zoxide.enableFishIntegration = true;
   };
   home.packages = with pkgs; [
+    bluetui
     nemo-with-extensions
     font-manager
     xfce.mousepad
