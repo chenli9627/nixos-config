@@ -10,7 +10,6 @@
     "keydoff" = "sudo systemctl stop keyd";
     pn = "pnpm";
     zj = "zellij";
-    hn = "hostname";
   };
   home.shell.enableShellIntegration = true;
 
