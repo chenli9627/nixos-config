@@ -11,5 +11,6 @@
     ./wm.nix
     ./niri.nix
     # ./hyprland.nix
+    ./sunshine.nix
   ];
 }
