@@ -8,6 +8,7 @@
     zoxide.enableFishIntegration = true;
   };
   home.packages = with pkgs; [
+    moonlight-qt
     bluetui
     nemo-with-extensions
     font-manager
