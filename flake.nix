@@ -1,10 +1,10 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # hyprland.url = "github:hyprwm/Hyprland";
@@ -13,8 +13,8 @@
     #   inputs.hyprland.follows = "hyprland";
     # };
     stylix = {
-      url = "github:nix-community/stylix/release-25.05";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     daeuniverse.url = "github:daeuniverse/flake.nix";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -40,7 +40,7 @@
           in
           nixpkgs.lib.nixosSystem {
             inherit specialArgs;
-            system = "x86_64-linux";
+            # system = "x86_64-linux";
             modules = [
               # ./configuration.nix
               ./hosts/lenovo-laptop
@@ -77,7 +77,7 @@
           in
           nixpkgs.lib.nixosSystem {
             inherit specialArgs;
-            system = "x86_64-linux";
+            # system = "x86_64-linux";
             modules = [
               # ./configuration.nix
               ./hosts/thinkpad-t14-gen1
