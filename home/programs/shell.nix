@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   home.shellAliases = {
     ":q" = "exit";
@@ -10,6 +9,7 @@
     "keydoff" = "sudo systemctl stop keyd";
     pn = "pnpm";
     zj = "zellij";
+    ff = "fastfetch";
   };
   home.shell.enableShellIntegration = true;
 
