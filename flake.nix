@@ -13,7 +13,7 @@
     #   inputs.hyprland.follows = "hyprland";
     # };
     stylix = {
-      url = "github:nix-community/stylix";
+      url = "github:nix-community/stylix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     daeuniverse.url = "github:daeuniverse/flake.nix";
