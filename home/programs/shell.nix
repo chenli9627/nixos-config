@@ -57,7 +57,6 @@
       shellInit = ''
         direnv hook fish | source
         set -g direnv_fish_mode eval_after_arrow
-        gtrash completion fish > /dev/null
         set fish_greeting # Disable greeting
         fish_vi_key_bindings
       '';
@@ -72,7 +71,6 @@
       };
       bashrcExtra = ''
         eval "$(direnv hook bash)"
-        gtrash completion bash > /dev/null
       '';
     };
   };
