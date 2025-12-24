@@ -23,6 +23,7 @@
     lxgw-wenkai
     roboto
     roboto-serif
+    nerd-fonts.fira-code
   ];
 
   fonts.fontconfig.enable = true;
