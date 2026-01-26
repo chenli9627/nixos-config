@@ -36,7 +36,7 @@
     };
 
     tailscale = {
-      enable = true;
+      enable = false;
     };
 
     daed = {
@@ -52,8 +52,12 @@
   environment.systemPackages = with pkgs; [ tailscale ];
 
   # programs = {
-  #   clash-verge.enable = true;
-  #   clash-verge.autoStart = false;
+  #   clash-verge = {
+  #     enable = true;
+  #     tunMode = true;
+  #     autoStart = true;
+  #     serviceMode = true;
+  #   };
   # };
 
   # imports = [
