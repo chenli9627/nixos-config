@@ -7,7 +7,12 @@
         enable = true;
         setSocketVariable = true;
       };
-      daemon.settings.registry-mirrors = [ "https://docker.m.daocloud.io" ];
+      daemon.settings.registry-mirrors = [
+        "https://docker.m.daocloud.io"
+        "https://dockerproxy.com"
+        "https://docker.mirrors.ustc.edu.cn"
+        "https://docker.nju.edu.cn"
+      ];
     };
     # virtualbox = {
     #   host.enable = true;
