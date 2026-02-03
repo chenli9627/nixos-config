@@ -10,6 +10,7 @@
     pn = "pnpm";
     zj = "zellij";
     ff = "fastfetch";
+    fh = "free -h";
   };
   home.shell.enableShellIntegration = true;
 
