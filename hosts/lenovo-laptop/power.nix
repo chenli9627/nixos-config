@@ -21,9 +21,10 @@
   };
 
   powerManagement.enable = true;
-  # powerManagement.powertop.enable = true;
+  powerManagement.powertop.enable = true;
 
   # services.power-profiles-daemon.enable = true;
+
   # services.tlp = {
   #   enable = true;
   #   settings = {
@@ -43,4 +44,11 @@
   #     STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
   #   };
   # };
+
+  services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchExternalPower = "ignore";
+    HandleLidSwitchDocked = "ignore";
+    KillUserProcesses = false;
+  };
 }
