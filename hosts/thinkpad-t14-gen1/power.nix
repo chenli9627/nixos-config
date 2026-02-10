@@ -11,11 +11,11 @@
 
       battery = {
         governor = "powersave";
-        turbo = "auto";
+        turbo = "never";
         platform_profile = "low-power";
-        enable_thresholds = true;
-        start_threshold = 75;
-        stop_threshold = 81;
+        # enable_thresholds = true;
+        # start_threshold = 75;
+        # stop_threshold = 81;
       };
     };
   };
