@@ -8,6 +8,8 @@
     zoxide.enableFishIntegration = true;
   };
   home.packages = with pkgs; [
+    hmcl
+    kdePackages.kdenlive
     moonlight-qt
     bluetui
     nemo-with-extensions
@@ -26,7 +28,6 @@
     nil
     gnome-solanum
     gnome-font-viewer
-    jetbrains.idea-community-bin
     jetbrains.datagrip
     bc
     strawberry
