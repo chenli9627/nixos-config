@@ -14,7 +14,7 @@
     # };
     stylix = {
       url = "github:nix-community/stylix/release-25.11";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     daeuniverse.url = "github:daeuniverse/flake.nix";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
