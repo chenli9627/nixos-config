@@ -39,14 +39,6 @@
       enable = false;
     };
 
-    # daed = {
-    #   enable = true;
-    #   openFirewall = {
-    #     enable = true;
-    #     port = 12345;
-    #   };
-    # };
-
   };
 
   environment.systemPackages = with pkgs; [ tailscale ];
@@ -59,11 +51,6 @@
       serviceMode = true;
     };
   };
-
-  # imports = [
-  #   inputs.daeuniverse.nixosModules.dae
-  #   inputs.daeuniverse.nixosModules.daed
-  # ];
 
   # nix.settings = {
   #   substituters = [ "https://cache.garnix.io" ];

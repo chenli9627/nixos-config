@@ -16,7 +16,6 @@
       url = "github:nix-community/stylix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    daeuniverse.url = "github:daeuniverse/flake.nix";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     auto-cpufreq = {
       url = "github:AdnanHodzic/auto-cpufreq";
@@ -45,8 +44,6 @@
               # ./configuration.nix
               ./hosts/lenovo-laptop
               # ./users/chen
-              inputs.daeuniverse.nixosModules.dae
-              inputs.daeuniverse.nixosModules.daed
               inputs.auto-cpufreq.nixosModules.default
 
               home-manager.nixosModules.home-manager
@@ -82,8 +79,6 @@
               # ./configuration.nix
               ./hosts/thinkpad-t14-gen1
               # ./users/chen
-              inputs.daeuniverse.nixosModules.dae
-              inputs.daeuniverse.nixosModules.daed
               # inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen1
               inputs.auto-cpufreq.nixosModules.default
 
