@@ -39,26 +39,26 @@
       enable = false;
     };
 
-    daed = {
-      enable = true;
-      openFirewall = {
-        enable = true;
-        port = 12345;
-      };
-    };
+    # daed = {
+    #   enable = true;
+    #   openFirewall = {
+    #     enable = true;
+    #     port = 12345;
+    #   };
+    # };
 
   };
 
   environment.systemPackages = with pkgs; [ tailscale ];
 
-  # programs = {
-  #   clash-verge = {
-  #     enable = true;
-  #     tunMode = true;
-  #     autoStart = true;
-  #     serviceMode = true;
-  #   };
-  # };
+  programs = {
+    clash-verge = {
+      enable = true;
+      tunMode = true;
+      autoStart = true;
+      serviceMode = true;
+    };
+  };
 
   # imports = [
   #   inputs.daeuniverse.nixosModules.dae
