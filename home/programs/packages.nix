@@ -8,6 +8,7 @@
     zoxide.enableFishIntegration = true;
   };
   home.packages = with pkgs; [
+    telegram-desktop
     hmcl
     kdePackages.kdenlive
     moonlight-qt
