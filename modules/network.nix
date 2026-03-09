@@ -39,6 +39,11 @@
       enable = false;
     };
 
+    v2raya = {
+      enable = true;
+      cliPackage = pkgs.xray;
+    };
+
   };
 
   environment.systemPackages = with pkgs; [ tailscale ];
@@ -47,7 +52,7 @@
     clash-verge = {
       enable = true;
       tunMode = true;
-      autoStart = true;
+      # autoStart = true;
       serviceMode = true;
     };
   };
