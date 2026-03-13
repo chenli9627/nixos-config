@@ -39,10 +39,10 @@
       enable = false;
     };
 
-    v2raya = {
-      enable = true;
-      cliPackage = pkgs.xray;
-    };
+    # v2raya = {
+    #   enable = true;
+    #   cliPackage = pkgs.xray;
+    # };
 
   };
 
@@ -52,7 +52,7 @@
     clash-verge = {
       enable = true;
       tunMode = true;
-      # autoStart = true;
+      autoStart = true;
       serviceMode = true;
     };
   };
