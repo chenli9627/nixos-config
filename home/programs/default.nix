@@ -20,5 +20,7 @@
     ./zellij.nix
     ./syncthing.nix
     ./fonts.nix
+    ./lutris.nix
+    ./tmux.nix
   ];
 }
