@@ -43,4 +43,12 @@
   #     STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
   #   };
   # };
+
+  services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchExternalPower = "ignore";
+    HandleLidSwitchDocked = "ignore";
+    KillUserProcesses = false;
+  };
+
 }
