@@ -106,7 +106,6 @@
     boxes
     fortune-kind
     kdePackages.okular
-    cherry-studio
 
     ## for developing
     nodejs_22
