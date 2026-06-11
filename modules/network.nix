@@ -1,4 +1,9 @@
-{ pkgs, inputs, ... }:
+{
+  pkgs,
+  inputs,
+  lib,
+  ...
+}:
 {
 
   # Open ports in the firewall.
@@ -40,30 +45,79 @@
       enable = true;
     };
 
+    xray = {
+      enable = true;
+      settingsFile = "/home/chen/code/proxy/xray/config.json";
+      package = inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.xray;
+    };
+
+    sing-box = {
+      enable = true;
+    };
+
     # v2raya = {
     #   enable = true;
     #   cliPackage = pkgs.xray;
     # };
 
+    # daed - dae with a web dashboard
+    # daed = {
+    #   enable = true;
+    #
+    #   openFirewall = {
+    #     enable = true;
+    #     port = 12345;
+    #   };
+    #   assetsPaths = [
+    #     "${inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.v2ray-geoip}/share/v2ray/geoip.dat"
+    #     "${inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.v2ray-domain-list-community}/share/v2ray/geosite.dat"
+    #   ];
+    #   /*
+    #     default options
+    #
+    #     package = inputs.daeuniverse.packages.x86_64-linux.daed;
+    #     configDir = "/etc/daed";
+    #     listen = "127.0.0.1:2023";
+    #   */
+    # };
+
+    # dae = {
+    #   enable = true;
+    #
+    #   openFirewall = {
+    #     enable = true;
+    #     port = 12345;
+    #   };
+    #
+    #   package = inputs.daeuniverse.packages.x86_64-linux.dae;
+    #
+    #   assets = [
+    #     inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.v2ray-geoip
+    #     inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.v2ray-domain-list-community
+    #   ];
+    #   configFile = "/home/chen/code/vps/dae/example.dae";
+    # };
+
   };
 
+  systemd.services.sing-box.wantedBy = lib.mkForce [ ];
+
+  nix.settings = {
+    substituters = [ "https://cache.garnix.io" ];
+    trusted-public-keys = [
+      "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+    ];
+  };
   environment.systemPackages = with pkgs; [ tailscale ];
 
   programs = {
     clash-verge = {
       enable = true;
       tunMode = true;
-      autoStart = true;
-      serviceMode = true;
+      # autoStart = true;
+      # serviceMode = true;
     };
   };
-
-  # nix.settings = {
-  #   substituters = [ "https://cache.garnix.io" ];
-  #   trusted-public-keys = [
-  #     "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
-  #   ];
-  # };
 
   # Force tailscaled to use nftables (Critical for clean nftables-only systems)
   # This avoids the "iptables-compat" translation layer issues.
