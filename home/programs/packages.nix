@@ -6,6 +6,9 @@
     mpv.enable = true;
     zoxide.enable = true;
     zoxide.enableFishIntegration = true;
+    chromium = {
+      enable = true;
+    };
   };
   home.packages = with pkgs; [
     telegram-desktop
