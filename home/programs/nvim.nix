@@ -16,5 +16,6 @@
       luarocks
       statix
     ];
+    sideloadInitLua = true;
   };
 }
