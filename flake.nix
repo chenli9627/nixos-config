@@ -1,10 +1,10 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     # hyprland.url = "github:hyprwm/Hyprland";
@@ -13,7 +13,7 @@
     #   inputs.hyprland.follows = "hyprland";
     # };
     stylix = {
-      url = "github:nix-community/stylix/release-25.11";
+      url = "github:nix-community/stylix/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -21,6 +21,7 @@
       url = "github:AdnanHodzic/auto-cpufreq";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    daeuniverse.url = "github:daeuniverse/flake.nix";
   };
 
   outputs =
@@ -35,7 +36,7 @@
         xiaoxin =
           let
             username = "chen";
-            specialArgs = { inherit username; };
+            specialArgs = { inherit username inputs; };
           in
           nixpkgs.lib.nixosSystem {
             inherit specialArgs;
@@ -70,7 +71,7 @@
         thinkpad =
           let
             username = "chen";
-            specialArgs = { inherit username; };
+            specialArgs = { inherit username inputs; };
           in
           nixpkgs.lib.nixosSystem {
             inherit specialArgs;
@@ -81,6 +82,8 @@
               # ./users/chen
               # inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen1
               inputs.auto-cpufreq.nixosModules.default
+              inputs.daeuniverse.nixosModules.dae
+              inputs.daeuniverse.nixosModules.daed
 
               home-manager.nixosModules.home-manager
               {
