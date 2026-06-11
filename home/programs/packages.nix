@@ -12,13 +12,12 @@
   };
   home.packages = with pkgs; [
     telegram-desktop
-    hmcl
     kdePackages.kdenlive
     moonlight-qt
     bluetui
     nemo-with-extensions
     font-manager
-    xfce.mousepad
+    mousepad
     gnome-clocks
     smartmontools
     tree-sitter
@@ -32,7 +31,6 @@
     nil
     gnome-solanum
     gnome-font-viewer
-    jetbrains.datagrip
     bc
     strawberry
     clang
@@ -66,7 +64,6 @@
     quickemu
     quickgui
     filezilla
-    remmina
     kitty
     lazygit
     lazydocker
@@ -111,9 +108,8 @@
     kdePackages.okular
 
     ## for developing
-    nodejs_22
+    nodejs_latest
     pnpm
-    bun
 
     go
   ];
