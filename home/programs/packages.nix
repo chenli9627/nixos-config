@@ -11,6 +11,8 @@
     };
   };
   home.packages = with pkgs; [
+    whois
+    dnsutils
     telegram-desktop
     kdePackages.kdenlive
     moonlight-qt
@@ -106,6 +108,7 @@
     boxes
     fortune-kind
     kdePackages.okular
+    tsukimi
 
     ## for developing
     nodejs_latest
