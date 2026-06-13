@@ -64,12 +64,6 @@
 
   systemd.services.sing-box.wantedBy = lib.mkForce [ ];
 
-  nix.settings = {
-    substituters = [ "https://cache.garnix.io" ];
-    trusted-public-keys = [
-      "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
-    ];
-  };
   environment.systemPackages = with pkgs; [ tailscale ];
 
   programs = {
