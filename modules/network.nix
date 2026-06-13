@@ -60,44 +60,6 @@
     #   cliPackage = pkgs.xray;
     # };
 
-    # daed - dae with a web dashboard
-    # daed = {
-    #   enable = true;
-    #
-    #   openFirewall = {
-    #     enable = true;
-    #     port = 12345;
-    #   };
-    #   assetsPaths = [
-    #     "${inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.v2ray-geoip}/share/v2ray/geoip.dat"
-    #     "${inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.v2ray-domain-list-community}/share/v2ray/geosite.dat"
-    #   ];
-    #   /*
-    #     default options
-    #
-    #     package = inputs.daeuniverse.packages.x86_64-linux.daed;
-    #     configDir = "/etc/daed";
-    #     listen = "127.0.0.1:2023";
-    #   */
-    # };
-
-    # dae = {
-    #   enable = true;
-    #
-    #   openFirewall = {
-    #     enable = true;
-    #     port = 12345;
-    #   };
-    #
-    #   package = inputs.daeuniverse.packages.x86_64-linux.dae;
-    #
-    #   assets = [
-    #     inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.v2ray-geoip
-    #     inputs.nixpkgs-unstable.legacyPackages.x86_64-linux.v2ray-domain-list-community
-    #   ];
-    #   configFile = "/home/chen/code/vps/dae/example.dae";
-    # };
-
   };
 
   systemd.services.sing-box.wantedBy = lib.mkForce [ ];

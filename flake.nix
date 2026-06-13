@@ -21,7 +21,7 @@
       url = "github:AdnanHodzic/auto-cpufreq";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
-    daeuniverse.url = "github:daeuniverse/flake.nix";
+
   };
 
   outputs =
@@ -82,8 +82,6 @@
               # ./users/chen
               # inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen1
               inputs.auto-cpufreq.nixosModules.default
-              inputs.daeuniverse.nixosModules.dae
-              inputs.daeuniverse.nixosModules.daed
 
               home-manager.nixosModules.home-manager
               {
