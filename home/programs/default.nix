@@ -22,5 +22,6 @@
     ./fonts.nix
     ./lutris.nix
     ./tmux.nix
+    ./zen-browser.nix
   ];
 }
