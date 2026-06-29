@@ -13,6 +13,8 @@
   home.packages = with pkgs; [
     whois
     dnsutils
+    openssl
+    xray
     telegram-desktop
     kdePackages.kdenlive
     moonlight-qt
