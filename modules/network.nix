@@ -63,6 +63,7 @@
   };
 
   systemd.services.sing-box.wantedBy = lib.mkForce [ ];
+  systemd.services.xray.wantedBy = lib.mkForce [ ];
 
   environment.systemPackages = with pkgs; [ tailscale ];
 
