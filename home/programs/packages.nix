@@ -38,7 +38,6 @@
     bc
     strawberry
     clang
-    google-chrome
     miniserve
     bruno
     goldendict-ng
