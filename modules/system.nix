@@ -53,7 +53,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Set your time zone.
-  time.timeZone = "Asia/Shanghai";
+  time.timeZone = "Asia/Singapore";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
