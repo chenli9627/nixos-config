@@ -22,5 +22,6 @@
         port = 443;
       };
     };
+    includes = [ "config.d/*" ];
   };
 }
